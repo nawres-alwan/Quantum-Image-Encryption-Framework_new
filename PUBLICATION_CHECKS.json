@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "published_file_hashes_checked": 260,
+  "python_sources_parsed": 36,
+  "json_files_parsed": 33,
+  "source_images_hash_verified": 4,
+  "saved_profile_image_sets_checked": 8,
+  "saved_run_records_checked": 24,
+  "saved_decrypted_images_byte_identical": true,
+  "saved_preview_metrics_match": true,
+  "table7_detailed_rows_regenerated": 128,
+  "table7_display_rows": 32,
+  "table7_latex_byte_identical": true,
+  "independent_dense_operator_cases": 4,
+  "legacy_array_regression_cases": 128,
+  "legacy_array_distinguishing_successes": 128,
+  "private_keys_published": false,
+  "private_key_replay_performed": false,
+  "full_image_experiments_rerun": false,
+  "scope": "Public data integrity, mathematical table regeneration, and small-system regression checks; not a source-security certification.",
+  "python_version": "3.14.3",
+  "numpy_version": "2.4.3"
+}

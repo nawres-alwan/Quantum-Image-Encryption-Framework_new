@@ -1,0 +1,92 @@
+SOURCE AUDIT: ORIGINAL QEF ANGLE AND GEOMETRIC-PHASE GENERATORS
+19 October 2026
+
+Scope
+Read the original manuscript and the actual experiment code. No generator
+has been replaced and no extra encryption layer is introduced. The file
+source_certification.tex supplies a rigorous criterion for the original
+source and explains which information is unavailable. This audit is not a
+certificate of a positive numerical resistance for the actual generator.
+
+Evidence in the original quantum encryption.tex
+1177-1182: theta=gamma mod(q,pi); neither actual gamma nor sample law given.
+2064-2074: QKG extracts samples from a state without specifying the sampled
+observable, initial-state probability law or per-pixel/axis sampling rule.
+1034-1062: raw HG-Phi bit is Bernoulli((1+cos(phi+delta))/2); extraction is
+only mentioned as possible, without entropy, seed or error parameters.
+
+Evidence in supplied experiment code
+encryption.py:17 invokes np.random.seed(key).
+main.py:89 sets key=0.
+encryption.py:83-125 uses global QIRBP channel masks and cumulative XOR.
+Substitution_Operation.py:15-17 gives fixed example Euler angles; it is a
+diagram script and states that chaotic angles would be used in a real
+scenario. These files do not implement the manuscript's source law.
+
+PSB sign error and proof
+Original lines974-989 define arg(<psi_a|psi_b>)+integral Im(<psi|psidot>).
+Under psi'(t)=exp(i chi(t))psi(t), the first term gains chi_b-chi_a and
+the second gains the same quantity. The printed expression gains twice
+that amount, so it is not gauge invariant as claimed at line1015.
+
+The gauge-invariant expression is
+gamma_g = arg(<psi_a|psi_b>) - integral Im(<psi|psidot>) dt
+        = arg(<psi_a|psi_b>) + integral <H>/hbar dt.
+Change plus to minus in eq:psb_phase_hgphi and minus to plus in
+eq:psb_phase_hamiltonian_hgphi. Primary reference:
+Rabei, Arvind, Mukunda and Simon, Bargmann Invariants and Geometric
+Phases -- A Generalised Connection, Eq.(2.4), PDF page5:
+https://arxiv.org/pdf/quant-ph/9907080
+The original kinematic treatment is Mukunda and Simon, Annals of Physics
+228 (1993),205-268, DOI10.1006/aphy.1993.1093.
+
+Exact countercheck: let H=E I and psi(t)=exp(-iEt/hbar)psi0. The physical
+ray is constant and its geometric phase is zero. The printed expression
+instead gives -2E tau/hbar. With E tau/hbar=pi/4 and delta=0, its raw-bit
+probability is1/2 while the corrected geometric phase gives probability1.
+
+Impact tracing for that correction
+The state evolution and the unitarity of the three encryption layers do
+not change. The derived PSB phase, compact phi, Bernoulli probabilities,
+raw-bit distribution and derived permutation/entanglement-key law can
+change. Earlier numerical HG-Phi data cannot be silently attributed to
+the corrected formula. The rotation-moment reference theorem allows any
+joint B law and is unaffected as a conditional theorem; it still requires
+the stated conditional moments of A given B. Correcting the PSB signs
+does not establish these moments or substitution-angle uniformity.
+
+Source-certification mathematics
+The wrapped density is sum_m f_q(z+m pi). Gamma2 and uniform wrapped
+density suffice for the one-pass continuous marginal on[0,2pi); modulo
+does not establish it. Actual conditional moments delta2 and eta2 give
+C_actual=ln[1+2^r delta2^2+(N-1)2^r eta2^2]. For independently refreshed
+whole records, binary discrimination success p requires
+q >= ceil[(ln2-h(p))/C_actual]. Distinct position blocks are orthogonal
+in Hilbert--Schmidt inner product, giving the stated bound without
+requiring independence within a record. Without certified source moments,
+the general bound supplies onlyq>=1 atp=2/3; this is not a successful
+attack and does not establish the actual attack cost.
+
+Finite independent-symbol law versus weaker moments
+Two independent uniform pixel tuples require6r log2(L) conditional
+entropy bits. A deterministic s-bit source has pair support<=2^s and
+distance to the uniform pair law at least max(0,1-2^s/L^(6r)). QIRBP r11,
+s128 gives15/16 atL4 and1-2^(-400) atL256. This precludes asserting that
+strong law from that seed, but does not preclude a correlated source
+with adequate operator moments. No AFQIRHSI feature count is used here.
+
+Raw bits and entropy
+Given phase and setting, raw-bit pointwise guessing probability is
+(1+abs(cos(phi+delta)))/2, which can equal1. Fixed deterministic
+postprocessing cannot increase source Shannon or min-entropy; reversible
+processing preserves it. A specified extractor needs an entropy bound,
+seed assumptions, output length and extraction error. Statistical tests
+and one-bit balance do not supply a uniform joint-law certificate.
+
+Architecture countermodel
+Constant FRQI feature|0> versus|1>, theta_x=theta_y=0, fresh theta_z,
+any position permutation and all-CZ entanglement preserve the feature
+Z label. One ciphertext gives perfect binary discrimination. This source
+law is permitted by the unrestricted architecture, not attributed to
+the actual proposed source. It proves that freshness and unitarity alone
+cannot imply a nontrivial architecture-wide attack lower bound.

@@ -1,0 +1,26 @@
+{
+  "page_count": 13,
+  "page_char_counts": [
+    1967,
+    1935,
+    1655,
+    2057,
+    2024,
+    1752,
+    1710,
+    1557,
+    1853,
+    243,
+    218,
+    1941,
+    2279
+  ],
+  "replacement_characters": 0,
+  "red_revision_characters": 818,
+  "overfull_boxes": 0,
+  "undefined_references": false,
+  "undefined_citations": false,
+  "pdf_sha256": "0ed52ac717afe7a12a95be1648febc3d5773116c655a474343f569a3e8ea8d4c",
+  "visual_review": "All 13 pages inspected; changed pages 4 and 6 re-inspected after final clarifications",
+  "python_sources_parse": true
+}

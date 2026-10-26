@@ -1,0 +1,4 @@
+N,r,n,dimension,enumerated_keys,ablation,choi_max_abs_residual,normalized_choi_trace_distance,pair_ciphertext_trace_distance,optimal_pair_guess_probability_numeric,reference_decoupling_trace_distance,choi_trace
+4,1,2,8,16,no_position_phase,0.015624853763574083,0.75,1.3877787807814457e-16,0.5000000000000001,0.43673145687769555,1.0
+4,1,2,8,16,no_feature_mask,0.02194399753402622,0.75,0.9999906408687416,0.9999953204343708,0.3441046854408635,1.0
+4,1,2,8,16,no_uniform_shift,0.046875,0.7499999999999999,1.0,1.0,0.3369077474271247,0.9999999999999998

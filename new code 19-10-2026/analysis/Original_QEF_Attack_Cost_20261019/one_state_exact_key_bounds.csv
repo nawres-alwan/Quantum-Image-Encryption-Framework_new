@@ -1,0 +1,5 @@
+﻿image,N,n,r,Q,valid_dimension,candidate_key_bits_assumed,one_known_pure_input_key_guess_upper,log2_upper,entangled_chosen_input_key_guess_upper,log2_entangled_upper,scope
+IM1_native,65536,16,11,27,134217728,384,3.4063678720065206e-108,-357.0,4.5719495651291e-100,-330.0,exact full-key identification only; no verifier; not plaintext secrecy
+IM2_native,50394,16,11,27,103206912,384,2.6193313986495453e-108,-357.379035646359,2.7033310515926054e-100,-330.75807129271794,exact full-key identification only; no verifier; not plaintext secrecy
+IM3_native,65536,16,11,27,134217728,384,3.4063678720065206e-108,-357.0,4.5719495651291e-100,-330.0,exact full-key identification only; no verifier; not plaintext secrecy
+IM4_native,786432,20,11,31,1610612736,384,4.0876414464078247e-107,-353.41503749927887,6.583607373785904e-98,-322.8300749985577,exact full-key identification only; no verifier; not plaintext secrecy

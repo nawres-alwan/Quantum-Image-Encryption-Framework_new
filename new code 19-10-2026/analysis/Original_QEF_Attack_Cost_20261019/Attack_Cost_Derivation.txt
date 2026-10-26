@@ -1,0 +1,371 @@
+ATTACK COST FOR THE ORIGINAL QEF: DERIVATION AND LIMITS
+19 October 2026
+
+This analysis uses the paper's original substitution, permutation, and
+position-controlled CNOT/CZ entanglement operators. It does not use the v2
+uniform privacy core and does not replace either original key generator.
+The manuscript and experiment code have not been changed by this analysis.
+
+RESULT
+
+The provable generic SEARCH baseline is
+
+    Q_search(M,t) = Theta(sqrt(M/t)) oracle queries,
+    T_Grover = Theta((C_ver + C_diff) sqrt(M/t)) elementary gates,
+
+for an unstructured acceptance oracle, uniform starting candidates, and a
+constant target success probability. Here M is the number of candidates,
+t is the number of marked candidates, C_ver is the reversible verification
+cost, and C_diff is the diffusion/reflection cost per iteration. A query
+count alone does not specify elapsed time, gate count, or physical cost.
+
+For M=2^384 and t=1 the query exponent is 192. This is a theorem about
+unstructured oracle search. No reduction from unrestricted QEF cryptanalysis
+to that search problem has been established. Therefore it is not a proven
+lower bound on the cheapest QEF attack.
+
+The existing 384-bit statement remains conditional even as a baseline:
+the original implementation used a scalar NumPy seed, and the paper does
+not specify the joint finite key law and reversible candidate verifier
+needed to instantiate the advertised 384-bit model. The number of RNG
+devices/sources is not the number of independent secret bits.
+
+Source evidence: quantum encryption.tex line 3311 introduces the three
+128-bit fields with "For example, if the three key components are selected
+such that". Line 3245 asserts that recovering the original state requires
+the complete key tuple. Line 3415 asserts a need to recover the complete
+encryption operator. Those are separate proof obligations; the example
+key lengths do not discharge them.
+
+1. DEFINE THE SUCCESS EVENT BEFORE COUNTING OPERATIONS
+
+These are different tasks:
+  (a) identify the exact original secret bit string;
+  (b) find an equivalent decryptor for the target ciphertext;
+  (c) recover a property of the image or distinguish two candidate images;
+  (d) reconstruct the complete unitary on every input.
+
+Success at (b) or (c) does not logically require (a) or (d). An attack cost
+must name its task, available quantum copies, oracle access, precision, and
+target success probability. Equality of pure quantum states is equality
+of rays (global phase is physically irrelevant).
+
+For a specified model A and goal G, the actual attack complexity is
+
+    C_opt(A,G,p) = inf{ cost(B) : Pr[B succeeds at G in A] >= p }.
+
+Exhibiting a successful attack upper-bounds C_opt. A security lower bound
+must apply to every allowed algorithm. Grover optimality supplies such a
+lower bound inside the unstructured-search oracle model, not automatically
+for a cipher whose public circuit structure can be analyzed.
+
+2. COUNT THE JOINT CANDIDATE SPACE
+
+Let K=(K_sub,K_perm,K_ent), drawn from the ACTUAL joint distribution.
+Let M=|supp(K)| when a uniform support model is justified.
+
+Independent, uniform 128-bit fields give M=2^(128+128+128)=2^384.
+If K_perm and K_ent are deterministic outputs of ONE 128-bit seed, their
+joint support has at most 2^128 points. With an independent 128-bit
+substitution seed, total support is at most 2^256, not 2^384.
+
+This latter conclusion DOES NOT follow merely from having two generators:
+fresh independent quantum measurement outcomes can supply extra entropy.
+Conversely, two outputs of one physical RNG can be independent when its
+joint source model justifies that. The actual seed/outcome law decides.
+
+A nonuniform distribution cannot in general be replaced by a uniform
+2^(Shannon entropy) or 2^(min-entropy) search space. Guessing strategies
+can prioritize high-probability candidates. Conditional side information
+about source parameters or earlier outputs must also be included.
+
+Even a uniform raw bit string does not establish that all bit strings
+produce different encryption channels. Output length, source entropy,
+distinct channels, and useful candidates for a particular attack are
+different quantities.
+
+3. DERIVE THE GROVER FORMULA
+
+Assume a coherent reversible verifier supplies the exact phase oracle
+
+    O_f |k> = (-1)^f(k) |k>,
+
+where f marks t of the M candidates. This oracle is an EXTRA attack-model
+assumption; it has not been constructed for the original quantum-image
+data interface.
+
+If f marks every candidate consistent with a finite known transcript,
+finding a marked candidate need not recover the true key or decrypt a
+different image. Such false positives cannot be counted as successful
+full-key recovery. The success goal and verifier must agree.
+
+Set
+    |good> = (1/sqrt(t)) sum_{f(k)=1} |k>,
+    |bad>  = (1/sqrt(M-t)) sum_{f(k)=0} |k>,
+    theta  = arcsin(sqrt(t/M)).
+
+The uniform start state is
+    |s> = sin(theta)|good> + cos(theta)|bad>.
+
+In the ordered basis (|good>,|bad>), one Grover iteration has matrix
+
+    G = [ cos(2 theta)   sin(2 theta) ]
+        [-sin(2 theta)   cos(2 theta) ].
+
+Consequently
+    G^q |s> = sin((2q+1)theta)|good>
+             + cos((2q+1)theta)|bad>,
+
+and the exact success probability of this algorithm is
+
+    P_G(q) = sin^2((2q+1) arcsin(sqrt(t/M))).
+
+The first probability peak is near
+
+    q_peak = pi/(4 arcsin(sqrt(t/M))) - 1/2
+           = (pi/4) sqrt(M/t) + O(1).
+
+For large M/t, the first crossing of a constant success level p occurs at
+
+    q_p = (arcsin(sqrt(p))/2) sqrt(M/t) + O(1).
+
+Integer rounding and a possible last adjusted amplification step must be
+handled for an exact finite target. Repeated ordinary Grover iterations
+can overshoot: arbitrarily increasing q does not monotonically increase
+success. The supplied small-system script checks the exact probabilities,
+not just the asymptotic exponent.
+
+For one uniformly hidden marked candidate, Zalka proves the optimality of
+Grover's success probability up to the first optimum. For a prescribed
+number of marked items, quantum search has the tight asymptotic scale
+Theta(sqrt(M/t)); see Boyer et al. These are oracle lower bounds.
+
+4. WHAT THE 192 MEANS NUMERICALLY
+
+With THREE independent uniform 128-bit secret fields, one marked useful
+key, and unstructured verification access:
+
+    sqrt(M) = 2^192 = 6.277101735386681e57,
+    q_peak approximately (pi/4) 2^192 = 4.930...e57 oracle queries.
+
+These are analytical extrapolations, not experimentally executed attacks.
+The exact numerical CSV is conditional_search_costs.csv. The elementary
+gate cost also includes verification, reflection, source/key expansion,
+state preparation where needed, and the chosen synthesis precision.
+
+If two 128-bit seeds deterministically generate all three fields, the
+corresponding GENERIC baseline has exponent at most 128 under the same
+verifier assumption. If one 128-bit seed supplies all fields it is at most
+64. The legacy scalar seed API admits at most 2^32 scalar seeds, giving at
+most 2^16 in that ideal search-query baseline; the old fixed seed zero
+does not even instantiate a uniformly hidden 32-bit seed experiment.
+
+None of these conditional numbers is a lower bound on QEF's best attack.
+
+5. WHY A SINGLE QUANTUM CIPHERTEXT IS NOT AN EXACT VERIFIER
+
+The paper supplies quantum ciphertext states, rather than full classical
+amplitude lists. Two distinct candidate keys may produce nonorthogonal
+ciphertext states for a known image. An exact deterministic discriminator
+cannot separate such states: if its output flags were orthogonal, inner
+product preservation would require the input states to be orthogonal.
+
+For two known pure candidate states with squared overlap s, m identical
+copies have overlap squared s^m. Their optimal equal-prior discrimination
+error is
+
+    p_err(m) = (1 - sqrt(1-s^m))/2.
+
+For 0<s<1, attaining error at most delta<1/2 requires
+
+    m >= ceil(log(4 delta(1-delta))/log(s)).
+
+This is a binary discrimination statement, not a constructed M-key
+verification oracle. It shows why copy access, precision, and separation
+between candidates cannot be omitted. If s=1 the two keys are not
+distinguishable from that state at any number of copies. If keys are
+independently refreshed between preparations, those preparations are not
+identical copies of one fixed-key ciphertext.
+
+6. USE THE ACTUAL ORIGINAL CIRCUIT STRUCTURE
+
+The intended substitution is
+
+    R_A = sum_k |k><k| tensor (tensor_j T_{k,j}),
+    T_{k,j}=R_z(theta_z) R_y(theta_y) R_x(theta_x) in SU(2).
+
+Because every entanglement gate has a position control and a feature
+target, conditioning on position t leaves only feature X or Z gates:
+
+    E_B = sum_t |t><t| tensor (tensor_j V_{B,t,j}).
+
+Here each V is the chronological product of its activated X/Z gates.
+The gates can entangle position and feature registers in superposition;
+this conditional formula does not assert that the global state is a
+product state. With position permutation pi,
+
+    U_K = sum_k |pi(k)><k| tensor W_k,
+    W_k = tensor_j [ V_{B,pi(k),j} T_{k,j} ].
+
+Therefore the continuous block description has at most 3 N r real
+rotation parameters, plus discrete permutation information. It is a
+highly constrained block-permutation family, not the set of arbitrary
+2^Q-dimensional unitaries with 4^Q-1 real parameters.
+
+This parameter comparison alone is NOT an attack algorithm or a sample
+complexity bound. It invalidates the inference that generic full-unitary
+parameter counting must be the optimal cost of attacking this family.
+
+In particular, for any alternative entanglement choice B', define
+
+    T'_{k,j} = V_{B',pi(k),j}^dagger V_{B,pi(k),j} T_{k,j}.
+
+Then E_{B'} P R_{A'} = E_B P R_A exactly. For every j and t, both
+V_B and V_B' contain the same NUMBER of activated X/Z factors, so their
+determinants agree; T' is in SU(2) and has an Euler-angle representation.
+
+This is a theorem about the unrestricted Euler-angle OPERATOR FAMILY.
+It does NOT claim that these alternative angles are generated by another
+valid seed of the actual HCS. That additional finite-seed restriction is
+unspecified. It proves that the layering alone cannot establish unique
+recovery of the three components, or additive hardness of their lengths.
+
+7. A DIFFERENT KEY/OPERATOR NEED NOT CHANGE A KNOWN IMAGE
+
+Let a QIRBP all-black image have each colour-data qubit in |0>. Plane and
+wavelength labels can remain in their usual coherent superpositions.
+For any original rotations T_{k,j}, change the first colour-data rotation
+to T'_{k,1}=T_{k,1} R_z(delta), using the same delta at every position.
+Other rotations, the permutation, and entanglement are unchanged.
+
+Since R_z(delta)|0>=exp(-i delta/2)|0>,
+
+    U' |I_black> = exp(-i delta/2) U |I_black>.
+
+For generic nonzero delta, U' and U are different operators, yet their
+ciphertexts for this valid image are the SAME physical state. This
+directly disproves the paper's algebraic implication
+
+    U' != U  =>  U'|psi> != U|psi> for every |psi>.
+
+Again, this is an operator-family witness, not an assertion that the
+unspecified finite HCS seed set contains this pair. A key-to-operator
+specification would be needed to determine that. The recorded QIRBP
+check uses N=4, three RGB data qubits and three plane-index qubits.
+
+8. WHAT FRESH INDEPENDENT KEYS DO PROVE
+
+Suppose the target key K* is independent of earlier operation keys and
+their complete transcripts T, conditioned on the public setup. Then
+
+    Pr(K*=k | T) = Pr(K*=k).
+
+Thus those other operations cannot narrow the target key merely by
+pooling plaintext/ciphertext pairs as samples of one fixed unitary.
+Fresh-but-correlated outputs do not automatically satisfy this condition.
+Side information about shared generator parameters must be conditioned on.
+
+For a genuinely independent key per preparation, the attacker observes
+a sequence U_{K1}|psi1>, U_{K2}|psi2>, ... with different keys. It is not
+fixed-key unitary tomography. This prevents applying the paper's
+fixed-U tomography argument directly, but does not itself prove image
+secrecy or an exponential computational lower bound.
+
+9. AN ORIGINAL-MODEL INFORMATION BOUND: EXACT KEY IDENTIFICATION
+
+There is a rigorous statement that does not assume a Grover verifier.
+Suppose an attacker has ONE ciphertext of a known pure QIRBP image,
+no target-key-dependent side information, and the key has maximum prior
+probability p_max. Let D=N 2^r be the valid ciphertext dimension.
+Write rho_k=U_k|I><I|U_k^dagger and let {M_k} be ANY key-guessing POVM.
+
+    P_exact_key = sum_k p_k Tr(M_k rho_k)
+                <= p_max sum_k Tr(M_k)
+                 = D p_max.
+
+The inequality follows from 0<=rho_k<=I and sum_k M_k=I. Therefore
+
+    P_exact_key <= min(1, D 2^(-H_min(K))).
+
+For a uniform M-key distribution, this is min(1,D/M). For N=65536,
+r=11, D=2^27 and a UNIFORM 384-bit key, P_exact_key<=2^(-357).
+This holds even with unlimited computation in that ONE-STATE model.
+
+If an arbitrary entangled chosen input with a retained reference is
+allowed for one use, its effective reference dimension is at most D;
+the corresponding bound is min(1,D^2 p_max), or 2^(-330) in the above
+uniform example. Both assume no other target-key-dependent resources.
+
+For m SAME-KEY ciphertext copies without an entangled reference, the
+simple dimension bound becomes min(1,D^m p_max); it is not tight in
+general. Independent other keys do not supply such copies.
+
+These are exact-full-key IDENTIFICATION bounds. They are NOT plaintext
+secrecy bounds and NOT a proof that a useful equivalent decryption key
+or image property requires 2^192 work. Unused/random key bits could also
+make exact full-key identification impossible while plaintext leaks.
+Do not relabel this bound as general encryption resistance.
+
+10. WHY 4^Q CANNOT BE THE FINAL RESISTANCE VALUE
+
+A general d-dimensional mixed density matrix has d^2-1 real parameters.
+A general d-dimensional unitary modulo global phase also has d^2-1.
+A pure state has only 2d-2 real parameters. These are parameter counts,
+not universal query/gate complexities, and tomography additionally
+depends on measurement model, error norm, precision and failure rate.
+
+QEF outputs a pure state for a fixed key and pure input under ideal
+unitary execution. Mixing over unknown fresh keys is a different state
+and does not provide identical copies of the hidden fixed-key operator.
+The original family is structured as proved in Section 6. Neither image
+dimension nor key sensitivity proves that the attacker must learn an
+arbitrary mixed state or arbitrary unitary before distinguishing images.
+
+11. CHECKS AND THE ACTUAL REMAINING PROOF OBLIGATION
+
+The accompanying verifier checks exact Grover success probabilities in
+351 small search instances/iteration choices; it also checks 40 random
+original E-P-R matrices against the block formula and the exact layer
+reparameterization. The QIRBP example independently checks a different
+operator giving the same known-image ciphertext. These are numerical
+checks of the displayed algebra, not statistical security certification.
+It additionally checks 20 binary-state discrimination probabilities
+against independent eigenvalue calculations and four explicit POVM
+examples saturating the exact-key dimension bound.
+
+To claim C_opt >= Omega(2^192) for unrestricted QEF key recovery or
+plaintext attack, a proof must supply all of the following:
+  - the actual finite joint secret-key law and leakage/side-info model;
+  - precise target success, copy and oracle access, including fresh keys;
+  - a reversible verification procedure, with its actual cost and error;
+  - a reduction or separately stated computational hardness assumption
+    ruling out algorithms that exploit the original circuit/generators;
+  - for plaintext security, a relation between that task and the proven
+    hard problem. Exact raw-key recovery is not automatically necessary.
+
+The original manuscript does not supply these. The mathematically
+defensible present result is the conditional generic-search baseline,
+the original structured-family theorems, the independent-rekeying fact,
+and the narrowly scoped exact-key information bound. A proven numerical
+lower bound for the cheapest successful QEF attack remains UNESTABLISHED.
+
+PRIMARY REFERENCES
+
+[1] M. Boyer, G. Brassard, P. Hoyer, A. Tapp,
+    Tight bounds on quantum searching.
+    https://arxiv.org/abs/quant-ph/9605034
+
+[2] C. Zalka, Grover's quantum searching algorithm is optimal.
+    https://arxiv.org/abs/quant-ph/9711070
+
+[3] S. Jaques, M. Naehrig, M. Roetteler, F. Virdia,
+    Implementing Grover oracles for quantum key search on AES and LowMC.
+    https://eprint.iacr.org/2019/1146
+
+[4] J. Watrous, The Theory of Quantum Information, Chapter 3.
+    Binary state discrimination and the trace-distance characterization.
+    https://cs.uwaterloo.ca/~watrous/TQI/TQI.3.pdf
+
+The structured-family and dimension arguments above are derived directly
+here from the paper's operators and elementary POVM inequalities; the
+references are not represented as proving QEF-specific security.

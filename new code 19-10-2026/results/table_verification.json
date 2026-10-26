@@ -1,0 +1,11 @@
+{
+  "runs": 24,
+  "summary_rows": 8,
+  "privacy_rows": 8,
+  "all_ideal_epsilons_zero": true,
+  "all_ideal_guess_probabilities_half": true,
+  "all_exact_recoveries": true,
+  "legacy_attack_cases": 128,
+  "legacy_attack_successes": 128,
+  "max_reference_channel_distance": 6.765421556309546e-16
+}

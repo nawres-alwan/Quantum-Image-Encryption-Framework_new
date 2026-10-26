@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Ashurbanipal",
+    "path": "historical-source/IM1_original.png",
+    "H": 256,
+    "W": 256,
+    "N": 65536,
+    "sha256": "250c1c5f3477653c2da79177bba5f5ae769cc7c871583d62dbea70000213a486"
+  },
+  {
+    "name": "Hammurabi code",
+    "path": "historical-source/IM2_original.png",
+    "H": 222,
+    "W": 227,
+    "N": 50394,
+    "sha256": "cea545a008b72b617a8f654d47b71191b09c0c73e6f0a880e064a3cbf9517d6c"
+  },
+  {
+    "name": "Lamassu",
+    "path": "historical-source/IM3_original.png",
+    "H": 256,
+    "W": 256,
+    "N": 65536,
+    "sha256": "e281035bb690b99f562f2a39b4fb736c611b420bc4974465b1a52b6b7f851063"
+  },
+  {
+    "name": "Babylon Lion",
+    "path": "historical-source/IM4_original.jpg",
+    "H": 768,
+    "W": 1024,
+    "N": 786432,
+    "sha256": "985518aa9168293175ef9efa8902def8a9f97d6605dd1d88265941f5f4d44226"
+  }
+]

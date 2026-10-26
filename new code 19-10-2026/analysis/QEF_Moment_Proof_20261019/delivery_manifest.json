@@ -1,0 +1,89 @@
+{
+  "original_manuscript_unchanged": true,
+  "source_conditions_certified": false,
+  "proved_cost_is_conditional_ciphertext_sample_lower_bound": true,
+  "primary_manuscript_revision_is_separate_from_original": true,
+  "proof_files": [
+    {
+      "name": "QEF_Moment_Proof.pdf",
+      "sha256": "1dc52b1f17f1871ab9d92be38d1828e8b95daaab7b46d8cf82808ea2329a136b"
+    },
+    {
+      "name": "Proof_Appendix.tex",
+      "sha256": "7121c62658b1479f7610f98b81f4273169b3b25f9cf3d92f17c798a93e1d05dd"
+    },
+    {
+      "name": "security_section.tex",
+      "sha256": "ea003f38e89e9cb3c1c4545bf2d1bb4b570cf89160516a6c2e34a9fd640ffb58"
+    },
+    {
+      "name": "finite_angle_rows.tex",
+      "sha256": "7cd1b6e069695bc21a6a5f55c597b7fefceb2c3bea423b754f905a8ad5b89b0a"
+    },
+    {
+      "name": "verification_summary.tex",
+      "sha256": "e694a4310b5edd737b793ce45d4c0e438cc849c80026b0553e076d5880de9b27"
+    },
+    {
+      "name": "verify_moment_bound.py",
+      "sha256": "bad93775630cab14e39bf39351bdd951783abae74b7194b8cb1c425fa9a59940"
+    },
+    {
+      "name": "verification_results.json",
+      "sha256": "0d790f24497dddd4d2ffbb6ca2a4cebff5d0d51a5ad0705bc11be61a9fc195eb"
+    },
+    {
+      "name": "document_checks.json",
+      "sha256": "efb42507d0b4238d0c4010ba9aec5ac096905b1cb1bf35757ba50ca8252a892f"
+    },
+    {
+      "name": "change_impact.json",
+      "sha256": "6ffa25fe8dbe756063f08c4a151e7a678166f46c64a93d54595fd48702953534"
+    },
+    {
+      "name": "READ_ME_AR.txt",
+      "sha256": "b8e3ae6801de534a36b8f17d600690ec35802c9b928c536f31f723379cc52a60"
+    },
+    {
+      "name": "Change_Impact_Review.txt",
+      "sha256": "ee095297124493452640efe2cc586dac1f2a94abc7ec413e76a582935d949b51"
+    },
+    {
+      "name": "Response_to_Reviewer1_Comment2.txt",
+      "sha256": "3eead1b55dab357da9ffe58e4c8d1e7803eb1461db06b84c1ac1524635a0e71f"
+    },
+    {
+      "name": "rotation_moments.csv",
+      "sha256": "830242effd7394e67248805edadfbd2ee127c578a719311e2da31f9cc886b839"
+    },
+    {
+      "name": "enumerated_channel_checks.csv",
+      "sha256": "24f3e1b49d6886aece1bdf5f671e7f8cc658f2128247d07d2ccddb8b385f6b02"
+    },
+    {
+      "name": "binary_discrimination_checks.csv",
+      "sha256": "34f5dd2331d91b34bdc9bb561d32642eb6f3dbf7088f84dadae15150db4dcec1"
+    },
+    {
+      "name": "source_perturbation_checks.csv",
+      "sha256": "6993f0e86b98551c9be62e9dd3019cbfc9767efbdb621c3c95e78418ae5dce2c"
+    },
+    {
+      "name": "conditional_sample_lower_bounds.csv",
+      "sha256": "b6059c98d1d407f03aeec5ff1c658b526ea18db58c90284407e72090b4943494"
+    },
+    {
+      "name": "normalized_qirbp_checks.csv",
+      "sha256": "f6042954c00486550b28cf749b30bd271a324234259caecd8efd986c9d55bc6c"
+    },
+    {
+      "name": "pi_range_countermodel_attack.csv",
+      "sha256": "6b7b350e7231fd374b067cd55c17fc495dce7f8852146b411f5e98f36620da4a"
+    }
+  ],
+  "revised_source_sha256": "f37f65fb0d341fd85707f7a3ca04977baa28d9d5ce581640dbcc7e2a55b396bb",
+  "revised_pdf_sha256": "f98f400b91dc0502720fd81b80da8ce010e606abb48c72f151b38120dfb103b5",
+  "proof_pdf_pages": 6,
+  "revised_manuscript_pages": 62,
+  "numerical_checks": "80 enumerated-channel images, 10 binary measurements, 12 perturbations, 6 QIRBP images"
+}

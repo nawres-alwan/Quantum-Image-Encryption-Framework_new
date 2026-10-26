@@ -1,0 +1,11 @@
+# Core QIRBP experiments, image checks, and Table 7
+numpy>=2.0
+Pillow>=10.0
+
+# Original image/diagram scripts and Grover oracle experiments
+opencv-python>=4.10
+scipy>=1.14
+matplotlib>=3.9
+qiskit==2.5.2
+qiskit-aer==0.17.2
+pylatexenc>=2.10

@@ -1,0 +1,707 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{fontspec}\setmainfont{Times New Roman}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,rotating}
+\usepackage[table]{xcolor}\definecolor{Bisque3}{RGB}{205,183,158}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}\setlength{\headheight}{14pt}
+\newtheorem{theorem}{Theorem}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small QEF: all-model bounds and source certification}
+\fancyhead[R]{\small 19 October 2026}\fancyfoot[C]{\thepage}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\let\subsubsection\section
+\begin{document}
+\begin{center}
+{\LARGE\bfseries QEF: corrected Table 7 and source conditions}\\[5pt]
+{\large Original three-layer operators; all-model reference calculations}\\[4pt]
+{\small Numerical source certification is not established by the original generator specification.}
+\end{center}
+\setcounter{table}{6}
+\subsubsection{Security model and a rotation-moment bound}
+\label{sec:qef_moment_security}
+{\color{red}
+The security quantity considered here is the number of independently
+encrypted quantum preparations needed to distinguish two specified images.
+This is a sample-complexity statement, rather than a gate-complexity estimate
+for exhaustive key search. The proof uses the original three QEF layers.
+It does not assume that an adversary reconstructs an arbitrary unitary or
+recovers every component of the original key.
+
+\paragraph{Keys, ciphertexts, and the attack experiment.}
+Write $A$ for the substitution-angle material produced by the nD-QHCS and
+$B=(K^{\rm perm},K^{\rm ent})$ for the material produced by the
+HG$\Phi$-QRNG. These are two source classes. The two components of $B$
+are described by their joint distribution; independence is not inferred
+from their output lengths. Each encryption uses a fresh secret key record,
+and the receiver obtains the same record over an assumed secure channel.
+Independent refresh between preparations is an explicit security
+assumption, stronger than merely obtaining different numerical key values.
+The experiment gives the adversary no additional side information
+correlated with the target secret record; any claimed extension to
+source leakage must bound that leakage explicitly.
+
+Let $N=HW$, let $r$ denote the feature-register size, and let
+$D=N2^r$ denote the dimension of the valid image subspace. Unused padded
+position addresses are excluded from the ciphertext experiment. The image
+states have the form
+\begin{equation}
+\label{eq:qef_security_image}
+ |I\rangle=N^{-1/2}\sum_{k=0}^{N-1}|k\rangle|\chi_k\rangle,
+ \qquad \langle\chi_k|\chi_k\rangle=1.
+\end{equation}
+The adversary is given the classical descriptions of two such images of
+the same public dimensions. A uniform hidden bit $b$ selects $I_b$.
+The adversary receives $q$ encryptions of that selected image, with
+independently refreshed keys, and may perform any joint quantum
+measurement. The publicly transmitted ciphertext is the quantum state,
+not a classical list of all its amplitudes or a rendered image file.
+Define
+\begin{equation}
+\label{eq:qef_averaged_cipher}
+ \sigma_b=\mathbb E_{A,B}
+   [U_{A,B}|I_b\rangle\langle I_b|U_{A,B}^{\dagger}].
+\end{equation}
+The joint ciphertext is $\sigma_b^{\otimes q}$. Its optimal binary
+discrimination probability is \cite{Watrous2018QEF}
+\begin{equation}
+\label{eq:qef_operational_guess}
+ P_{\rm guess}^{(q)}
+ =\frac12+\frac14\left\|
+       \sigma_0^{\otimes q}-\sigma_1^{\otimes q}\right\|_1.
+\end{equation}
+This experiment does not give repeated access to one fixed-key unitary.
+It also does not cover key reuse, arbitrary reference-entangled chosen
+inputs, authentication, or publication of simulator amplitude records.
+
+\paragraph{Use the actual circuit structure.}
+For the intended pixel-dependent substitution, write
+\begin{equation}
+ R_A=\sum_k |k\rangle\langle k|\otimes R_{A,k},\qquad
+ R_{A,k}=\bigotimes_{j=1}^r T_{k,j},\quad
+ T_{k,j}=R_z(\theta_{k,j}^z)R_y(\theta_{k,j}^y)R_x(\theta_{k,j}^x).
+\end{equation}
+Position-controlled CNOT/CZ gates leave each position basis label
+unchanged. Thus, for suitable feature unitaries $V_B(t)$,
+\begin{equation}
+ E_B=\sum_t |t\rangle\langle t|\otimes V_B(t),\qquad
+ U_{A,B}=E_BP_BR_A
+ =\sum_k |\pi_B(k)\rangle\langle k|
+       \otimes V_B(\pi_B(k))R_{A,k}.
+\end{equation}
+The permutation and entanglement keys may have any joint distribution
+in the theorem below. In particular, a uniform distribution over all
+$N!$ permutations is not needed for the image experiment in
+Eq.~\eqref{eq:qef_security_image}. The permutation must nevertheless be
+implemented reversibly with its work registers correctly cleaned.
+
+\paragraph{An explicit angle reference law.}
+The following law is an analytical reference, not an experimentally
+certified property of the nD-QHCS. For an integer $L\geq2$, let each
+Euler angle be uniform on
+\begin{equation}
+ \Theta_L=\{2\pi s/L:s=0,\ldots,L-1\}.
+\end{equation}
+Conditioned on $B$, the $3r$ angles within a pixel are independent,
+and the angle tuples belonging to any two different pixels are
+independent. Pairwise independence of pixel tuples is sufficient;
+independence of all $N$ tuples jointly is not required. The continuous
+reference is the corresponding independent uniform law on $[0,2\pi)$.
+These conditions must hold after conditioning on any public setup
+information or side information used in the attack experiment.
+The reference is a key-law assumption, not a consequence of deterministic
+seed expansion. For $N\geq2$, two independent uniform angle tuples alone
+require at least $6r\log_2L$ bits of conditional source entropy. The
+continuous law is an ideal limiting model; a finite implementation must
+use the finite-law expression and provide sufficient actual key material.
+
+Set
+\begin{equation}
+\label{eq:qef_beta_definition}
+ a_L=\frac{1}{L\sin(\pi/(2L))},\qquad
+ \beta_L=a_L^{6r},\qquad
+ \beta_{\infty}=\left(\frac{2}{\pi}\right)^{6r}.
+\end{equation}
+Uniform Euler coordinates are not Haar-distributed rotations. The
+nonzero first moment is retained in the analysis below.
+
+\begin{theorem}[Conditional image-discrimination sample bound]
+\label{thm:qef_moment_sample_bound}
+Under the stated angle reference law and independent key refresh, let
+$N\geq2$, $F=2^r$, $c_N=1-1/N$, and
+\begin{equation}
+\label{eq:qef_information_budget}
+ \begin{split}
+ x_+&=1+F\beta_L(N-1),\qquad x_-=1-F\beta_L,\\
+ C_{N,r,L}
+ &=\frac{x_+\ln x_+ +(N-1)x_-\ln x_-}{NF}.
+ \end{split}
+\end{equation}
+Here $x_->0$ for the stated finite and continuous reference laws.
+For every image state in Eq.~\eqref{eq:qef_security_image}, its average
+ciphertext $\sigma$ satisfies
+\begin{align}
+ \frac12\|\sigma-I_D/D\|_1&\leq\beta_Lc_N,
+ \label{eq:qef_one_image_distance}\\
+ \mathsf D(\sigma\|I_D/D)&\leq C_{N,r,L},
+ \label{eq:qef_cipher_relative_entropy}
+\end{align}
+where $\mathsf D$ uses natural logarithms. For any two such images,
+achieving $P_{\rm guess}^{(q)}\geq p>1/2$ requires
+\begin{equation}
+\boxed{\displaystyle
+ q\ \geq\left\lceil\max\left\{
+ \frac{\ln2-h(p)}{C_{N,r,L}},\;
+ \frac{p-1/2}{\beta_L(1-1/N)}
+ \right\}\right\rceil,}
+ \qquad h(p)=-p\ln p-(1-p)\ln(1-p).
+\label{eq:qef_final_sample_bound}
+\end{equation}
+The continuous reference uses $\beta_\infty$ in the same expressions.
+For $N=1$, the feature twirl makes the reference ciphertext exactly
+maximally mixed, and no finite number of fresh encryptions distinguishes
+the candidate images.
+\end{theorem}
+
+\begin{proof}
+For one rotation axis $a$, averaging its conjugation over $\Theta_L$
+dephases the Bloch components transverse to that axis. Composing the
+independent $x$, $y$, and $z$ averages therefore gives
+\begin{equation}
+ \mathbb E[T X T^{\dagger}]=\frac{I_2}{2}\operatorname{Tr}X.
+\end{equation}
+For the first moment, a finite trigonometric sum gives
+\begin{equation}
+ \mathbb E[R_a(\theta)]
+ =c_LI_2-is_L\sigma_a,
+ \quad c_L=1/L,\quad s_L=L^{-1}\cot(\pi/(2L)).
+\end{equation}
+Each matrix on the right is $a_L$ times a unitary, since
+$c_L^2+s_L^2=a_L^2$. Hence
+$M=\mathbb E[R_{A,k}]=\beta_L^{1/2}W$ for a feature unitary $W$,
+and the feature conjugation average is the completely depolarizing
+channel. In the continuous limit,
+\begin{equation}
+ \mathbb E[T]=(2/\pi)^3 I_2,
+ \qquad M=(2/\pi)^{3r}I_{2^r}.
+\end{equation}
+For example, the first identity follows by multiplying
+$\mathbb E[R_a]=-i(2/\pi)\sigma_a$ in the order $z,y,x$.
+
+Write $\rho=|I\rangle\langle I|=\sum_{k,l}|k\rangle\langle l|\otimes X_{kl}$,
+and let $\Delta$ remove its off-diagonal position blocks. Conditional
+pairwise independence gives
+\begin{equation}
+ \mathbb E[R_{A,k}X_{kl}R_{A,l}^{\dagger}]
+ =\begin{cases}
+ I_{2^r}\operatorname{Tr}(X_{kk})/2^r,&k=l,\\
+ MX_{kl}M^{\dagger},&k\ne l.
+ \end{cases}
+\end{equation}
+For Eq.~\eqref{eq:qef_security_image},
+$\operatorname{Tr}X_{kk}=1/N$. Consequently the diagonal contribution
+is $\tau=I_D/D$, which is invariant under every $E_BP_B$. The remaining
+term is
+\begin{equation}
+ \sigma-\tau=\beta_L\,\mathbb E_B
+  [F_B(\rho-\Delta\rho)F_B^{\dagger}],
+ \quad F_B=E_BP_B(I\otimes W).
+\label{eq:qef_off_diagonal_remainder}
+\end{equation}
+Every $F_B$ is unitary, so both trace norm and Hilbert--Schmidt norm
+are bounded by the corresponding norms before this average.
+
+The pinching map is an average over $N$ diagonal position-phase
+unitaries, one of which is the identity. The triangle inequality gives
+$\|\rho-\Delta\rho\|_1\leq2(1-1/N)$. Combining this with
+Eq.~\eqref{eq:qef_off_diagonal_remainder} proves
+Eq.~\eqref{eq:qef_one_image_distance}.
+Moreover, because $\rho$ is pure and its position probabilities are
+uniform,
+\begin{equation}
+ \|\rho-\Delta\rho\|_2^2
+ =\operatorname{Tr}\rho^2-\operatorname{Tr}(\Delta\rho)^2
+ =1-1/N.
+\end{equation}
+Thus $\|\sigma-\tau\|_2^2\leq\beta_L^2c_N$. A sharper entropy bound
+uses the exact spectrum before the final average. The $N$ vectors
+$|k\rangle|\chi_k\rangle$ are orthonormal, and on their span
+$\rho-\Delta\rho$ has eigenvalues $1-1/N$ once and $-1/N$ with
+multiplicity $N-1$. It is zero on the orthogonal complement.
+Consequently $\tau+\beta_L(\rho-\Delta\rho)$ has eigenvalues
+\begin{equation}
+ \lambda_+=x_+/D,\qquad
+ \lambda_-=x_-/D\quad(N-1\text{ times}),\qquad
+ \lambda_0=1/D\quad(N(F-1)\text{ times}).
+\end{equation}
+Every conditional output in
+Eq.~\eqref{eq:qef_off_diagonal_remainder} is a unitary conjugate of
+this state. Relative entropy is convex and $\tau$ is invariant, so
+\begin{equation}
+ \mathsf D(\sigma\|\tau)
+ \leq\lambda_+\ln(D\lambda_+)
+       +(N-1)\lambda_-\ln(D\lambda_-)
+ =C_{N,r,L}.
+\end{equation}
+For comparison, Jensen's inequality gives the valid, weaker bound
+\begin{equation}
+ C_{N,r,L}\leq\ln(1+D\beta_L^2c_N).
+\end{equation}
+For a uniform hidden bit and $q$ independent encryptions, the Holevo
+information obeys
+\begin{equation}
+ \chi_q\leq\frac12\sum_{b=0}^1
+ \mathsf D(\sigma_b^{\otimes q}\|\tau^{\otimes q})
+ \leq qC_{N,r,L}.
+\end{equation}
+Indeed, subtracting $\chi_q$ from the first expression gives the
+nonnegative relative entropy of the average ciphertext to
+$\tau^{\otimes q}$. Holevo's theorem and binary Fano's inequality
+\cite{Watrous2018QEF} imply that any guess with success at least $p$
+requires mutual information at least $\ln2-h(p)$. Therefore
+$\ln2-h(p)\leq qC_{N,r,L}$. Independently, the trace-distance triangle
+inequality and Eq.~\eqref{eq:qef_one_image_distance} give
+$\frac12\|\sigma_0-\sigma_1\|_1\leq2\beta_Lc_N$.
+Expanding the difference of the tensor powers as a telescoping sum,
+and using $\|\sigma_b\|_1=1$, yields
+\begin{equation}
+ \frac12\|\sigma_0^{\otimes q}-\sigma_1^{\otimes q}\|_1
+ \leq 2q\beta_Lc_N,\qquad
+ P_{\rm guess}^{(q)}\leq\frac12+q\beta_Lc_N.
+\end{equation}
+Success at least $p$ thus requires both inequalities inside the maximum
+in Eq.~\eqref{eq:qef_final_sample_bound}. The proof allows arbitrary
+joint measurements and unlimited computational postprocessing.
+\end{proof}
+
+\paragraph{Declared register conventions and numerical meaning.}
+Table~\ref{tab:qef_quantum_attack_resistance} evaluates
+Eq.~\eqref{eq:qef_final_sample_bound} at $p=2/3$ for all listed models
+and four images. These are newly declared mathematical benchmark
+settings; they are not reconstructed experimental parameters.
+With $n=\lceil\log_2N\rceil$, the feature counts used here are
+\begin{equation}
+\begin{array}{c|c}
+\text{Model}&r\\\hline
+\mathrm{FRQI}&1\\
+\mathrm{NEQR}&8\\
+\mathrm{QIRHSI/EQIR}&10\\
+\mathrm{AFQIRHSI}\ (p_{\rm AF}=4)&p_{\rm AF}+3=7\\
+\mathrm{QIRBP}\ (b_{\rm BP}=0)&b_{\rm BP}+6=6\\
+\mathrm{QRMW}\ (3\text{ channels})&8+\lceil\log_2 3\rceil=10\\
+\mathrm{QIRWC}\ (b_{\rm WC}=0)&n+2b_{\rm WC}+8=n+8.
+\end{array}
+\end{equation}
+All selected feature qubits are included in the controlled substitution
+assumed by the theorem. In particular, QIRWC uses one main position
+address of size $N$; its other position register is counted among the
+feature qubits. Thus its total register count is $Q=2n+8$ and its valid
+main-address dimension is $D=N2^{n+8}$. It is not counted as a
+pair-address image with $N^2$ main addresses.
+
+The stated QIRBP sum over positions, bit planes, and wavelength labels
+has normalization
+\[
+ (N2^{b_{\rm BP}+3})^{-1/2}.
+\]
+The choice $b_{\rm BP}=0$ therefore
+uses $r=6$ in this table. The previous illustrative $r=11$ calculation
+would correspond to $b_{\rm BP}=5$ under this register convention; it
+does not establish that this was an experimental setting.
+
+The table values are necessary ciphertext-preparation counts under the
+specified angle law and register conventions. They are neither measured
+attack times nor bit-security exponents. The logarithm of a sample count
+must not be labelled as elementary-gate security. Each displayed bound
+is rounded conservatively; the accompanying calculation data retain
+integer thresholds.
+
+\begin{sidewaystable}[p]
+\centering\color{red}
+\caption{{\color{red}Conditional QEF image-discrimination sample bounds for all listed QIR models and the four original images. The original generator is not certified by these reference calculations.}}
+\label{tab:qef_quantum_attack_resistance}
+\vspace{0.25cm}
+\textbf{(a) Ashurbanipal image, $H\times W=256\times256$, $n=\lceil\log_2(HW)\rceil=16$}\\[3pt]
+{\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccccc}
+\hline\rowcolor{Bisque3}
+\textbf{Model} & $\boldsymbol{r}$ & $\boldsymbol{Q=n+r}$ & $\boldsymbol{D=N2^r}$ & $\boldsymbol{q_2}$ & $\boldsymbol{q_\infty}$ & $\boldsymbol{H_2\geq}$ & \textbf{Source}\\
+\hline
+\textbf{FRQI} & \(1\) & \(17\) & \(65{,}536\,2^{1}\) & $\geq 2$ & $\geq 3$ & \(6\) & NC \\
+\textbf{NEQR} & \(8\) & \(24\) & \(65{,}536\,2^{8}\) & $\geq 2.79624\times10^{6}$ & $\geq 4.54809\times10^{10}$ & \(48\) & NC \\
+\textbf{QIRHSI} & \(10\) & \(26\) & \(65{,}536\,2^{10}\) & $\geq 1.98605\times10^{9}$ & $\geq 5.77734\times10^{14}$ & \(60\) & NC \\
+\textbf{EQIRHSI} & \(10\) & \(26\) & \(65{,}536\,2^{10}\) & $\geq 1.98605\times10^{9}$ & $\geq 5.77734\times10^{14}$ & \(60\) & NC \\
+\textbf{AFQIRHSI} & \(7\) & \(23\) & \(65{,}536\,2^{7}\) & $\geq 349{,}531$ & $\geq 4.08705\times10^{8}$ & \(42\) & NC \\
+\textbf{QIRBP} & \(6\) & \(22\) & \(65{,}536\,2^{6}\) & $\geq 43{,}692$ & $\geq 3.97626\times10^{6}$ & \(36\) & NC \\
+\textbf{QRMW} & \(10\) & \(26\) & \(65{,}536\,2^{10}\) & $\geq 1.98605\times10^{9}$ & $\geq 5.77734\times10^{14}$ & \(60\) & NC \\
+\textbf{QIRWC} & \(16+8\) & \(40\) & \(65{,}536\,2^{24}\) & $\geq 2.29734\times10^{30}$ & $\geq 3.12918\times10^{43}$ & \(144\) & NC \\
+\hline\end{tabular}}\par
+
+\par\vspace{0.3cm}
+\textbf{(b) Hammurabi code image, $H\times W=222\times227$, $n=\lceil\log_2(HW)\rceil=16$}\\[3pt]
+{\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccccc}
+\hline\rowcolor{Bisque3}
+\textbf{Model} & $\boldsymbol{r}$ & $\boldsymbol{Q=n+r}$ & $\boldsymbol{D=N2^r}$ & $\boldsymbol{q_2}$ & $\boldsymbol{q_\infty}$ & $\boldsymbol{H_2\geq}$ & \textbf{Source}\\
+\hline
+\textbf{FRQI} & \(1\) & \(17\) & \(50{,}394\,2^{1}\) & $\geq 2$ & $\geq 3$ & \(6\) & NC \\
+\textbf{NEQR} & \(8\) & \(24\) & \(50{,}394\,2^{8}\) & $\geq 3.04381\times10^{6}$ & $\geq 5.91175\times10^{10}$ & \(48\) & NC \\
+\textbf{QIRHSI} & \(10\) & \(26\) & \(50{,}394\,2^{10}\) & $\geq 2.57085\times10^{9}$ & $\geq 7.51324\times10^{14}$ & \(60\) & NC \\
+\textbf{EQIRHSI} & \(10\) & \(26\) & \(50{,}394\,2^{10}\) & $\geq 2.57085\times10^{9}$ & $\geq 7.51324\times10^{14}$ & \(60\) & NC \\
+\textbf{AFQIRHSI} & \(7\) & \(23\) & \(50{,}394\,2^{7}\) & $\geq 349{,}533$ & $\geq 5.29581\times10^{8}$ & \(42\) & NC \\
+\textbf{QIRBP} & \(6\) & \(22\) & \(50{,}394\,2^{6}\) & $\geq 43{,}692$ & $\geq 5.05218\times10^{6}$ & \(36\) & NC \\
+\textbf{QRMW} & \(10\) & \(26\) & \(50{,}394\,2^{10}\) & $\geq 2.57085\times10^{9}$ & $\geq 7.51324\times10^{14}$ & \(60\) & NC \\
+\textbf{QIRWC} & \(16+8\) & \(40\) & \(50{,}394\,2^{24}\) & $\geq 2.98764\times10^{30}$ & $\geq 4.06943\times10^{43}$ & \(144\) & NC \\
+\hline\end{tabular}}\par
+
+\par\vspace{0.3cm}
+\textbf{(c) Lamassu image, $H\times W=256\times256$, $n=\lceil\log_2(HW)\rceil=16$}\\[3pt]
+{\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccccc}
+\hline\rowcolor{Bisque3}
+\textbf{Model} & $\boldsymbol{r}$ & $\boldsymbol{Q=n+r}$ & $\boldsymbol{D=N2^r}$ & $\boldsymbol{q_2}$ & $\boldsymbol{q_\infty}$ & $\boldsymbol{H_2\geq}$ & \textbf{Source}\\
+\hline
+\textbf{FRQI} & \(1\) & \(17\) & \(65{,}536\,2^{1}\) & $\geq 2$ & $\geq 3$ & \(6\) & NC \\
+\textbf{NEQR} & \(8\) & \(24\) & \(65{,}536\,2^{8}\) & $\geq 2.79624\times10^{6}$ & $\geq 4.54809\times10^{10}$ & \(48\) & NC \\
+\textbf{QIRHSI} & \(10\) & \(26\) & \(65{,}536\,2^{10}\) & $\geq 1.98605\times10^{9}$ & $\geq 5.77734\times10^{14}$ & \(60\) & NC \\
+\textbf{EQIRHSI} & \(10\) & \(26\) & \(65{,}536\,2^{10}\) & $\geq 1.98605\times10^{9}$ & $\geq 5.77734\times10^{14}$ & \(60\) & NC \\
+\textbf{AFQIRHSI} & \(7\) & \(23\) & \(65{,}536\,2^{7}\) & $\geq 349{,}531$ & $\geq 4.08705\times10^{8}$ & \(42\) & NC \\
+\textbf{QIRBP} & \(6\) & \(22\) & \(65{,}536\,2^{6}\) & $\geq 43{,}692$ & $\geq 3.97626\times10^{6}$ & \(36\) & NC \\
+\textbf{QRMW} & \(10\) & \(26\) & \(65{,}536\,2^{10}\) & $\geq 1.98605\times10^{9}$ & $\geq 5.77734\times10^{14}$ & \(60\) & NC \\
+\textbf{QIRWC} & \(16+8\) & \(40\) & \(65{,}536\,2^{24}\) & $\geq 2.29734\times10^{30}$ & $\geq 3.12918\times10^{43}$ & \(144\) & NC \\
+\hline\end{tabular}}\par
+
+\par\vspace{0.3cm}
+\textbf{(d) Babylon Lion image, $H\times W=768\times1024$, $n=\lceil\log_2(HW)\rceil=20$}\\[3pt]
+{\footnotesize\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lccccccc}
+\hline\rowcolor{Bisque3}
+\textbf{Model} & $\boldsymbol{r}$ & $\boldsymbol{Q=n+r}$ & $\boldsymbol{D=N2^r}$ & $\boldsymbol{q_2}$ & $\boldsymbol{q_\infty}$ & $\boldsymbol{H_2\geq}$ & \textbf{Source}\\
+\hline
+\textbf{FRQI} & \(1\) & \(21\) & \(786{,}432\,2^{1}\) & $\geq 2$ & $\geq 3$ & \(6\) & NC \\
+\textbf{NEQR} & \(8\) & \(28\) & \(786{,}432\,2^{8}\) & $\geq 2.79620\times10^{6}$ & $\geq 3.87854\times10^{9}$ & \(48\) & NC \\
+\textbf{QIRHSI} & \(10\) & \(30\) & \(786{,}432\,2^{10}\) & $\geq 1.98872\times10^{8}$ & $\geq 4.81641\times10^{13}$ & \(60\) & NC \\
+\textbf{EQIRHSI} & \(10\) & \(30\) & \(786{,}432\,2^{10}\) & $\geq 1.98872\times10^{8}$ & $\geq 4.81641\times10^{13}$ & \(60\) & NC \\
+\textbf{AFQIRHSI} & \(7\) & \(27\) & \(786{,}432\,2^{7}\) & $\geq 349{,}526$ & $\geq 3.95317\times10^{7}$ & \(42\) & NC \\
+\textbf{QIRBP} & \(6\) & \(26\) & \(786{,}432\,2^{6}\) & $\geq 43{,}691$ & $\geq 1.91498\times10^{6}$ & \(36\) & NC \\
+\textbf{QRMW} & \(10\) & \(30\) & \(786{,}432\,2^{10}\) & $\geq 1.98872\times10^{8}$ & $\geq 4.81641\times10^{13}$ & \(60\) & NC \\
+\textbf{QIRWC} & \(20+8\) & \(48\) & \(786{,}432\,2^{28}\) & $\geq 2.00742\times10^{35}$ & $\geq 4.22549\times10^{50}$ & \(168\) & NC \\
+\hline\end{tabular}}\par
+\vspace{0.2cm}
+\parbox{\textwidth}{\footnotesize\color{red}
+$q_2$ and $q_\infty$ are necessary independent ciphertext preparations for success $2/3$, from Eq.~\eqref{eq:qef_final_sample_bound}; the latter is an ideal continuous reference, not a finite-key claim.
+$H_2$ is the necessary conditional source entropy (bits) for the $L=2$ independent-tuple reference, not a security exponent. NC means the original source conditions are not certified.
+The declared benchmark uses 8-bit intensity, AFQIRHSI $p=4$, RGB QRMW, and one wavelength label ($b=0$) for QIRBP/QIRWC. In QIRWC the second position register is included among the features, so $r=n+8$.
+These are explicit mathematical settings, not reconstructed experiment metadata.
+Valid dimension $D$ differs from padded $d=2^Q$ when $N<2^n$.
+Large lower bounds are rounded down; exact integer ceilings are supplied separately.}
+\end{sidewaystable}
+
+
+To relate the reference calculation to an actual generator, suppose
+the resulting average ciphertext is within trace distance $\kappa$
+of the reference ciphertext, uniformly over the allowed input images.
+For example, a bound $\kappa$ on the total variation distance of the
+actual joint finite angle/control-key law from its finite reference
+law suffices. Comparing a finite law directly to a continuous law in
+total variation is inappropriate; the reference must use the same
+finite alphabet. Then the preceding proof gives
+\begin{equation}
+\label{eq:qef_source_robust_bound}
+\begin{split}
+ C_{\kappa}&=\min\!\left\{\ln D,\;
+ \ln\!\left(1+D[\beta_L\sqrt{1-1/N}+2\kappa]^2\right)\right\},\\
+ q&\geq\left\lceil\max\!\left\{
+ \frac{\ln2-h(p)}{C_\kappa},\;
+ \frac{p-1/2}{\beta_L(1-1/N)+\kappa}
+ \right\}\right\rceil.
+\end{split}
+\end{equation}
+The trace-distance bound becomes
+$\frac12\|\sigma-\tau\|_1\leq\beta_L(1-1/N)+\kappa$.
+This follows from $\|\sigma-\sigma_{\rm ref}\|_2
+\leq\|\sigma-\sigma_{\rm ref}\|_1\leq2\kappa$.
+The source bound must include correlations between pixels, axes,
+source parameters, both components of $B$, and any relevant side
+information. Statistical image metrics or balanced one-bit marginals
+do not certify this joint bound.
+
+The mapping $\theta=\gamma\bmod(q,\pi)$ does not by itself establish
+the reference law. Even if $q\bmod\pi$ were uniform, its angle range
+would be $[0,\gamma\pi)$; the reference continuous range requires
+$\gamma=2$, as well as the stated joint moment conditions. No measured
+value of $\kappa$ or proof of those conditions for the original
+generators is supplied here. Therefore the numerical rows are
+conditional benchmarks and are not asserted as certified resistance
+of the experimental generator.
+
+\paragraph{Why the range cannot be omitted.}
+There is an explicit contrasting calculation within the same circuit
+family. Suppose the Euler angles are instead independent uniform
+variables on $[0,\pi)$, independently of $B$. Averaging the Bloch
+rotations gives, for a data qubit initially in $|0\rangle$ or
+$|1\rangle$,
+\begin{equation}
+ \langle X\rangle_0=(2/\pi)^2,\qquad
+ \langle X\rangle_1=-(2/\pi)^2.
+\end{equation}
+Consider all-black and all-white images with a feature data qubit
+initially $|0\rangle$ and $|1\rangle$, respectively. At output position
+$t=0$, no position control is active, so $V_B(0)=I$. That position
+occurs with probability $1/N$, regardless of the permutation.
+An adversary can request fresh encryptions until measuring $t=0$,
+then measure $X$ on that feature qubit. This stopping-time procedure
+uses $N$ preparations on average and succeeds with probability
+\begin{equation}
+ \frac{1+(2/\pi)^2}{2}\simeq0.702642>2/3.
+\end{equation}
+For a fixed budget of $q$ preparations, use the first such outcome
+and guess uniformly if none is obtained. The resulting success is
+\begin{equation}
+ P_{\rm attack}(q)=\frac12+\frac{2}{\pi^2}
+      [1-(1-1/N)^q].
+\end{equation}
+Therefore this contrasting law admits a fixed-budget attack with
+success at least $2/3$ at
+\begin{equation}
+ q_{\rm attack}=\left\lceil
+ \frac{\ln(1-\pi^2/12)}{\ln(1-1/N)}\right\rceil.
+\end{equation}
+For the four images in table order these counts are $113,285$,
+$87,111$, $113,285$, and $1,359,425$. They are attack upper bounds
+under the contrasting law, distinct from the theorem's lower bounds
+under its reference law. This is not a claimed attack on an
+unspecified nD-QHCS distribution. It shows why the source range and
+joint moments cannot be omitted from a numerical security claim.
+
+{\color{red}
+\paragraph{Certification of the original angle source.}
+The reference law above must be distinguished from a property of the
+implemented generator. Write $Z=q\bmod\pi$. If $q$ has density $f_q$,
+then, for $0\leq z<\pi$,
+\begin{equation}
+ f_Z(z)=\sum_{m\in\mathbb Z}f_q(z+m\pi),\qquad
+ f_\theta(t)=\gamma^{-1}f_Z(t/\gamma),\quad 0\leq t<\gamma\pi.
+ \label{eq:qef_wrapped_source_density}
+\end{equation}
+Indeed, the inverse image of a measurable set $A\subset[0,\pi)$ is
+the disjoint union of $A+m\pi$; summing their probabilities and changing
+variables proves the first identity. Scaling proves the second.
+Thus $\gamma=2$ and $f_Z=1/\pi$ are sufficient for the one-pass
+continuous marginal reference on $[0,2\pi)$, but the modulo operation
+does not establish either uniformity or independence. The manuscript
+does not specify an actual numerical $\gamma$, a probability law for the
+initial source state, or a sampling map that proves the required
+conditional pixel/axis moments. Chaotic sensitivity and a bounded angle
+range do not provide that missing probability law.
+
+\paragraph{A bound stated directly in terms of source moments.}
+Full independence is sufficient for the preceding reference calculation,
+but is not necessary for a security bound. Let $F=2^r$, $D=NF$, and
+condition on $B=b$ in its essential support. For the actual substitution
+operators define
+\begin{align}
+ \delta_2&=\mathop{\mathrm{ess\,sup}}_{b,k,\|u\|=1}
+ \left\|\mathbb E_{A\mid b}
+ [R_{A,k}|u\rangle\langle u|R_{A,k}^{\dagger}]-I_F/F\right\|_2,
+ \label{eq:qef_actual_diagonal_moment}\\
+ \eta_2&=\mathop{\mathrm{ess\,sup}}_{b,k\ne l,\|u\|=\|v\|=1}
+ \left\|\mathbb E_{A\mid b}
+ [R_{A,k}|u\rangle\langle v|R_{A,l}^{\dagger}]\right\|_2.
+ \label{eq:qef_actual_cross_moment}
+\end{align}
+Here vectors have Euclidean norm one and $\|\cdot\|_2$ denotes the
+Hilbert--Schmidt matrix norm. Public setup information is also conditioned
+on. These quantities account for dependence between
+the two source classes, between axes, and between pixel tuples.
+
+\begin{theorem}[Source-moment certification criterion]
+\label{thm:qef_actual_source_moments}
+For image states in Eq.~\eqref{eq:qef_security_image} and the original
+clean three-layer unitary, the actual average ciphertext satisfies
+\begin{equation}
+ \mathsf D(\sigma\|I_D/D)\leq C_{\rm actual},\qquad
+ C_{\rm actual}=\ln\!\left[1+F\delta_2^2+(N-1)F\eta_2^2\right].
+ \label{eq:qef_actual_source_budget}
+\end{equation}
+If whole key records are independent between preparations, success
+$p>1/2$ in the binary image experiment requires
+\begin{equation}
+ \boxed{\displaystyle q\geq
+ \left\lceil\frac{\ln2-h(p)}{C_{\rm actual}}\right\rceil.}
+ \label{eq:qef_actual_source_sample_bound}
+\end{equation}
+When $C_{\rm actual}=0$, no finite number of these preparations
+distinguishes the candidate images.
+\end{theorem}
+\begin{proof}
+Before applying $E_bP_b$, subtract $\tau=I_D/D$ from the conditional
+average. Its diagonal position blocks are $1/N$ times the matrices in
+Eq.~\eqref{eq:qef_actual_diagonal_moment}; its off-diagonal blocks are
+$1/N$ times those in Eq.~\eqref{eq:qef_actual_cross_moment}.
+Distinct blocks are orthogonal in the Hilbert--Schmidt inner product.
+Unitary conjugation preserves this norm and $\tau$; convexity of its
+square therefore gives
+\begin{equation}
+ \|\sigma-\tau\|_2^2
+ \leq\delta_2^2/N+(1-1/N)\eta_2^2.
+\end{equation}
+Using $\mathsf D(\sigma\|\tau)\leq
+\ln(1+D\|\sigma-\tau\|_2^2)$ proves
+Eq.~\eqref{eq:qef_actual_source_budget}. The same Holevo/Fano argument
+used above proves Eq.~\eqref{eq:qef_actual_source_sample_bound}.
+No independence within an individual key record is used in this proof.
+\end{proof}
+
+The reference law has $\delta_2=0$ and $\eta_2=\beta_L$.
+For an uncertified source, only the general inequalities
+$\delta_2^2\leq1-1/F$ and $\eta_2\leq1$ are available. They give
+$C_{\rm actual}\leq\ln D$ and only the trivial necessary count
+$q\geq1$ for $p=2/3$ and $D\geq2$. This is not a successful attack;
+it means the source information supplied does not certify a larger
+count. A nontrivial value must follow from certified upper bounds on
+the actual conditional moments, rather than being assigned from the
+reference table.
+
+\paragraph{Finite keys and the stronger independence assumption.}
+Two independent uniform pixel tuples over an $L$-point angle alphabet
+contain $6r$ independent symbols. Consequently
+\begin{equation}
+ H(A\mid B)\geq H(\Theta_k,\Theta_l\mid B)=6r\log_2L,
+ \qquad k\ne l.
+ \label{eq:qef_source_entropy_requirement}
+\end{equation}
+If all angles are deterministic expansions of an $s$-bit substitution
+seed, their pair has at most $2^s$ possible values. For its support $S$,
+the actual law gives probability one to $S$, whereas the independent
+uniform pair law gives at most $2^s/L^{6r}$. Hence their total variation
+distance is at least
+\begin{equation}
+ \max\{0,1-2^s/L^{6r}\}.
+ \label{eq:qef_source_support_obstruction}
+\end{equation}
+For QIRBP ($r=11$) and a deterministic 128-bit substitution seed, this
+lower bound is $15/16$ at $L=4$, and $1-2^{-400}$ at $L=256$.
+These results concern the strong independent-symbol reference; they do
+not exclude a correlated source satisfying the weaker operator-moment
+criterion in Theorem~\ref{thm:qef_actual_source_moments}.
+
+\paragraph{What the HG$\Phi$ measurement establishes.}
+For the stated raw-bit model, an observer who knows the phase and
+reference setting has single-bit guessing probability and conditional
+pointwise min-entropy
+\begin{equation}
+ p_{\rm guess}(b\mid\phi,\delta)
+ =\frac{1+|\cos(\phi+\delta)|}{2},\qquad
+ H_{\min}(b\mid\phi,\delta)
+ =-\log_2p_{\rm guess}(b\mid\phi,\delta).
+ \label{eq:qef_raw_bit_source_entropy}
+\end{equation}
+The latter can be zero. A fixed deterministic coarse-graining or hash
+cannot create missing entropy; a reversible map preserves it. Specifying
+a randomness extractor would additionally require a source entropy
+bound, seed assumptions, output length, and extraction error. None is
+supplied here as a certification of the original generator.
+
+\paragraph{Freshness alone does not supply the missing bound.}
+An explicit countermodel uses two constant FRQI images with feature
+states $|0\rangle$ and $|1\rangle$. Set the $x$ and $y$ rotation angles
+to zero, refresh the $z$ angles independently for every encryption,
+allow any position permutation, and let the entanglement component
+select CZ gates. Every layer preserves the feature's $Z$ basis value.
+One feature measurement therefore distinguishes the two images with
+probability one using a single ciphertext. The whole key record is
+fresh even though its gate-selection component is fixed. This is an
+allowed source-law countermodel to an architecture-only claim, not an
+attack attributed to the unspecified actual nD-QHCS/HG$\Phi$ law.
+
+Finally, the supplied experimental implementation resets NumPy's
+scalar-seeded pseudorandom generator and uses a fixed seed in its
+driver. Its QIRBP branch performs shared channel masks and XOR chaining;
+it does not implement the controlled complex Euler rotations or the
+specified nD-QHCS/HG$\Phi$ generator. It therefore cannot certify the
+moments in Eqs.~\eqref{eq:qef_actual_diagonal_moment}--
+\eqref{eq:qef_actual_cross_moment}. The actual-source numerical
+resistance remains unestablished; the preceding table entries are
+conditional mathematical benchmarks.
+\par}
+
+
+\paragraph{Interpretation of the original attack labels.}
+Independent known/chosen-image pairs from other operations do not
+share the target key under the independent-refresh assumption. They
+can still reveal a biased generator law or shared source parameters;
+the conditional key law must therefore be specified. Generic key
+search, if a reversible candidate verifier is available, has the
+usual conditional $\Theta(\sqrt{M/t})$ query baseline for $M$ candidates
+and $t$ marked candidates \cite{GDO,Boyer1998QEF,Zalka1999QEF}.
+No particular old key-length value is used to certify QEF, and no
+reduction proving that all attacks require exhaustive search is
+claimed. The dimension or parameter count of a general quantum state
+or unitary is not substituted for an attack lower bound.
+
+Theorem~\ref{thm:qef_moment_sample_bound} concerns the mathematical
+quantum operators and the stated key law. Classical array simulations
+and their rendered images do not verify these quantum moment
+conditions. In particular, the original scalar-seeded XOR/permutation
+simulation is not an implementation of the controlled complex
+Euler rotations assumed here. Image-quality and decryption metrics
+are therefore reported as diagnostics, rather than as evidence that
+the conditional security bound holds. The new probabilistic bound
+is proved analytically; it is not included in the existing Lean~4
+unitarity checks. Entanglement alone supplies neither authentication
+nor a proof of resistance to active modification.
+\par}
+\clearpage
+\section{Verification and effects of the corrections}
+The numerical supplement has 128 rows: eight allocations, four native
+image sizes, and four angle reference laws ($L=2,4,256$ and the ideal
+continuous limit). Integer thresholds agree at 120 and 170 decimal
+digits. The exact entropy denominator and the trace-distance converse
+strengthen the earlier purity-based bound; they do not change encryption.
+
+The main manuscript corrects both PSB phase signs and proves gauge
+invariance. This affects the phase, Bernoulli probability, and any
+keys generated from that probability; old source records need
+recomputation. The original source classes are retained.
+The security table keeps four panels and tan headers, separates
+QRMW and QIRWC, and declares each register allocation. QIRBP's
+plane-index qubits are counted separately from intensity precision.
+The QIRWC secondary address is included in its feature register.
+
+The experimental scope, statistical interpretations, source indexing,
+resource counts, ancillary cleanup discussion, and numerical discussion
+are adjusted consistently. Existing image metrics remain diagnostics
+of the supplied array simulations. The source moment bound is an
+analytic result, not part of the earlier Lean unitarity checks.
+The original manuscript and the previous review copy are retained.
+
+\input{verification_summary.tex}
+\clearpage
+\begin{thebibliography}{99}
+\bibitem{Watrous2018QEF} J. Watrous, The Theory of Quantum Information,
+Cambridge University Press (2018), Chapters 3 and 5.
+\url{https://cs.uwaterloo.ca/~watrous/TQI/}.
+\bibitem{GDO} L. K. Grover, A fast quantum mechanical algorithm for database search, STOC (1996).
+\bibitem{Boyer1998QEF} M. Boyer et al., Tight bounds on quantum searching,
+Fortschritte der Physik 46 (1998). \url{https://arxiv.org/abs/quant-ph/9605034}.
+\bibitem{Zalka1999QEF} C. Zalka, Physical Review A 60, 2746--2751 (1999).
+\url{https://arxiv.org/abs/quant-ph/9711070}.
+\bibitem{FRQI} P. Q. Le et al., Flexible representation of quantum images,
+Quantum Information Processing (2011).
+\bibitem{NEQR} Y. Zhang et al., NEQR, Quantum Information Processing (2013).
+\bibitem{QIRHSI} G.-L. Chen et al., QIRHSI, Quantum Information Processing 21, 5 (2022).
+\bibitem{EQIRHSI} M. Li et al., EQIRHSI, Quantum Information Processing 22, 334 (2023).
+\bibitem{AFQIRHSI} N. A. Alwan et al., Scientific Reports 15, 40286 (2025).
+\url{https://doi.org/10.1038/s41598-025-24168-4}.
+\bibitem{QIRBPQIRWC} N. A. Alwan et al., AIMS Mathematics 10, 10994--11035 (2025).
+\url{https://doi.org/10.3934/math.2025499}.
+\bibitem{Rabei1999QEF} E. M. Rabei, Arvind, N. Mukunda, and R. Simon,
+Bargmann invariants and geometric phases: a generalised connection,
+Physical Review A 60, 3397--3409 (1999), Eq.~(2.4).
+\url{https://arxiv.org/abs/quant-ph/9907080}.
+\bibitem{QRMW2018QEF} E. \c{S}ahin and \.{I}. Y{\i}lmaz,
+QRMW: Quantum representation of multi wavelength images,
+Turkish Journal of Electrical Engineering and Computer Sciences 26,
+768--779 (2018). \url{https://arxiv.org/abs/1801.10349}.
+\end{thebibliography}
+\end{document}

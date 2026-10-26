@@ -1,0 +1,89 @@
+CHANGE AND IMPACT REVIEW - 19 OCTOBER 2026
+
+The original manuscript remains unchanged. The all-model revision is a separate review copy.
+The source and the proof report use the same mathematical security section.
+
+A. The former arbitrary-unitary tomography cost and exhaustive-search lower-bound claims were removed in the previous revision. They are not reintroduced.
+B. Table 7 now contains all eight declared model allocations and all four original images, with the original four-panel sideways layout and Bisque3 headers. QRMW and QIRWC are separate. The old passed column is replaced by source-certification status NC.
+C. The reference bound combines two necessary sample counts: exact-spectrum entropy/Holevo/Fano and trace-distance tensor telescoping. Sample counts are not gate-work security.
+D. The actual-source theorem uses conditional diagonal and cross-pixel Hilbert-Schmidt moments. The supplied original generator specification does not certify their numerical values.
+E. Wrapped-density and finite-seed/support arguments prove why bounded angles, marginal statistics, sensitivity and deterministic seed expansion do not establish the stated reference law.
+F. Correct PSB signs are required for gauge invariance. Changes propagate to phase, Bernoulli probability and permutation/entanglement key records. Existing source outputs were NOT recomputed or certified from undocumented settings.
+G. Pixel/feature indexing, chronological Euler order, its inverse, key lookup, rank tie-breaking and address-aware cleanup are made consistent with the theorem. A fully compiled clean permutation and a hardware-error budget remain implementation requirements.
+H. QIRBP normalization and register accounting are corrected. b is a wavelength-label width, not intensity precision. QIRWC includes its secondary position register in the features in this experiment. Table settings are declared mathematical benchmarks, not recovered experimental metadata.
+I. Resource accounting now uses 3Nr logical controlled rotations, at most nr selected entanglers, and explicit compilation-dependent costs. Old q=p tables are withdrawn as unsupported QEF-encryption costs.
+J. Statistical image results are diagnostics. The supplied cumulative-XOR implementation leaks the channel parity at even N. These array results cannot certify the ideal quantum channel.
+K. All 128 rows were independently recomputed using a different pi algorithm and stable entropy series. Small-system channel/spectrum/source-correlation tests check the derivation; see extension_verification.json.
+L. Original asset dimensions and hashes were verified. The image-panel display size was reduced slightly to avoid a pre-existing oversized float. The phase-noise plus/minus glyph was repaired.
+M. The new probabilistic theorem is not included in the inherited Lean unitarity code.
+
+RELATED SOURCE AUDIT
+The sibling paper-four source and its simulation were also inspected. They discuss marginal readout entropy and simulated NumPy-driven sampling, but do not supply the QEF substitution-angle conditional moments. An existing source-analysis document independently notes a missing conditional entropy/extraction budget. The full quantum-chaos reference in the original bibliography was not located or independently verified in this review; its listed DOI must be checked before submission.
+
+NEW SOURCE LOCATIONS
+PSB_geometric_phase: line 1002
+pixel_dependent_definition: line 1207
+clean_permutation: line 1852
+key_generation_algorithm: line 2021
+classical_implementation_scope: line 2902
+reference_security_theorem: line 3246
+Table_7: line 3439
+actual_source_theorem: line 3636
+resource_analysis: line 3845
+discussion: line 4223
+
+DETAILED CHANGES RELATIVE TO THE PREVIOUS SECURITY REVISION
+1. Section 5.2.2: all-model table; sharper reference proof; actual-source moment certificate
+2. Geometric-phase sign: eq:psb_phase_hgphi
+3. Geometric-phase sign: eq:psb_phase_hamiltonian_hgphi
+4. Gauge proof and phase/probability/control-key impact
+5. Defining source notation: pixel and feature indexing
+6. Four native image dimensions, with height and width read from the original assets
+7. Section 5.2.1: diagnostic scope and exact implementation parity leak
+8. Section 6: propagate corrected register allocations and controlled logical counts
+9. Discussion: all-model scope and actual-source certification status
+10. Discussion: correct address-dependent ancillary-key erasure
+11. Primary references for phase sign and separate QRMW register
+12. Replace the invalid post-sort U_G adjoint cleanup by an output-address-aware oracle and state the uncompiled routing requirement
+13. Make Algorithm 1 substitution-key indexing match the pixel-controlled operator
+14. Return the same pixel-dependent key family from Algorithm 1
+15. Update Algorithm 1 output notation
+16. Use a reversible lift of coarse-graining/hash evaluation while retaining their inputs
+17. Define the rank permutation with deterministic index tie-breaking in Algorithm 2
+18. Use the inverse of the defined bijection in Algorithm 3
+19. Correct Algorithm 2 cleanup and distinguish the image map from its implementation
+20. Correct Algorithm 3 factor order and require inverse routing/cleanup rather than wire swaps
+21. Make Algorithm 2 key lookup a prepared oracle rather than an extra application to the image
+22. Correct the overview substitution to the pixel-controlled direct sum
+23. Correct the overview permutation implementation
+24. Correct the architecture figure key-cleanup label
+25. Label the architecture routing as the compiled controlled address bijection
+26. Update the symbol-table cleanup definition
+27. Update the symbol-table pixel-feature key label
+28. Update the overview source key label
+29. Make the discussion source-angle family agree with the controlled operator
+30. Use pixel-feature labels in the architecture angle family
+31. Update overview angle labels
+32. Update architecture key label 1
+33. Update architecture key label 2
+34. Update architecture key label n
+35. Update the architecture caption key notation
+36. Update the local key-generation figure to pixel-feature notation
+37. Replace the unspecified coarse-graining/hash gate sketch with the defined clean label-oracle module
+38. Correct the substitution basis-permutation claim and the arbitrary-address-permutation wire-swap claim
+39. Correct chronological Euler order and pixel index on feature circuit row 0
+40. Correct chronological Euler order and pixel index on feature circuit row 1
+41. Correct chronological Euler order and pixel index on feature circuit row 2
+42. Show the corrected clean lookup-routing-cleanup sequence in the permutation overview circuit
+43. Replace the incorrect detailed permutation explanation with the clean-map requirement and honest schematic scope
+44. Correct source wire, routing block and output-address cleanup in the detailed permutation circuit
+45. Make the detailed permutation caption state its schematic rather than implementation-certified scope
+46. Remove the false implication that inverse entanglement makes every original QIR separable
+47. Key-generation introduction: remove unproved source resistance and separate both source roles
+48. Substitution introduction: exact record/inverse rather than assumed key/IV secrecy
+49. Entanglement discussion: avoid claiming every allowed input becomes entangled
+50. Discussion: align novelty, source, implementation, and corrected resource scope
+51. Layout: display the expanded pixel-dependent key family without line overflow
+52. Typesetting: restore the phase-noise plus/minus symbol
+53. Tracking: explicitly color the changed key-generation figure captions red
+54. Layout: retain all original image panels at a size fitting the Table 4 page

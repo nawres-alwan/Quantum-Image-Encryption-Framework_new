@@ -1,0 +1,46 @@
+[
+  {
+    "image_id": "IM1",
+    "title": "Ashurbanipal",
+    "relative_input": "inputs\\IM1_Ashurbanipal.jpg",
+    "original_source": "images encryption and decryption models/code/Ashurbanipal.jpg",
+    "file_sha256": "0d4794d673cf94329f85a454379e4cd19de32aad189ea5d52b4b644f80d5a7ed",
+    "rgb_pixel_sha256": "6bce77fd652c4f401099421e7ac095b9d66d6edeb42adca0a89158fa927e3a94",
+    "height": 256,
+    "width": 256,
+    "channels": 3
+  },
+  {
+    "image_id": "IM2",
+    "title": "Stele of Hammurabi",
+    "relative_input": "inputs\\IM2_IM2_original.png",
+    "original_source": "images encryption and decryption models/IM2_original.png",
+    "file_sha256": "cea545a008b72b617a8f654d47b71191b09c0c73e6f0a880e064a3cbf9517d6c",
+    "rgb_pixel_sha256": "5743ac64d0b8281d6885b2952fbd914cbe43c3c251f4be0d14b3dea4f4f9c106",
+    "height": 222,
+    "width": 227,
+    "channels": 3
+  },
+  {
+    "image_id": "IM3",
+    "title": "Lamassu",
+    "relative_input": "inputs\\IM3_IM3_original.png",
+    "original_source": "images encryption and decryption models/IM3_original.png",
+    "file_sha256": "e281035bb690b99f562f2a39b4fb736c611b420bc4974465b1a52b6b7f851063",
+    "rgb_pixel_sha256": "57fb261af754b38b48735782ab20a63c666a74933033081672dbac659bfccf12",
+    "height": 256,
+    "width": 256,
+    "channels": 3
+  },
+  {
+    "image_id": "IM4",
+    "title": "Lion of Babylon",
+    "relative_input": "inputs\\IM4_IM4_original.jpg",
+    "original_source": "images encryption and decryption models/IM4_original.jpg",
+    "file_sha256": "985518aa9168293175ef9efa8902def8a9f97d6605dd1d88265941f5f4d44226",
+    "rgb_pixel_sha256": "badf2c0183944f65047c53cb6aae34aa792d3fb85dea1f7102a48bdd4ad8d4f3",
+    "height": 768,
+    "width": 1024,
+    "channels": 3
+  }
+]

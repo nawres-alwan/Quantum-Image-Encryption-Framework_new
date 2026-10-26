@@ -1,0 +1,25 @@
+# Local environments and Python caches
+QEF/
+fram_q_env/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.idea/
+
+# Private experiment keys and simulator state checkpoints
+private_keys/
+private_checkpoints/
+checkpoints/
+.env
+.env.*
+*.pem
+*.key
+
+# Local verification / fresh experiment output
+local_runs/
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,21 @@
+{
+  "moment_models": 4,
+  "enumerated_image_checks": 80,
+  "binary_joint_measurement_checks": 10,
+  "source_perturbation_checks": 12,
+  "normalized_qirbp_checks": 6,
+  "analytical_table_rows": 16,
+  "maximum_first_moment_error": 1.1653236760143332e-16,
+  "maximum_twirl_error": 1.1102569054260746e-16,
+  "maximum_enumerated_superoperator_error": 1.801441632774288e-16,
+  "continuous_reference_beta": 1.1378581276864421e-13,
+  "pi_range_countermodel_signal_error": 6.106226635438361e-16,
+  "sample_lower_bound_integer_checked_at_decimal_precisions": [
+    100,
+    140
+  ],
+  "success_information_threshold_nats": 0.05663301226513251,
+  "original_HCS_HG_Phi_source_law_certified": false,
+  "no_new_encryption_layer_used": true,
+  "costs_are_ciphertext_samples_not_elementary_gates": true
+}

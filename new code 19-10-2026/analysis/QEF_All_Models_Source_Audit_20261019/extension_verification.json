@@ -1,0 +1,385 @@
+{
+  "reference_models": [
+    {
+      "N": 2,
+      "r": 1,
+      "L": 2,
+      "enumerated_keys": 64,
+      "first_moment_error": 1.1653236760143332e-16,
+      "twirl_error": 3.061616997868383e-17,
+      "superoperator_error": 3.061616997868381e-17,
+      "C_exact": 0.015791971200981574,
+      "C_purity": 0.030771658666753653,
+      "spectrum_error": 2.220446049250313e-16,
+      "entropy_error": 4.649058915617843e-16
+    },
+    {
+      "N": 3,
+      "r": 1,
+      "L": 2,
+      "enumerated_keys": 512,
+      "first_moment_error": 1.1653236760143332e-16,
+      "twirl_error": 3.061616997868383e-17,
+      "superoperator_error": 3.0616169978683793e-17,
+      "C_exact": 0.029445758914095833,
+      "C_purity": 0.06062462181643478,
+      "spectrum_error": 2.498001805406602e-16,
+      "entropy_error": 5.412337245047638e-16
+    },
+    {
+      "N": 2,
+      "r": 1,
+      "L": 4,
+      "enumerated_keys": 4096,
+      "first_moment_error": 6.206335383118183e-17,
+      "twirl_error": 1.1102569054260746e-16,
+      "superoperator_error": 1.801441632774288e-16,
+      "C_exact": 0.00606690454448932,
+      "C_purity": 0.012012216251556842,
+      "spectrum_error": 2.498001805406602e-16,
+      "entropy_error": 3.0531133177191805e-16
+    },
+    {
+      "N": 2,
+      "r": 2,
+      "L": 2,
+      "enumerated_keys": 4096,
+      "first_moment_error": 5.934894795736604e-17,
+      "twirl_error": 1.5308084989341915e-17,
+      "superoperator_error": 1.5308084989341897e-17,
+      "C_exact": 0.0004885996391861434,
+      "C_purity": 0.0009760859730554568,
+      "spectrum_error": 2.0816681711721685e-16,
+      "entropy_error": 5.828670879282072e-16
+    }
+  ],
+  "reference_joint_checks": [
+    {
+      "N": 2,
+      "model": "reference r1 L2",
+      "q": 1,
+      "optimal_success": 0.5625,
+      "Holevo": 0.007958997917494548,
+      "Fano_required": 0.007832973283487088,
+      "information_upper": 0.015791971200981574,
+      "trace_success_upper": 0.5625
+    },
+    {
+      "N": 2,
+      "model": "reference r1 L2",
+      "q": 2,
+      "optimal_success": 0.56640625,
+      "Holevo": 0.015792013534692284,
+      "Fano_required": 0.008845693098556207,
+      "information_upper": 0.03158394240196315,
+      "trace_success_upper": 0.6249999999999999
+    },
+    {
+      "N": 2,
+      "model": "reference r1 L2",
+      "q": 3,
+      "optimal_success": 0.59326171875,
+      "Holevo": 0.023502948138392377,
+      "Fano_required": 0.017497794591551874,
+      "information_upper": 0.04737591360294472,
+      "trace_success_upper": 0.6874999999999999
+    },
+    {
+      "N": 3,
+      "model": "reference r1 L2",
+      "q": 1,
+      "optimal_success": 0.5833333333333334,
+      "Holevo": 0.014362591564146765,
+      "Fano_required": 0.013953914568419545,
+      "information_upper": 0.029445758914095833,
+      "trace_success_upper": 0.5833333333333333
+    },
+    {
+      "N": 3,
+      "model": "reference r1 L2",
+      "q": 2,
+      "optimal_success": 0.5902777777777779,
+      "Holevo": 0.028316950878762626,
+      "Fano_required": 0.01638989481807218,
+      "information_upper": 0.058891517828191665,
+      "trace_success_upper": 0.6666666666666666
+    },
+    {
+      "N": 2,
+      "model": "reference r1 L4",
+      "q": 1,
+      "optimal_success": 0.5388662010480697,
+      "Holevo": 0.003042691523697627,
+      "Fano_required": 0.0030242130207916995,
+      "information_upper": 0.00606690454448932,
+      "trace_success_upper": 0.5388662010480697
+    },
+    {
+      "N": 2,
+      "model": "reference r1 L4",
+      "q": 2,
+      "optimal_success": 0.5403767826319787,
+      "Holevo": 0.006066905454976013,
+      "Fano_required": 0.0032641221980083124,
+      "information_upper": 0.01213380908897864,
+      "trace_success_upper": 0.5777324020961393
+    },
+    {
+      "N": 2,
+      "model": "reference r1 L4",
+      "q": 3,
+      "optimal_success": 0.5581818804370252,
+      "Holevo": 0.009072864372583922,
+      "Fano_required": 0.006785624598801943,
+      "information_upper": 0.01820071363346796,
+      "trace_success_upper": 0.616598603144209
+    },
+    {
+      "N": 2,
+      "model": "reference r2 L2",
+      "q": 1,
+      "optimal_success": 0.5078125,
+      "Holevo": 0.00024441926222618093,
+      "Fano_required": 0.00012207528003882473,
+      "information_upper": 0.0004885996391861434,
+      "trace_success_upper": 0.5078125
+    },
+    {
+      "N": 2,
+      "model": "reference r2 L2",
+      "q": 2,
+      "optimal_success": 0.51177978515625,
+      "Holevo": 0.0004887190819706788,
+      "Fano_required": 0.0002775523560419879,
+      "information_upper": 0.0009771992783722868,
+      "trace_success_upper": 0.515625
+    }
+  ],
+  "source_perturbations": [
+    {
+      "N": 2,
+      "r": 1,
+      "L": 2,
+      "kappa": 0.001,
+      "relative_entropy": 0.015791691299270605,
+      "C_upper": 0.032157571603052625
+    },
+    {
+      "N": 2,
+      "r": 1,
+      "L": 2,
+      "kappa": 0.05,
+      "relative_entropy": 0.01931220220096641,
+      "C_upper": 0.13274667817047733
+    },
+    {
+      "N": 3,
+      "r": 1,
+      "L": 2,
+      "kappa": 0.001,
+      "relative_entropy": 0.0295749535353953,
+      "C_upper": 0.06294990659127343
+    },
+    {
+      "N": 3,
+      "r": 1,
+      "L": 2,
+      "kappa": 0.05,
+      "relative_entropy": 0.04079355308219812,
+      "C_upper": 0.21911503744899796
+    },
+    {
+      "N": 2,
+      "r": 1,
+      "L": 4,
+      "kappa": 0.001,
+      "relative_entropy": 0.0061689971455005654,
+      "C_upper": 0.012896574934796085
+    },
+    {
+      "N": 2,
+      "r": 1,
+      "L": 4,
+      "kappa": 0.05,
+      "relative_entropy": 0.014273298574228432,
+      "C_upper": 0.09171895687865839
+    },
+    {
+      "N": 2,
+      "r": 2,
+      "L": 2,
+      "kappa": 0.001,
+      "relative_entropy": 0.0005083457697958593,
+      "C_upper": 0.0013611890522888914
+    },
+    {
+      "N": 2,
+      "r": 2,
+      "L": 2,
+      "kappa": 0.05,
+      "relative_entropy": 0.009172967347871541,
+      "C_upper": 0.09408600538090194
+    }
+  ],
+  "correlated_source_models": [
+    {
+      "N": 2,
+      "r": 1,
+      "records": 8,
+      "conditioning": "B=A mod2",
+      "image_trials": 20,
+      "delta2": 0.5936847409571617,
+      "eta2_certified_upper": 0.7703948036601476,
+      "HS_squared_upper": 0.4729848625759647,
+      "max_HS_squared": 0.09989711925961035,
+      "max_relative_entropy": 0.2271776989174923,
+      "C_upper": 1.0619273671146325,
+      "block_orthogonality_error": 5.551115123125783e-17
+    },
+    {
+      "N": 3,
+      "r": 1,
+      "records": 8,
+      "conditioning": "B=A mod2",
+      "image_trials": 20,
+      "delta2": 0.5936847409571617,
+      "eta2_certified_upper": 0.9672967037195715,
+      "HS_squared_upper": 0.7412624658996232,
+      "max_HS_squared": 0.14972155254245606,
+      "max_relative_entropy": 0.46228591883710646,
+      "C_upper": 1.695170517966838,
+      "block_orthogonality_error": 1.1102230246251565e-16
+    }
+  ],
+  "correlated_joint_checks": [
+    {
+      "N": 2,
+      "model": "correlated actual-source model",
+      "q": 1,
+      "optimal_success": 0.7187217600359261,
+      "Holevo": 0.10967172259509805,
+      "Fano_required": 0.09899066310673055,
+      "information_upper": 1.0619273671146325,
+      "trace_success_upper": 1.0
+    },
+    {
+      "N": 2,
+      "model": "correlated actual-source model",
+      "q": 2,
+      "optimal_success": 0.7517438121933261,
+      "Holevo": 0.19732553774567485,
+      "Fano_required": 0.132735931082534,
+      "information_upper": 2.123854734229265,
+      "trace_success_upper": 1.0
+    },
+    {
+      "N": 2,
+      "model": "correlated actual-source model",
+      "q": 3,
+      "optimal_success": 0.8078603262024446,
+      "Holevo": 0.26963116649221464,
+      "Fano_required": 0.2038364985954716,
+      "information_upper": 3.1857821013438974,
+      "trace_success_upper": 1.0
+    },
+    {
+      "N": 3,
+      "model": "correlated actual-source model",
+      "q": 1,
+      "optimal_success": 0.7938682632035077,
+      "Holevo": 0.21833875484915044,
+      "Fano_required": 0.1843609733751581,
+      "information_upper": 1.695170517966838,
+      "trace_success_upper": 1.0
+    },
+    {
+      "N": 3,
+      "model": "correlated actual-source model",
+      "q": 2,
+      "optimal_success": 0.8441075834553518,
+      "Holevo": 0.3582220068831403,
+      "Fano_required": 0.2603518208792781,
+      "information_upper": 3.390341035933676,
+      "trace_success_upper": 1.0
+    }
+  ],
+  "table_audit": {
+    "rows": 128,
+    "precision": 145,
+    "pi_algorithm": "independent Chudnovsky",
+    "entropy_algorithm": "positive g-series with linear terms cancelled analytically",
+    "maximum_relative_C_difference": "1.124026562237256993905096556991661361895117658246912065970776521685642763840268895700967386704572272288099472085955294477790836587112662947565637E-77",
+    "all_ceilings_dimensions_match": true
+  },
+  "countermodel_audit": {
+    "pi_range_signal": 0.4052847345693476,
+    "signal_error": 3.552713678800501e-15,
+    "fixed_budget_thresholds": [
+      {
+        "N": 65536,
+        "q": 113285,
+        "success": 0.666666887810974,
+        "previous_success": 0.6666663388603451
+      },
+      {
+        "N": 50394,
+        "q": 87111,
+        "success": 0.6666672722634381,
+        "previous_success": 0.6666665583727188
+      },
+      {
+        "N": 65536,
+        "q": 113285,
+        "success": 0.666666887810974,
+        "previous_success": 0.6666663388603451
+      },
+      {
+        "N": 786432,
+        "q": 1359425,
+        "success": 0.6666666816204843,
+        "previous_success": 0.6666666358749762
+      }
+    ],
+    "fresh_Z_CZ_records": [
+      {
+        "N": 2,
+        "feature_bit": 0,
+        "fresh_records": 8,
+        "minimum_correct_Z_probability": 0.9999999999999998
+      },
+      {
+        "N": 2,
+        "feature_bit": 1,
+        "fresh_records": 8,
+        "minimum_correct_Z_probability": 0.9999999999999998
+      },
+      {
+        "N": 3,
+        "feature_bit": 0,
+        "fresh_records": 8,
+        "minimum_correct_Z_probability": 1.0000000000000002
+      },
+      {
+        "N": 3,
+        "feature_bit": 1,
+        "fresh_records": 8,
+        "minimum_correct_Z_probability": 1.0000000000000002
+      },
+      {
+        "N": 5,
+        "feature_bit": 0,
+        "fresh_records": 8,
+        "minimum_correct_Z_probability": 0.9999999999999998
+      },
+      {
+        "N": 5,
+        "feature_bit": 1,
+        "fresh_records": 8,
+        "minimum_correct_Z_probability": 0.9999999999999998
+      }
+    ]
+  },
+  "original_source_certified": false,
+  "hardware_or_cryptanalytic_attacks_executed": false,
+  "original_manuscript_modified": false
+}

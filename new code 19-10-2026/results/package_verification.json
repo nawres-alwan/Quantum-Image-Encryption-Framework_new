@@ -1,0 +1,16 @@
+{
+  "complete_runs_checked": 24,
+  "saved_profile_image_sets_checked": 8,
+  "private_key_records_checked": 24,
+  "observed_distinct_key_records": 24,
+  "private_replay_positions_per_run": 4096,
+  "maximum_private_replay_fidelity_error": 2.6645352591003757e-15,
+  "saved_preview_replay_exact": true,
+  "saved_preview_metric_error": 0.0,
+  "saved_decrypted_images_byte_identical": true,
+  "input_file_hashes_match": true,
+  "summary_tables_match_run_data": true,
+  "independent_dense_tests_on_this_interpreter": 4,
+  "python_version": "3.14.3",
+  "numpy_version": "2.4.3"
+}

@@ -1,0 +1,249 @@
+{
+  "dense_production_equivalence": [
+    {
+      "case": 0,
+      "pixels": 4,
+      "r": 7,
+      "valid_dimension": 512,
+      "unitarity_max_error": 1.3322676295501878e-15,
+      "factorized_dense_max_error": 4.7348736264955016e-17,
+      "inverse_dense_max_error": 8.338627722824931e-17,
+      "recovered_state_l2_error": 4.273316989816474e-16
+    },
+    {
+      "case": 1,
+      "pixels": 4,
+      "r": 7,
+      "valid_dimension": 512,
+      "unitarity_max_error": 8.881784197001252e-16,
+      "factorized_dense_max_error": 6.206335383118183e-17,
+      "inverse_dense_max_error": 6.96198835127192e-17,
+      "recovered_state_l2_error": 3.6122068877874235e-16
+    },
+    {
+      "case": 2,
+      "pixels": 3,
+      "r": 6,
+      "valid_dimension": 192,
+      "unitarity_max_error": 8.881784197001252e-16,
+      "factorized_dense_max_error": 5.928593550334434e-17,
+      "inverse_dense_max_error": 8.327169463222593e-17,
+      "recovered_state_l2_error": 4.738281147297038e-16
+    },
+    {
+      "case": 3,
+      "pixels": 3,
+      "r": 6,
+      "valid_dimension": 192,
+      "unitarity_max_error": 8.881784197001252e-16,
+      "factorized_dense_max_error": 5.003707553108402e-17,
+      "inverse_dense_max_error": 8.392387509920038e-17,
+      "recovered_state_l2_error": 4.0566766492217993e-16
+    }
+  ],
+  "exact_sampler_and_permutation": [
+    {
+      "N": 1,
+      "offset_acceptance_support": "18446744073709551616",
+      "roundtrip_checked": true,
+      "exact_rejection_rule_checked": true
+    },
+    {
+      "N": 2,
+      "offset_acceptance_support": "18446744073709551616",
+      "roundtrip_checked": true,
+      "exact_rejection_rule_checked": true
+    },
+    {
+      "N": 3,
+      "offset_acceptance_support": "18446744073709551615",
+      "roundtrip_checked": true,
+      "exact_rejection_rule_checked": true
+    },
+    {
+      "N": 7,
+      "offset_acceptance_support": "18446744073709551614",
+      "roundtrip_checked": true,
+      "exact_rejection_rule_checked": true
+    },
+    {
+      "N": 16,
+      "offset_acceptance_support": "18446744073709551616",
+      "roundtrip_checked": true,
+      "exact_rejection_rule_checked": true
+    },
+    {
+      "N": 50394,
+      "offset_acceptance_support": "18446744073709528812",
+      "roundtrip_checked": true,
+      "exact_rejection_rule_checked": true
+    },
+    {
+      "N": 65536,
+      "offset_acceptance_support": "18446744073709551616",
+      "roundtrip_checked": true,
+      "exact_rejection_rule_checked": true
+    },
+    {
+      "N": 786432,
+      "offset_acceptance_support": "18446744073709289472",
+      "roundtrip_checked": true,
+      "exact_rejection_rule_checked": true
+    }
+  ],
+  "exhaustive_private_channels": [
+    {
+      "N": 2,
+      "r": 1,
+      "n": 1,
+      "dimension": 4,
+      "enumerated_keys": 16,
+      "ablation": "complete",
+      "choi_max_abs_residual": 2.7755575615628914e-17,
+      "normalized_choi_trace_distance": 1.0071439962654436e-16,
+      "pair_ciphertext_trace_distance": 2.7755575615628914e-16,
+      "optimal_pair_guess_probability_numeric": 0.5000000000000001,
+      "reference_decoupling_trace_distance": 1.179956201928324e-16,
+      "choi_trace": 1.0
+    },
+    {
+      "N": 3,
+      "r": 1,
+      "n": 2,
+      "dimension": 6,
+      "enumerated_keys": 48,
+      "ablation": "complete",
+      "choi_max_abs_residual": 1.3877787807814457e-17,
+      "normalized_choi_trace_distance": 1.97758476261356e-16,
+      "pair_ciphertext_trace_distance": 0.0,
+      "optimal_pair_guess_probability_numeric": 0.5,
+      "reference_decoupling_trace_distance": 1.6062129442055107e-16,
+      "choi_trace": 1.0000000000000004
+    },
+    {
+      "N": 4,
+      "r": 1,
+      "n": 2,
+      "dimension": 8,
+      "enumerated_keys": 64,
+      "ablation": "complete",
+      "choi_max_abs_residual": 6.938893903907228e-18,
+      "normalized_choi_trace_distance": 1.2627683951523623e-16,
+      "pair_ciphertext_trace_distance": 1.3877787807814457e-16,
+      "optimal_pair_guess_probability_numeric": 0.5000000000000001,
+      "reference_decoupling_trace_distance": 1.633378536405776e-16,
+      "choi_trace": 1.0
+    },
+    {
+      "N": 2,
+      "r": 2,
+      "n": 1,
+      "dimension": 8,
+      "enumerated_keys": 64,
+      "ablation": "complete",
+      "choi_max_abs_residual": 5.204170427930421e-18,
+      "normalized_choi_trace_distance": 1.0214531977104177e-16,
+      "pair_ciphertext_trace_distance": 4.005170516130293e-17,
+      "optimal_pair_guess_probability_numeric": 0.5,
+      "reference_decoupling_trace_distance": 1.279824062695028e-16,
+      "choi_trace": 1.0
+    },
+    {
+      "N": 3,
+      "r": 2,
+      "n": 2,
+      "dimension": 12,
+      "enumerated_keys": 192,
+      "ablation": "complete",
+      "choi_max_abs_residual": 6.071532165918825e-18,
+      "normalized_choi_trace_distance": 1.9989481648362794e-16,
+      "pair_ciphertext_trace_distance": 8.118505867571457e-16,
+      "optimal_pair_guess_probability_numeric": 0.5000000000000004,
+      "reference_decoupling_trace_distance": 1.1972413994418993e-16,
+      "choi_trace": 1.0000000000000004
+    },
+    {
+      "N": 4,
+      "r": 2,
+      "n": 2,
+      "dimension": 16,
+      "enumerated_keys": 256,
+      "ablation": "complete",
+      "choi_max_abs_residual": 1.734723475976807e-18,
+      "normalized_choi_trace_distance": 1.4131003869647664e-16,
+      "pair_ciphertext_trace_distance": 6.938893903907228e-17,
+      "optimal_pair_guess_probability_numeric": 0.5,
+      "reference_decoupling_trace_distance": 6.765421556309546e-16,
+      "choi_trace": 1.0
+    }
+  ],
+  "ablations": [
+    {
+      "N": 4,
+      "r": 1,
+      "n": 2,
+      "dimension": 8,
+      "enumerated_keys": 16,
+      "ablation": "no_position_phase",
+      "choi_max_abs_residual": 0.015624853763574083,
+      "normalized_choi_trace_distance": 0.75,
+      "pair_ciphertext_trace_distance": 1.3877787807814457e-16,
+      "optimal_pair_guess_probability_numeric": 0.5000000000000001,
+      "reference_decoupling_trace_distance": 0.43673145687769555,
+      "choi_trace": 1.0
+    },
+    {
+      "N": 4,
+      "r": 1,
+      "n": 2,
+      "dimension": 8,
+      "enumerated_keys": 16,
+      "ablation": "no_feature_mask",
+      "choi_max_abs_residual": 0.02194399753402622,
+      "normalized_choi_trace_distance": 0.75,
+      "pair_ciphertext_trace_distance": 0.9999906408687416,
+      "optimal_pair_guess_probability_numeric": 0.9999953204343708,
+      "reference_decoupling_trace_distance": 0.3441046854408635,
+      "choi_trace": 1.0
+    },
+    {
+      "N": 4,
+      "r": 1,
+      "n": 2,
+      "dimension": 8,
+      "enumerated_keys": 16,
+      "ablation": "no_uniform_shift",
+      "choi_max_abs_residual": 0.046875,
+      "normalized_choi_trace_distance": 0.7499999999999999,
+      "pair_ciphertext_trace_distance": 1.0,
+      "optimal_pair_guess_probability_numeric": 1.0,
+      "reference_decoupling_trace_distance": 0.3369077474271247,
+      "choi_trace": 0.9999999999999998
+    }
+  ],
+  "legacy_attack": {
+    "cases": 128,
+    "correct": 128,
+    "guess_probability": 1.0,
+    "scope": "old classical-array code, last-pixel checksum attack",
+    "encryption_source_sha256": "1fea2fcfbdecbfc45101f408044eb76ef490cf31003e8483aaa781fa3335e630"
+  },
+  "wrong_phase_key_tests": [
+    {
+      "N": 4,
+      "wrong_key_bit": "position-phase bit 0",
+      "quantum_fidelity": 1.1191161408836015e-31,
+      "exact_expected_fidelity": 0.0,
+      "classical_pixel_mse": 0.0,
+      "meaning": "image readout alone cannot detect every quantum phase error"
+    },
+    {
+      "N": 3,
+      "wrong_key_bit": "position-phase bit 0",
+      "quantum_fidelity": 0.11111111111111055,
+      "exact_expected_fidelity": 0.1111111111111111,
+      "classical_pixel_mse": 0.0,
+      "meaning": "image readout alone cannot detect every quantum phase error"
+    }
+  ]
+}

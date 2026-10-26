@@ -1,0 +1,450 @@
+{
+  "proof": {
+    "pages": 10,
+    "table7_page": 5,
+    "outside_page": [],
+    "replacement_characters": [],
+    "undefined_references": [],
+    "overfull_boxes": 0,
+    "page_details": [
+      {
+        "page": 1,
+        "head": "QEF:all-modelboundsandsourcecertification 19October2026\nQEF: corrected Table 7 and source ",
+        "red_characters": 2484,
+        "characters": 2754
+      },
+      {
+        "page": 2,
+        "head": "QEF:all-modelboundsandsourcecertification 19October2026\nAnexplicitanglereferencelaw. Thefo",
+        "red_characters": 2177,
+        "characters": 2232
+      },
+      {
+        "page": 3,
+        "head": "QEF:all-modelboundsandsourcecertification 19October2026\nForexample,thefirstidentityfollows",
+        "red_characters": 1990,
+        "characters": 2045
+      },
+      {
+        "page": 4,
+        "head": "QEF:all-modelboundsandsourcecertification 19October2026\nDeclared register conventions and ",
+        "red_characters": 2733,
+        "characters": 2788
+      },
+      {
+        "page": 5,
+        "head": "QEF:all-modelboundsandsourcecertification 19October2026\nesehtybdeifitrectonsirotareneglani",
+        "red_characters": 2487,
+        "characters": 2542
+      },
+      {
+        "page": 6,
+        "head": "QEF:all-modelboundsandsourcecertification 19October2026\nConsiderall-blackandall-whiteimage",
+        "red_characters": 2664,
+        "characters": 2719
+      },
+      {
+        "page": 7,
+        "head": "QEF:all-modelboundsandsourcecertification 19October2026\nProof. BeforeapplyingE P ,subtract",
+        "red_characters": 3110,
+        "characters": 3165
+      },
+      {
+        "page": 8,
+        "head": "QEF:all-modelboundsandsourcecertification 19October2026\nInterpretation of the original att",
+        "red_characters": 1210,
+        "characters": 1265
+      },
+      {
+        "page": 9,
+        "head": "QEF:all-modelboundsandsourcecertification 19October2026\n2 Verification and effects of the ",
+        "red_characters": 0,
+        "characters": 2213
+      },
+      {
+        "page": 10,
+        "head": "QEF:all-modelboundsandsourcecertification 19October2026\nReferences\n[1] J.Watrous, TheTheor",
+        "red_characters": 0,
+        "characters": 1284
+      }
+    ],
+    "pdf_sha256": "23be2cf218db86fc3ca4c9281b27ea9efcdce5754f40c62fa56d084d861f65f3"
+  },
+  "paper": {
+    "pages": 61,
+    "table7_page": 36,
+    "outside_page": [],
+    "replacement_characters": [],
+    "undefined_references": [],
+    "overfull_boxes": 16,
+    "page_details": [
+      {
+        "page": 1,
+        "head": "Quantum Encryption Framework via Hyperchaotic\nSystems and Geometric Phase Randomness for S",
+        "red_characters": 1192,
+        "characters": 3818
+      },
+      {
+        "page": 2,
+        "head": "other leading developers, have shifted from maximising physical-qubit counts towards impro",
+        "red_characters": 0,
+        "characters": 5452
+      },
+      {
+        "page": 3,
+        "head": "Representation, and Phase-Based Intensity Representation [20]. Second, the proposed QEF op",
+        "red_characters": 520,
+        "characters": 5236
+      },
+      {
+        "page": 4,
+        "head": "Table 1: Symbols and their meaning\nSymbol definition Symbol definition\n\u03bb(t) Bounded contro",
+        "red_characters": 37,
+        "characters": 2579
+      },
+      {
+        "page": 5,
+        "head": "InputClassicalImage\nQIRModeling\nHG\u03a6-QRNG\nnD-QHCSDriver (FRQI,NEQR,\nGeometricPhaseBased\nCon",
+        "red_characters": 60,
+        "characters": 1930
+      },
+      {
+        "page": 6,
+        "head": "Generatesbasebandcontrolsignals\nArbitrary\nWaveform Generator\n(AWG)\nI(t) Q(t)\nCombinessigna",
+        "red_characters": 11,
+        "characters": 1823
+      },
+      {
+        "page": 7,
+        "head": "nD-HCS HG\u03a6-QRNG\ncontinuous chaotic samples discrete / binary quantum randomness\nKsub Ksub ",
+        "red_characters": 64,
+        "characters": 2058
+      },
+      {
+        "page": 8,
+        "head": "authors of [56] introduced a new quantum encryption algorithm based on the quantum logisti",
+        "red_characters": 0,
+        "characters": 4267
+      },
+      {
+        "page": 9,
+        "head": "Table 3: Summary of Quantum Gates Used in the Quantum Encryption Framework\nCategory Gate N",
+        "red_characters": 0,
+        "characters": 1908
+      },
+      {
+        "page": 10,
+        "head": "hyperchaotic variables into the Hamiltonian control parameters. The parameter \u03b1 determines",
+        "red_characters": 527,
+        "characters": 2712
+      },
+      {
+        "page": 11,
+        "head": "Third, the phase-dependent interferometric measurement converts these geometric phases int",
+        "red_characters": 261,
+        "characters": 2142
+      },
+      {
+        "page": 12,
+        "head": "Theorem 1. Generalized Quantum Image Encryption via nD-HCS/HG\u03a6-QRNG\nSuppose jIi 2 H is a q",
+        "red_characters": 384,
+        "characters": 2085
+      },
+      {
+        "page": 13,
+        "head": "2. Permutation Operator: The permutation operation rearranges the pixel-position register ",
+        "red_characters": 0,
+        "characters": 2176
+      },
+      {
+        "page": 14,
+        "head": "2Xn\u22121\nW = jkihkj (cid:10)F , (28)\nmodel pos k\nk=0\nwhere F =I for k (cid:21)N. This means t",
+        "red_characters": 315,
+        "characters": 1465
+      },
+      {
+        "page": 15,
+        "head": "Then, the generalized reflections used in EAA are defined as:\nS =I (cid:0)(1(cid:0)ei\u03d5)\u03a0 ,",
+        "red_characters": 681,
+        "characters": 1509
+      },
+      {
+        "page": 16,
+        "head": "(R (\u03b8), R (\u03b8)) and (R (\u03b8)) to modify the color information of each pixel. These rotations ",
+        "red_characters": 480,
+        "characters": 2008
+      },
+      {
+        "page": 17,
+        "head": "The actual pixel-controlled substitution operator is constructed below; R is distinct from",
+        "red_characters": 496,
+        "characters": 1721
+      },
+      {
+        "page": 18,
+        "head": "This is the controlled operator R used in Theorem 1.\ntotal\nThe final state after the subst",
+        "red_characters": 2051,
+        "characters": 2608
+      },
+      {
+        "page": 19,
+        "head": "The output is a superposition where data is reordered based on HG\u03a6-QRNG:\n!!\nX X\n1\nj\u03a8 i= \u03b1 ",
+        "red_characters": 93,
+        "characters": 2561
+      },
+      {
+        "page": 20,
+        "head": "comparison circuits (U ). Figure 4 (c) illustrates the reversible comparison circuit U for",
+        "red_characters": 644,
+        "characters": 1990
+      },
+      {
+        "page": 21,
+        "head": "21: Provide the clean key-label lookup of Eq. (67):\nU jy,k,zi=jy,k,z(cid:8)h(S(b(y)),k)i.\n",
+        "red_characters": 792,
+        "characters": 1426
+      },
+      {
+        "page": 22,
+        "head": "Algorithm 2 QEF Encryption Procedure\nRequire: Quantum image state jIi with n position qubi",
+        "red_characters": 433,
+        "characters": 1328
+      },
+      {
+        "page": 23,
+        "head": "Algorithm 3 QEF Decryption Procedure\nRequire: Encrypted state j\u03c8 i; the identical fresh ke",
+        "red_characters": 970,
+        "characters": 2058
+      },
+      {
+        "page": 24,
+        "head": "cleanupusingtheinverseoriginaladdress. Arbitraryaddresspermutationsgenerallyrequirecontrol",
+        "red_characters": 1042,
+        "characters": 2268
+      },
+      {
+        "page": 25,
+        "head": "jb(y)i U pair U cswap\nA_key\njki U G C G\u25e6\u03c0\u22121 B_key\nP (cid:10)I A_col\nj0b\u2032i\nB_col\njC\u2032i g\nk\n(",
+        "red_characters": 335,
+        "characters": 2574
+      },
+      {
+        "page": 26,
+        "head": "z z\nj00i\nj10i\nj11i\nR j00i\nsub\nR j10i\nsub\nx Rx j11i\nsub\nj01i\nR j01i\nsub\n(a) (b)\nz\nj0i Pj10i",
+        "red_characters": 17,
+        "characters": 972
+      },
+      {
+        "page": 27,
+        "head": "z z\nc p\nj0i j0i\nx x\nc p\nj1i j1i\nColor Position\nk = 0\nz z\nc p\nj0i j0i\nx x\nc p\nj1i j1i\nColor",
+        "red_characters": 0,
+        "characters": 324
+      },
+      {
+        "page": 28,
+        "head": "Table 4: Notation used throughout the image quality and encryption performance analysis.\nS",
+        "red_characters": 0,
+        "characters": 3772
+      },
+      {
+        "page": 29,
+        "head": "similar behaviour of the results discussed previously for the Ashurbanipal and Code of Ham",
+        "red_characters": 1284,
+        "characters": 4472
+      },
+      {
+        "page": 30,
+        "head": "The experiments were conducted on an HP Pavilion Gaming Laptop 15-dk2xxx equipped with an\n",
+        "red_characters": 0,
+        "characters": 414
+      },
+      {
+        "page": 31,
+        "head": "Table 5: Original (O), Encrypted (E), and Decrypted (D) Images for Different QIR models\nTy",
+        "red_characters": 0,
+        "characters": 276
+      },
+      {
+        "page": 32,
+        "head": "segami\ntnereffid\ndna\nstnemerusaem\nlareves\nno\ndesab\nFEQ\neht\nfo\nstluser\nfo\nnosirapmoC\n:6\nelb",
+        "red_characters": 0,
+        "characters": 1848
+      },
+      {
+        "page": 33,
+        "head": "5.2.2 Security model and a rotation-moment bound\nThe security quantity considered here is ",
+        "red_characters": 3227,
+        "characters": 3271
+      },
+      {
+        "page": 34,
+        "head": "The continuous law is an ideal limiting model; a finite implementation must use the finite",
+        "red_characters": 2183,
+        "characters": 2185
+      },
+      {
+        "page": 35,
+        "head": "Thus k\u03c3 (cid:0) \u03c4k2 (cid:20) \u03b22c . A sharper entropy bound uses the exact spectrum before ",
+        "red_characters": 2806,
+        "characters": 2808
+      },
+      {
+        "page": 36,
+        "head": "eseht\nyb\ndefiitrec\nton\nsi\nrotareneg\nlanigiro\nehT\n.segami\nlanigiro\nruof\neht\ndna\nsledom\nRIQ\n",
+        "red_characters": 2476,
+        "characters": 2485
+      },
+      {
+        "page": 37,
+        "head": "su\ufb00ices. Comparing a finite law directly to a continuous law in total variation is inappro",
+        "red_characters": 2871,
+        "characters": 2873
+      },
+      {
+        "page": 38,
+        "head": "A bound stated directly in terms of source moments. Full independence is su\ufb00icient for the",
+        "red_characters": 3032,
+        "characters": 3034
+      },
+      {
+        "page": 39,
+        "head": "Freshness alone does not supply the missing bound. AnexplicitcountermodelusestwoconstantFR",
+        "red_characters": 2539,
+        "characters": 4494
+      },
+      {
+        "page": 40,
+        "head": "Table 8: Comparison of Ashurbanipal image results using NEQR methods, with some previous w",
+        "red_characters": 2021,
+        "characters": 2259
+      },
+      {
+        "page": 41,
+        "head": "Table 10: Comparison of evolution metrics (NPCR, UACI, PSNR, and entropy) for the Ref. [22",
+        "red_characters": 1734,
+        "characters": 2003
+      },
+      {
+        "page": 42,
+        "head": "Fortheconcatenationofthethreecompiledmodules,serialexecutionofthecontrolledrotationsandsel",
+        "red_characters": 2395,
+        "characters": 2730
+      },
+      {
+        "page": 43,
+        "head": "residual (Z)-phase noise on selected pixels ( [71]). The choice of ((cid:6)0.02\u03c0) is not a",
+        "red_characters": 6,
+        "characters": 1843
+      },
+      {
+        "page": 44,
+        "head": "Table 13: Comparison of QEFE values for several QIR models under \u03d5=0.02\u03c0 phase perturbatio",
+        "red_characters": 902,
+        "characters": 2800
+      },
+      {
+        "page": 45,
+        "head": "with the stated conditional image-discrimination analysis. The key source classes follow e",
+        "red_characters": 1878,
+        "characters": 3944
+      },
+      {
+        "page": 46,
+        "head": "ThepermutationlayerP ,bycontrast,actsontheimagegeometryratherthanonlocalfeatureamplitudes.",
+        "red_characters": 0,
+        "characters": 2079
+      },
+      {
+        "page": 47,
+        "head": "and then define the entanglement operation;\n(\nNY\u22121\nCNOT , b (y)=0,\nU(y) = (ik,jk) k (150)\n",
+        "red_characters": 912,
+        "characters": 3782
+      },
+      {
+        "page": 48,
+        "head": "U and U are all unitary, their product is unitary, and U U = I on the image space. This gu",
+        "red_characters": 1258,
+        "characters": 5242
+      },
+      {
+        "page": 49,
+        "head": "and decrypted using the same operators U and U . Therefore, the QEF defines a model-indepe",
+        "red_characters": 1480,
+        "characters": 3085
+      },
+      {
+        "page": 50,
+        "head": "References\n[1] Ige, A.S., Cavalluzzi, D., Djordjevic, I.B., Runge, K., &Deymier, P.A.(2024",
+        "red_characters": 0,
+        "characters": 3346
+      },
+      {
+        "page": 51,
+        "head": "[20] Alwan, N. A., Al-Saidi, N. M., Obaiys, S. J., Noor, N. F. B. M., & Ahmad, M. (2025). ",
+        "red_characters": 0,
+        "characters": 3229
+      },
+      {
+        "page": 52,
+        "head": "[40] Graham, R. (1983). Quantization of a two-dimensional map with a strange attractor. Ph",
+        "red_characters": 0,
+        "characters": 3612
+      },
+      {
+        "page": 53,
+        "head": "[59] Singh, S., Tripathi, A., Sharma, K., Singh, U., & Singh, B. (2025). 3-D hyperchaotic ",
+        "red_characters": 525,
+        "characters": 3165
+      },
+      {
+        "page": 54,
+        "head": "[81] E. M. Rabei, Arvind, N. Mukunda, and R. Simon, Bargmann invariants and geometric phas",
+        "red_characters": 770,
+        "characters": 2748
+      },
+      {
+        "page": 55,
+        "head": "Table 17: Machine-verification status of the proof chain for the reversibility core of the",
+        "red_characters": 0,
+        "characters": 2063
+      },
+      {
+        "page": 56,
+        "head": "/\u2212\u2212 \u2018dec = star enc \u2018. \u2212/\ntheorem Scheme.dec_eq_star_enc {d : Nat} (S : Scheme d) :\nS.dec ",
+        "red_characters": 0,
+        "characters": 2018
+      },
+      {
+        "page": 57,
+        "head": "ring\n\u2217 simp [Rx, Fin.sum_univ_two, Matrix.mul_apply, Matrix.star_apply ,\nComplex.conj_ofRe",
+        "red_characters": 0,
+        "characters": 1925
+      },
+      {
+        "page": 58,
+        "head": "Complex.exp (\u2212(theta : Complex)\n\u2217 I / 2) = 1 := by\nrw [Complex.star_def , <\u2212 Complex.exp_c",
+        "red_characters": 0,
+        "characters": 1687
+      },
+      {
+        "page": 59,
+        "head": "(Matrix (Fin 2)\n(Fin 2) Complex) := by\nrefine <Rz_unitary theta , ?_>\nhave h := Rz_unitary",
+        "red_characters": 0,
+        "characters": 1727
+      },
+      {
+        "page": 60,
+        "head": "theorem UE_mem_unitary (b : Bool) : UE b in unitary (Matrix (Fin 4) (Fin 4)\nComplex) := by",
+        "red_characters": 0,
+        "characters": 2078
+      },
+      {
+        "page": 61,
+        "head": "star (reflect P omega) \u2217 (reflect P omega) = 1 := by\nunfold reflect\ngeneralize hz : (1 \u2212 C",
+        "red_characters": 0,
+        "characters": 1630
+      }
+    ],
+    "pdf_sha256": "b213d7499bd7f783ceb2450fd2fa73593f7e2e930bec9615c8d9409984cc38f5"
+  }
+}

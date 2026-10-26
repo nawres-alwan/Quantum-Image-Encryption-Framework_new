@@ -1,0 +1,986 @@
+{
+  "package_directory": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019",
+  "items": [
+    {
+      "source": "historical-source/QEF_All_Models_Proof.pdf",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/QEF_All_Models_Proof.pdf",
+      "sha256": "23be2cf218db86fc3ca4c9281b27ea9efcdce5754f40c62fa56d084d861f65f3",
+      "bytes": 186961
+    },
+    {
+      "source": "historical-source/Proof_All_Models.tex",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/Proof_All_Models.tex",
+      "sha256": "14781ef41a974b5e576f47d3c64d956d8340a35a93979e559ffc4a36b9ee75af",
+      "bytes": 36728
+    },
+    {
+      "source": "historical-source/security_section.tex",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/security_section.tex",
+      "sha256": "dbb85c4cc0d56bd3d93530515dc2f21f02866a3be8ab8a706b6bae7e82692350",
+      "bytes": 18305
+    },
+    {
+      "source": "historical-source/source_certification.tex",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/source_certification.tex",
+      "sha256": "9f5c78b5fe7f71f4115854b627d0a637de1a6b8f084577eab2b633f234d14eeb",
+      "bytes": 7351
+    },
+    {
+      "source": "historical-source/resource_section.tex",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/resource_section.tex",
+      "sha256": "26f9034eeff015d4128e5903c885f460b18518249bdf09a327a2e10f428dd649",
+      "bytes": 9660
+    },
+    {
+      "source": "historical-source/Table7_All_Models.tex",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/Table7_All_Models.tex",
+      "sha256": "361e3b53400116efbb6bc6a1b4f0c5692e2266335b8b0b1fc991cf19cab1bdac",
+      "bytes": 6904
+    },
+    {
+      "source": "historical-source/Table7_All_Models.csv",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/Table7_All_Models.csv",
+      "sha256": "cce6dcbb84bcfbf21fefd52d1ba5450694cf179e68b8c2f44a5dd57d70fb4b36",
+      "bytes": 92048
+    },
+    {
+      "source": "historical-source/calculate_all_models.py",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/calculate_all_models.py",
+      "sha256": "bd9b96f8efd3f4275e2bb8ab1b9c385cb9fc6cd73102f6d18bbf8aa88185d53d",
+      "bytes": 5286
+    },
+    {
+      "source": "historical-source/verify_extension.py",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/verify_extension.py",
+      "sha256": "7737a6eec425484207fc481afb58fcd45ff17cbeed83763ea5990f39cf137641",
+      "bytes": 14606
+    },
+    {
+      "source": "historical-source/verify_moment_bound.py",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/verify_moment_bound.py",
+      "sha256": "bad93775630cab14e39bf39351bdd951783abae74b7194b8cb1c425fa9a59940",
+      "bytes": 14099
+    },
+    {
+      "source": "historical-source/extension_verification.json",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/extension_verification.json",
+      "sha256": "6bc22efb310989ef233848c7c27cbb52c8ad79acc7303f7601ebbc4667f3aa9b",
+      "bytes": 10967
+    },
+    {
+      "source": "historical-source/verification_summary.tex",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/verification_summary.tex",
+      "sha256": "f502e2d1cb8ceffd4bfce6c9b0b68a4fbf966ca87dd7a0c714921b3373eaf500",
+      "bytes": 1189
+    },
+    {
+      "source": "historical-source/image_inputs.json",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/image_inputs.json",
+      "sha256": "51d2aaa3833fd3f641ffa29e7d18692afee4526d78c872cfb78f87b5362cece9",
+      "bytes": 1562
+    },
+    {
+      "source": "historical-source/change_impact.json",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/change_impact.json",
+      "sha256": "ad8fe07f1b15c7013abb6e16f7b7febb83ee7cb21699da48eb383985419fa4d0",
+      "bytes": 5387
+    },
+    {
+      "source": "historical-source/Change_Impact_Review.txt",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/Change_Impact_Review.txt",
+      "sha256": "5aef4b1521c97b1fc0412343c2374347b5528243a3d62e16aa81efdab364326f",
+      "bytes": 7831
+    },
+    {
+      "source": "historical-source/READ_ME_AR.txt",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/READ_ME_AR.txt",
+      "sha256": "7d1359979e5c74c97730f7fe03f6fe0f98fdb6a084dd9a126ab0eed49fe33a9b",
+      "bytes": 3419
+    },
+    {
+      "source": "historical-source/Response_to_Reviewer1_Comment2.txt",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/Response_to_Reviewer1_Comment2.txt",
+      "sha256": "3bf5f18eb010c18f2dad1a70e4b78369cf77f46be810dfbc3a1b3bf5e9ff8020",
+      "bytes": 1790
+    },
+    {
+      "source": "historical-source/Previous_Revision_to_All_Models.patch",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/Previous_Revision_to_All_Models.patch",
+      "sha256": "20901f46ae5e4edc865fb5e88257b3baa4015b81d10d162b31694fdd9e64edff",
+      "bytes": 127380
+    },
+    {
+      "source": "historical-source/Original_to_All_Models.patch",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/Original_to_All_Models.patch",
+      "sha256": "de59146572c1f9c59ef4c753120199d35818587d36527e7127dcbe561457b7f4",
+      "bytes": 203601
+    },
+    {
+      "source": "historical-source/Source_Audit.txt",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/Source_Audit.txt",
+      "sha256": "2d580e378a4cfce24ad59724be3903802c2ff9c3f21dcb0f246ac1379cca9a40",
+      "bytes": 5096
+    },
+    {
+      "source": "historical-source/previous_r11_recalculation.json",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/previous_r11_recalculation.json",
+      "sha256": "875ad3325cb6e92d57939837ff100e56a1db32500ef9273d385b7a69aea4a5d1",
+      "bytes": 4451
+    },
+    {
+      "source": "historical-source/document_checks.json",
+      "destination": "new code 19-10-2026/analysis/QEF_All_Models_Source_Audit_20261019/document_checks.json",
+      "sha256": "e1af568b53b3885d6f0e722b07610c4fe768ed764cc2fbb7f2b916ceb358e334",
+      "bytes": 15860
+    },
+    {
+      "source": "historical-source/quantum encryption.tex",
+      "destination": "historical-source/quantum encryption_security_all_models_19-10-2026.tex",
+      "sha256": "5b5fbabebe8c0aacce2ae13c14ee3a79e667326a335fdf5838a680e165722235",
+      "bytes": 276068
+    },
+    {
+      "source": "historical-source/QEF_All_Models_Revised.pdf",
+      "destination": "historical-source/quantum encryption_security_all_models_19-10-2026.pdf",
+      "sha256": "b213d7499bd7f783ceb2450fd2fa73593f7e2e930bec9615c8d9409984cc38f5",
+      "bytes": 8999821
+    }
+  ],
+  "original_preserved": true,
+  "original_source_certified": false,
+  "checks": {
+    "proof": {
+      "pages": 10,
+      "table7_page": 5,
+      "outside_page": [],
+      "replacement_characters": [],
+      "undefined_references": [],
+      "overfull_boxes": 0,
+      "page_details": [
+        {
+          "page": 1,
+          "head": "QEF:all-modelboundsandsourcecertification 19October2026\nQEF: corrected Table 7 and source ",
+          "red_characters": 2484,
+          "characters": 2754
+        },
+        {
+          "page": 2,
+          "head": "QEF:all-modelboundsandsourcecertification 19October2026\nAnexplicitanglereferencelaw. Thefo",
+          "red_characters": 2177,
+          "characters": 2232
+        },
+        {
+          "page": 3,
+          "head": "QEF:all-modelboundsandsourcecertification 19October2026\nForexample,thefirstidentityfollows",
+          "red_characters": 1990,
+          "characters": 2045
+        },
+        {
+          "page": 4,
+          "head": "QEF:all-modelboundsandsourcecertification 19October2026\nDeclared register conventions and ",
+          "red_characters": 2733,
+          "characters": 2788
+        },
+        {
+          "page": 5,
+          "head": "QEF:all-modelboundsandsourcecertification 19October2026\nesehtybdeifitrectonsirotareneglani",
+          "red_characters": 2487,
+          "characters": 2542
+        },
+        {
+          "page": 6,
+          "head": "QEF:all-modelboundsandsourcecertification 19October2026\nConsiderall-blackandall-whiteimage",
+          "red_characters": 2664,
+          "characters": 2719
+        },
+        {
+          "page": 7,
+          "head": "QEF:all-modelboundsandsourcecertification 19October2026\nProof. BeforeapplyingE P ,subtract",
+          "red_characters": 3110,
+          "characters": 3165
+        },
+        {
+          "page": 8,
+          "head": "QEF:all-modelboundsandsourcecertification 19October2026\nInterpretation of the original att",
+          "red_characters": 1210,
+          "characters": 1265
+        },
+        {
+          "page": 9,
+          "head": "QEF:all-modelboundsandsourcecertification 19October2026\n2 Verification and effects of the ",
+          "red_characters": 0,
+          "characters": 2213
+        },
+        {
+          "page": 10,
+          "head": "QEF:all-modelboundsandsourcecertification 19October2026\nReferences\n[1] J.Watrous, TheTheor",
+          "red_characters": 0,
+          "characters": 1284
+        }
+      ],
+      "pdf_sha256": "23be2cf218db86fc3ca4c9281b27ea9efcdce5754f40c62fa56d084d861f65f3"
+    },
+    "paper": {
+      "pages": 61,
+      "table7_page": 36,
+      "outside_page": [],
+      "replacement_characters": [],
+      "undefined_references": [],
+      "overfull_boxes": 16,
+      "page_details": [
+        {
+          "page": 1,
+          "head": "Quantum Encryption Framework via Hyperchaotic\nSystems and Geometric Phase Randomness for S",
+          "red_characters": 1192,
+          "characters": 3818
+        },
+        {
+          "page": 2,
+          "head": "other leading developers, have shifted from maximising physical-qubit counts towards impro",
+          "red_characters": 0,
+          "characters": 5452
+        },
+        {
+          "page": 3,
+          "head": "Representation, and Phase-Based Intensity Representation [20]. Second, the proposed QEF op",
+          "red_characters": 520,
+          "characters": 5236
+        },
+        {
+          "page": 4,
+          "head": "Table 1: Symbols and their meaning\nSymbol definition Symbol definition\nλ(t) Bounded contro",
+          "red_characters": 37,
+          "characters": 2579
+        },
+        {
+          "page": 5,
+          "head": "InputClassicalImage\nQIRModeling\nHGΦ-QRNG\nnD-QHCSDriver (FRQI,NEQR,\nGeometricPhaseBased\nCon",
+          "red_characters": 60,
+          "characters": 1930
+        },
+        {
+          "page": 6,
+          "head": "Generatesbasebandcontrolsignals\nArbitrary\nWaveform Generator\n(AWG)\nI(t) Q(t)\nCombinessigna",
+          "red_characters": 11,
+          "characters": 1823
+        },
+        {
+          "page": 7,
+          "head": "nD-HCS HGΦ-QRNG\ncontinuous chaotic samples discrete / binary quantum randomness\nKsub Ksub ",
+          "red_characters": 64,
+          "characters": 2058
+        },
+        {
+          "page": 8,
+          "head": "authors of [56] introduced a new quantum encryption algorithm based on the quantum logisti",
+          "red_characters": 0,
+          "characters": 4267
+        },
+        {
+          "page": 9,
+          "head": "Table 3: Summary of Quantum Gates Used in the Quantum Encryption Framework\nCategory Gate N",
+          "red_characters": 0,
+          "characters": 1908
+        },
+        {
+          "page": 10,
+          "head": "hyperchaotic variables into the Hamiltonian control parameters. The parameter α determines",
+          "red_characters": 527,
+          "characters": 2712
+        },
+        {
+          "page": 11,
+          "head": "Third, the phase-dependent interferometric measurement converts these geometric phases int",
+          "red_characters": 261,
+          "characters": 2142
+        },
+        {
+          "page": 12,
+          "head": "Theorem 1. Generalized Quantum Image Encryption via nD-HCS/HGΦ-QRNG\nSuppose jIi 2 H is a q",
+          "red_characters": 384,
+          "characters": 2085
+        },
+        {
+          "page": 13,
+          "head": "2. Permutation Operator: The permutation operation rearranges the pixel-position register ",
+          "red_characters": 0,
+          "characters": 2176
+        },
+        {
+          "page": 14,
+          "head": "2Xn−1\nW = jkihkj (cid:10)F , (28)\nmodel pos k\nk=0\nwhere F =I for k (cid:21)N. This means t",
+          "red_characters": 315,
+          "characters": 1465
+        },
+        {
+          "page": 15,
+          "head": "Then, the generalized reflections used in EAA are defined as:\nS =I (cid:0)(1(cid:0)eiϕ)Π ,",
+          "red_characters": 681,
+          "characters": 1509
+        },
+        {
+          "page": 16,
+          "head": "(R (θ), R (θ)) and (R (θ)) to modify the color information of each pixel. These rotations ",
+          "red_characters": 480,
+          "characters": 2008
+        },
+        {
+          "page": 17,
+          "head": "The actual pixel-controlled substitution operator is constructed below; R is distinct from",
+          "red_characters": 496,
+          "characters": 1721
+        },
+        {
+          "page": 18,
+          "head": "This is the controlled operator R used in Theorem 1.\ntotal\nThe final state after the subst",
+          "red_characters": 2051,
+          "characters": 2608
+        },
+        {
+          "page": 19,
+          "head": "The output is a superposition where data is reordered based on HGΦ-QRNG:\n!!\nX X\n1\njΨ i= α ",
+          "red_characters": 93,
+          "characters": 2561
+        },
+        {
+          "page": 20,
+          "head": "comparison circuits (U ). Figure 4 (c) illustrates the reversible comparison circuit U for",
+          "red_characters": 644,
+          "characters": 1990
+        },
+        {
+          "page": 21,
+          "head": "21: Provide the clean key-label lookup of Eq. (67):\nU jy,k,zi=jy,k,z(cid:8)h(S(b(y)),k)i.\n",
+          "red_characters": 792,
+          "characters": 1426
+        },
+        {
+          "page": 22,
+          "head": "Algorithm 2 QEF Encryption Procedure\nRequire: Quantum image state jIi with n position qubi",
+          "red_characters": 433,
+          "characters": 1328
+        },
+        {
+          "page": 23,
+          "head": "Algorithm 3 QEF Decryption Procedure\nRequire: Encrypted state jψ i; the identical fresh ke",
+          "red_characters": 970,
+          "characters": 2058
+        },
+        {
+          "page": 24,
+          "head": "cleanupusingtheinverseoriginaladdress. Arbitraryaddresspermutationsgenerallyrequirecontrol",
+          "red_characters": 1042,
+          "characters": 2268
+        },
+        {
+          "page": 25,
+          "head": "jb(y)i U pair U cswap\nA_key\njki U G C G◦π−1 B_key\nP (cid:10)I A_col\nj0b′i\nB_col\njC′i g\nk\n(",
+          "red_characters": 335,
+          "characters": 2574
+        },
+        {
+          "page": 26,
+          "head": "z z\nj00i\nj10i\nj11i\nR j00i\nsub\nR j10i\nsub\nx Rx j11i\nsub\nj01i\nR j01i\nsub\n(a) (b)\nz\nj0i Pj10i",
+          "red_characters": 17,
+          "characters": 972
+        },
+        {
+          "page": 27,
+          "head": "z z\nc p\nj0i j0i\nx x\nc p\nj1i j1i\nColor Position\nk = 0\nz z\nc p\nj0i j0i\nx x\nc p\nj1i j1i\nColor",
+          "red_characters": 0,
+          "characters": 324
+        },
+        {
+          "page": 28,
+          "head": "Table 4: Notation used throughout the image quality and encryption performance analysis.\nS",
+          "red_characters": 0,
+          "characters": 3772
+        },
+        {
+          "page": 29,
+          "head": "similar behaviour of the results discussed previously for the Ashurbanipal and Code of Ham",
+          "red_characters": 1284,
+          "characters": 4472
+        },
+        {
+          "page": 30,
+          "head": "The experiments were conducted on an HP Pavilion Gaming Laptop 15-dk2xxx equipped with an\n",
+          "red_characters": 0,
+          "characters": 414
+        },
+        {
+          "page": 31,
+          "head": "Table 5: Original (O), Encrypted (E), and Decrypted (D) Images for Different QIR models\nTy",
+          "red_characters": 0,
+          "characters": 276
+        },
+        {
+          "page": 32,
+          "head": "segami\ntnereffid\ndna\nstnemerusaem\nlareves\nno\ndesab\nFEQ\neht\nfo\nstluser\nfo\nnosirapmoC\n:6\nelb",
+          "red_characters": 0,
+          "characters": 1848
+        },
+        {
+          "page": 33,
+          "head": "5.2.2 Security model and a rotation-moment bound\nThe security quantity considered here is ",
+          "red_characters": 3227,
+          "characters": 3271
+        },
+        {
+          "page": 34,
+          "head": "The continuous law is an ideal limiting model; a finite implementation must use the finite",
+          "red_characters": 2183,
+          "characters": 2185
+        },
+        {
+          "page": 35,
+          "head": "Thus kσ (cid:0) τk2 (cid:20) β2c . A sharper entropy bound uses the exact spectrum before ",
+          "red_characters": 2806,
+          "characters": 2808
+        },
+        {
+          "page": 36,
+          "head": "eseht\nyb\ndefiitrec\nton\nsi\nrotareneg\nlanigiro\nehT\n.segami\nlanigiro\nruof\neht\ndna\nsledom\nRIQ\n",
+          "red_characters": 2476,
+          "characters": 2485
+        },
+        {
+          "page": 37,
+          "head": "suﬀices. Comparing a finite law directly to a continuous law in total variation is inappro",
+          "red_characters": 2871,
+          "characters": 2873
+        },
+        {
+          "page": 38,
+          "head": "A bound stated directly in terms of source moments. Full independence is suﬀicient for the",
+          "red_characters": 3032,
+          "characters": 3034
+        },
+        {
+          "page": 39,
+          "head": "Freshness alone does not supply the missing bound. AnexplicitcountermodelusestwoconstantFR",
+          "red_characters": 2539,
+          "characters": 4494
+        },
+        {
+          "page": 40,
+          "head": "Table 8: Comparison of Ashurbanipal image results using NEQR methods, with some previous w",
+          "red_characters": 2021,
+          "characters": 2259
+        },
+        {
+          "page": 41,
+          "head": "Table 10: Comparison of evolution metrics (NPCR, UACI, PSNR, and entropy) for the Ref. [22",
+          "red_characters": 1734,
+          "characters": 2003
+        },
+        {
+          "page": 42,
+          "head": "Fortheconcatenationofthethreecompiledmodules,serialexecutionofthecontrolledrotationsandsel",
+          "red_characters": 2395,
+          "characters": 2730
+        },
+        {
+          "page": 43,
+          "head": "residual (Z)-phase noise on selected pixels ( [71]). The choice of ((cid:6)0.02π) is not a",
+          "red_characters": 6,
+          "characters": 1843
+        },
+        {
+          "page": 44,
+          "head": "Table 13: Comparison of QEFE values for several QIR models under ϕ=0.02π phase perturbatio",
+          "red_characters": 902,
+          "characters": 2800
+        },
+        {
+          "page": 45,
+          "head": "with the stated conditional image-discrimination analysis. The key source classes follow e",
+          "red_characters": 1878,
+          "characters": 3944
+        },
+        {
+          "page": 46,
+          "head": "ThepermutationlayerP ,bycontrast,actsontheimagegeometryratherthanonlocalfeatureamplitudes.",
+          "red_characters": 0,
+          "characters": 2079
+        },
+        {
+          "page": 47,
+          "head": "and then define the entanglement operation;\n(\nNY−1\nCNOT , b (y)=0,\nU(y) = (ik,jk) k (150)\n",
+          "red_characters": 912,
+          "characters": 3782
+        },
+        {
+          "page": 48,
+          "head": "U and U are all unitary, their product is unitary, and U U = I on the image space. This gu",
+          "red_characters": 1258,
+          "characters": 5242
+        },
+        {
+          "page": 49,
+          "head": "and decrypted using the same operators U and U . Therefore, the QEF defines a model-indepe",
+          "red_characters": 1480,
+          "characters": 3085
+        },
+        {
+          "page": 50,
+          "head": "References\n[1] Ige, A.S., Cavalluzzi, D., Djordjevic, I.B., Runge, K., &Deymier, P.A.(2024",
+          "red_characters": 0,
+          "characters": 3346
+        },
+        {
+          "page": 51,
+          "head": "[20] Alwan, N. A., Al-Saidi, N. M., Obaiys, S. J., Noor, N. F. B. M., & Ahmad, M. (2025). ",
+          "red_characters": 0,
+          "characters": 3229
+        },
+        {
+          "page": 52,
+          "head": "[40] Graham, R. (1983). Quantization of a two-dimensional map with a strange attractor. Ph",
+          "red_characters": 0,
+          "characters": 3612
+        },
+        {
+          "page": 53,
+          "head": "[59] Singh, S., Tripathi, A., Sharma, K., Singh, U., & Singh, B. (2025). 3-D hyperchaotic ",
+          "red_characters": 525,
+          "characters": 3165
+        },
+        {
+          "page": 54,
+          "head": "[81] E. M. Rabei, Arvind, N. Mukunda, and R. Simon, Bargmann invariants and geometric phas",
+          "red_characters": 770,
+          "characters": 2748
+        },
+        {
+          "page": 55,
+          "head": "Table 17: Machine-verification status of the proof chain for the reversibility core of the",
+          "red_characters": 0,
+          "characters": 2063
+        },
+        {
+          "page": 56,
+          "head": "/−− ‘dec = star enc ‘. −/\ntheorem Scheme.dec_eq_star_enc {d : Nat} (S : Scheme d) :\nS.dec ",
+          "red_characters": 0,
+          "characters": 2018
+        },
+        {
+          "page": 57,
+          "head": "ring\n∗ simp [Rx, Fin.sum_univ_two, Matrix.mul_apply, Matrix.star_apply ,\nComplex.conj_ofRe",
+          "red_characters": 0,
+          "characters": 1925
+        },
+        {
+          "page": 58,
+          "head": "Complex.exp (−(theta : Complex)\n∗ I / 2) = 1 := by\nrw [Complex.star_def , <− Complex.exp_c",
+          "red_characters": 0,
+          "characters": 1687
+        },
+        {
+          "page": 59,
+          "head": "(Matrix (Fin 2)\n(Fin 2) Complex) := by\nrefine <Rz_unitary theta , ?_>\nhave h := Rz_unitary",
+          "red_characters": 0,
+          "characters": 1727
+        },
+        {
+          "page": 60,
+          "head": "theorem UE_mem_unitary (b : Bool) : UE b in unitary (Matrix (Fin 4) (Fin 4)\nComplex) := by",
+          "red_characters": 0,
+          "characters": 2078
+        },
+        {
+          "page": 61,
+          "head": "star (reflect P omega) ∗ (reflect P omega) = 1 := by\nunfold reflect\ngeneralize hz : (1 − C",
+          "red_characters": 0,
+          "characters": 1630
+        }
+      ],
+      "pdf_sha256": "b213d7499bd7f783ceb2450fd2fa73593f7e2e930bec9615c8d9409984cc38f5"
+    }
+  },
+  "independent_verification": {
+    "reference_models": [
+      {
+        "N": 2,
+        "r": 1,
+        "L": 2,
+        "enumerated_keys": 64,
+        "first_moment_error": 1.1653236760143332e-16,
+        "twirl_error": 3.061616997868383e-17,
+        "superoperator_error": 3.061616997868381e-17,
+        "C_exact": 0.015791971200981574,
+        "C_purity": 0.030771658666753653,
+        "spectrum_error": 2.220446049250313e-16,
+        "entropy_error": 4.649058915617843e-16
+      },
+      {
+        "N": 3,
+        "r": 1,
+        "L": 2,
+        "enumerated_keys": 512,
+        "first_moment_error": 1.1653236760143332e-16,
+        "twirl_error": 3.061616997868383e-17,
+        "superoperator_error": 3.0616169978683793e-17,
+        "C_exact": 0.029445758914095833,
+        "C_purity": 0.06062462181643478,
+        "spectrum_error": 2.498001805406602e-16,
+        "entropy_error": 5.412337245047638e-16
+      },
+      {
+        "N": 2,
+        "r": 1,
+        "L": 4,
+        "enumerated_keys": 4096,
+        "first_moment_error": 6.206335383118183e-17,
+        "twirl_error": 1.1102569054260746e-16,
+        "superoperator_error": 1.801441632774288e-16,
+        "C_exact": 0.00606690454448932,
+        "C_purity": 0.012012216251556842,
+        "spectrum_error": 2.498001805406602e-16,
+        "entropy_error": 3.0531133177191805e-16
+      },
+      {
+        "N": 2,
+        "r": 2,
+        "L": 2,
+        "enumerated_keys": 4096,
+        "first_moment_error": 5.934894795736604e-17,
+        "twirl_error": 1.5308084989341915e-17,
+        "superoperator_error": 1.5308084989341897e-17,
+        "C_exact": 0.0004885996391861434,
+        "C_purity": 0.0009760859730554568,
+        "spectrum_error": 2.0816681711721685e-16,
+        "entropy_error": 5.828670879282072e-16
+      }
+    ],
+    "reference_joint_checks": [
+      {
+        "N": 2,
+        "model": "reference r1 L2",
+        "q": 1,
+        "optimal_success": 0.5625,
+        "Holevo": 0.007958997917494548,
+        "Fano_required": 0.007832973283487088,
+        "information_upper": 0.015791971200981574,
+        "trace_success_upper": 0.5625
+      },
+      {
+        "N": 2,
+        "model": "reference r1 L2",
+        "q": 2,
+        "optimal_success": 0.56640625,
+        "Holevo": 0.015792013534692284,
+        "Fano_required": 0.008845693098556207,
+        "information_upper": 0.03158394240196315,
+        "trace_success_upper": 0.6249999999999999
+      },
+      {
+        "N": 2,
+        "model": "reference r1 L2",
+        "q": 3,
+        "optimal_success": 0.59326171875,
+        "Holevo": 0.023502948138392377,
+        "Fano_required": 0.017497794591551874,
+        "information_upper": 0.04737591360294472,
+        "trace_success_upper": 0.6874999999999999
+      },
+      {
+        "N": 3,
+        "model": "reference r1 L2",
+        "q": 1,
+        "optimal_success": 0.5833333333333334,
+        "Holevo": 0.014362591564146765,
+        "Fano_required": 0.013953914568419545,
+        "information_upper": 0.029445758914095833,
+        "trace_success_upper": 0.5833333333333333
+      },
+      {
+        "N": 3,
+        "model": "reference r1 L2",
+        "q": 2,
+        "optimal_success": 0.5902777777777779,
+        "Holevo": 0.028316950878762626,
+        "Fano_required": 0.01638989481807218,
+        "information_upper": 0.058891517828191665,
+        "trace_success_upper": 0.6666666666666666
+      },
+      {
+        "N": 2,
+        "model": "reference r1 L4",
+        "q": 1,
+        "optimal_success": 0.5388662010480697,
+        "Holevo": 0.003042691523697627,
+        "Fano_required": 0.0030242130207916995,
+        "information_upper": 0.00606690454448932,
+        "trace_success_upper": 0.5388662010480697
+      },
+      {
+        "N": 2,
+        "model": "reference r1 L4",
+        "q": 2,
+        "optimal_success": 0.5403767826319787,
+        "Holevo": 0.006066905454976013,
+        "Fano_required": 0.0032641221980083124,
+        "information_upper": 0.01213380908897864,
+        "trace_success_upper": 0.5777324020961393
+      },
+      {
+        "N": 2,
+        "model": "reference r1 L4",
+        "q": 3,
+        "optimal_success": 0.5581818804370252,
+        "Holevo": 0.009072864372583922,
+        "Fano_required": 0.006785624598801943,
+        "information_upper": 0.01820071363346796,
+        "trace_success_upper": 0.616598603144209
+      },
+      {
+        "N": 2,
+        "model": "reference r2 L2",
+        "q": 1,
+        "optimal_success": 0.5078125,
+        "Holevo": 0.00024441926222618093,
+        "Fano_required": 0.00012207528003882473,
+        "information_upper": 0.0004885996391861434,
+        "trace_success_upper": 0.5078125
+      },
+      {
+        "N": 2,
+        "model": "reference r2 L2",
+        "q": 2,
+        "optimal_success": 0.51177978515625,
+        "Holevo": 0.0004887190819706788,
+        "Fano_required": 0.0002775523560419879,
+        "information_upper": 0.0009771992783722868,
+        "trace_success_upper": 0.515625
+      }
+    ],
+    "source_perturbations": [
+      {
+        "N": 2,
+        "r": 1,
+        "L": 2,
+        "kappa": 0.001,
+        "relative_entropy": 0.015791691299270605,
+        "C_upper": 0.032157571603052625
+      },
+      {
+        "N": 2,
+        "r": 1,
+        "L": 2,
+        "kappa": 0.05,
+        "relative_entropy": 0.01931220220096641,
+        "C_upper": 0.13274667817047733
+      },
+      {
+        "N": 3,
+        "r": 1,
+        "L": 2,
+        "kappa": 0.001,
+        "relative_entropy": 0.0295749535353953,
+        "C_upper": 0.06294990659127343
+      },
+      {
+        "N": 3,
+        "r": 1,
+        "L": 2,
+        "kappa": 0.05,
+        "relative_entropy": 0.04079355308219812,
+        "C_upper": 0.21911503744899796
+      },
+      {
+        "N": 2,
+        "r": 1,
+        "L": 4,
+        "kappa": 0.001,
+        "relative_entropy": 0.0061689971455005654,
+        "C_upper": 0.012896574934796085
+      },
+      {
+        "N": 2,
+        "r": 1,
+        "L": 4,
+        "kappa": 0.05,
+        "relative_entropy": 0.014273298574228432,
+        "C_upper": 0.09171895687865839
+      },
+      {
+        "N": 2,
+        "r": 2,
+        "L": 2,
+        "kappa": 0.001,
+        "relative_entropy": 0.0005083457697958593,
+        "C_upper": 0.0013611890522888914
+      },
+      {
+        "N": 2,
+        "r": 2,
+        "L": 2,
+        "kappa": 0.05,
+        "relative_entropy": 0.009172967347871541,
+        "C_upper": 0.09408600538090194
+      }
+    ],
+    "correlated_source_models": [
+      {
+        "N": 2,
+        "r": 1,
+        "records": 8,
+        "conditioning": "B=A mod2",
+        "image_trials": 20,
+        "delta2": 0.5936847409571617,
+        "eta2_certified_upper": 0.7703948036601476,
+        "HS_squared_upper": 0.4729848625759647,
+        "max_HS_squared": 0.09989711925961035,
+        "max_relative_entropy": 0.2271776989174923,
+        "C_upper": 1.0619273671146325,
+        "block_orthogonality_error": 5.551115123125783e-17
+      },
+      {
+        "N": 3,
+        "r": 1,
+        "records": 8,
+        "conditioning": "B=A mod2",
+        "image_trials": 20,
+        "delta2": 0.5936847409571617,
+        "eta2_certified_upper": 0.9672967037195715,
+        "HS_squared_upper": 0.7412624658996232,
+        "max_HS_squared": 0.14972155254245606,
+        "max_relative_entropy": 0.46228591883710646,
+        "C_upper": 1.695170517966838,
+        "block_orthogonality_error": 1.1102230246251565e-16
+      }
+    ],
+    "correlated_joint_checks": [
+      {
+        "N": 2,
+        "model": "correlated actual-source model",
+        "q": 1,
+        "optimal_success": 0.7187217600359261,
+        "Holevo": 0.10967172259509805,
+        "Fano_required": 0.09899066310673055,
+        "information_upper": 1.0619273671146325,
+        "trace_success_upper": 1.0
+      },
+      {
+        "N": 2,
+        "model": "correlated actual-source model",
+        "q": 2,
+        "optimal_success": 0.7517438121933261,
+        "Holevo": 0.19732553774567485,
+        "Fano_required": 0.132735931082534,
+        "information_upper": 2.123854734229265,
+        "trace_success_upper": 1.0
+      },
+      {
+        "N": 2,
+        "model": "correlated actual-source model",
+        "q": 3,
+        "optimal_success": 0.8078603262024446,
+        "Holevo": 0.26963116649221464,
+        "Fano_required": 0.2038364985954716,
+        "information_upper": 3.1857821013438974,
+        "trace_success_upper": 1.0
+      },
+      {
+        "N": 3,
+        "model": "correlated actual-source model",
+        "q": 1,
+        "optimal_success": 0.7938682632035077,
+        "Holevo": 0.21833875484915044,
+        "Fano_required": 0.1843609733751581,
+        "information_upper": 1.695170517966838,
+        "trace_success_upper": 1.0
+      },
+      {
+        "N": 3,
+        "model": "correlated actual-source model",
+        "q": 2,
+        "optimal_success": 0.8441075834553518,
+        "Holevo": 0.3582220068831403,
+        "Fano_required": 0.2603518208792781,
+        "information_upper": 3.390341035933676,
+        "trace_success_upper": 1.0
+      }
+    ],
+    "table_audit": {
+      "rows": 128,
+      "precision": 145,
+      "pi_algorithm": "independent Chudnovsky",
+      "entropy_algorithm": "positive g-series with linear terms cancelled analytically",
+      "maximum_relative_C_difference": "1.124026562237256993905096556991661361895117658246912065970776521685642763840268895700967386704572272288099472085955294477790836587112662947565637E-77",
+      "all_ceilings_dimensions_match": true
+    },
+    "countermodel_audit": {
+      "pi_range_signal": 0.4052847345693476,
+      "signal_error": 3.552713678800501e-15,
+      "fixed_budget_thresholds": [
+        {
+          "N": 65536,
+          "q": 113285,
+          "success": 0.666666887810974,
+          "previous_success": 0.6666663388603451
+        },
+        {
+          "N": 50394,
+          "q": 87111,
+          "success": 0.6666672722634381,
+          "previous_success": 0.6666665583727188
+        },
+        {
+          "N": 65536,
+          "q": 113285,
+          "success": 0.666666887810974,
+          "previous_success": 0.6666663388603451
+        },
+        {
+          "N": 786432,
+          "q": 1359425,
+          "success": 0.6666666816204843,
+          "previous_success": 0.6666666358749762
+        }
+      ],
+      "fresh_Z_CZ_records": [
+        {
+          "N": 2,
+          "feature_bit": 0,
+          "fresh_records": 8,
+          "minimum_correct_Z_probability": 0.9999999999999998
+        },
+        {
+          "N": 2,
+          "feature_bit": 1,
+          "fresh_records": 8,
+          "minimum_correct_Z_probability": 0.9999999999999998
+        },
+        {
+          "N": 3,
+          "feature_bit": 0,
+          "fresh_records": 8,
+          "minimum_correct_Z_probability": 1.0000000000000002
+        },
+        {
+          "N": 3,
+          "feature_bit": 1,
+          "fresh_records": 8,
+          "minimum_correct_Z_probability": 1.0000000000000002
+        },
+        {
+          "N": 5,
+          "feature_bit": 0,
+          "fresh_records": 8,
+          "minimum_correct_Z_probability": 0.9999999999999998
+        },
+        {
+          "N": 5,
+          "feature_bit": 1,
+          "fresh_records": 8,
+          "minimum_correct_Z_probability": 0.9999999999999998
+        }
+      ]
+    },
+    "original_source_certified": false,
+    "hardware_or_cryptanalytic_attacks_executed": false,
+    "original_manuscript_modified": false
+  }
+}

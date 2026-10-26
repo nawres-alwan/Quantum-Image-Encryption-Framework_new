@@ -1,0 +1,25 @@
+{
+  "selector_max_state_error": 2.231687133607212e-16,
+  "zero_phase_max_error": 4.07394520715138e-15,
+  "zero_phase_count_cases": 8,
+  "key_controlled_QEF_max_error": 4.5393458249236354e-14,
+  "key_controlled_QEF_basis_branches": 32,
+  "existing_v2_reference_max_error": 7.28852306480777e-14,
+  "angle_quantization_max_state_error": 0.002588157824056269,
+  "eleven_feature_register_max_error": 8.409677700533536e-14,
+  "eleven_feature_register_branches_checked": 6,
+  "single_oracle_gate_counts": {
+    "cx": 6731,
+    "u": 12481
+  },
+  "compositional_count_repetitions_checked": [
+    1,
+    2,
+    3
+  ],
+  "gram_vs_full_circuit_probability_max_error": 3.0980773502164993e-13,
+  "full_circuit_simulated_qubits": 16,
+  "sufficient_oracle_actual_success": 0.961318969665355,
+  "sufficient_oracle_error_bound": 8.063257535917269e-13,
+  "passed": true
+}

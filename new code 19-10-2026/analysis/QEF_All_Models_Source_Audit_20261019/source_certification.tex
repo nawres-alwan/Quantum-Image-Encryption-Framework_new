@@ -1,0 +1,151 @@
+{\color{red}
+\paragraph{Certification of the original angle source.}
+The reference law above must be distinguished from a property of the
+implemented generator. Write $Z=q\bmod\pi$. If $q$ has density $f_q$,
+then, for $0\leq z<\pi$,
+\begin{equation}
+ f_Z(z)=\sum_{m\in\mathbb Z}f_q(z+m\pi),\qquad
+ f_\theta(t)=\gamma^{-1}f_Z(t/\gamma),\quad 0\leq t<\gamma\pi.
+ \label{eq:qef_wrapped_source_density}
+\end{equation}
+Indeed, the inverse image of a measurable set $A\subset[0,\pi)$ is
+the disjoint union of $A+m\pi$; summing their probabilities and changing
+variables proves the first identity. Scaling proves the second.
+Thus $\gamma=2$ and $f_Z=1/\pi$ are sufficient for the one-pass
+continuous marginal reference on $[0,2\pi)$, but the modulo operation
+does not establish either uniformity or independence. The manuscript
+does not specify an actual numerical $\gamma$, a probability law for the
+initial source state, or a sampling map that proves the required
+conditional pixel/axis moments. Chaotic sensitivity and a bounded angle
+range do not provide that missing probability law.
+
+\paragraph{A bound stated directly in terms of source moments.}
+Full independence is sufficient for the preceding reference calculation,
+but is not necessary for a security bound. Let $F=2^r$, $D=NF$, and
+condition on $B=b$ in its essential support. For the actual substitution
+operators define
+\begin{align}
+ \delta_2&=\mathop{\mathrm{ess\,sup}}_{b,k,\|u\|=1}
+ \left\|\mathbb E_{A\mid b}
+ [R_{A,k}|u\rangle\langle u|R_{A,k}^{\dagger}]-I_F/F\right\|_2,
+ \label{eq:qef_actual_diagonal_moment}\\
+ \eta_2&=\mathop{\mathrm{ess\,sup}}_{b,k\ne l,\|u\|=\|v\|=1}
+ \left\|\mathbb E_{A\mid b}
+ [R_{A,k}|u\rangle\langle v|R_{A,l}^{\dagger}]\right\|_2.
+ \label{eq:qef_actual_cross_moment}
+\end{align}
+Here vectors have Euclidean norm one and $\|\cdot\|_2$ denotes the
+Hilbert--Schmidt matrix norm. Public setup information is also conditioned
+on. These quantities account for dependence between
+the two source classes, between axes, and between pixel tuples.
+
+\begin{theorem}[Source-moment certification criterion]
+\label{thm:qef_actual_source_moments}
+For image states in Eq.~\eqref{eq:qef_security_image} and the original
+clean three-layer unitary, the actual average ciphertext satisfies
+\begin{equation}
+ \mathsf D(\sigma\|I_D/D)\leq C_{\rm actual},\qquad
+ C_{\rm actual}=\ln\!\left[1+F\delta_2^2+(N-1)F\eta_2^2\right].
+ \label{eq:qef_actual_source_budget}
+\end{equation}
+If whole key records are independent between preparations, success
+$p>1/2$ in the binary image experiment requires
+\begin{equation}
+ \boxed{\displaystyle q\geq
+ \left\lceil\frac{\ln2-h(p)}{C_{\rm actual}}\right\rceil.}
+ \label{eq:qef_actual_source_sample_bound}
+\end{equation}
+When $C_{\rm actual}=0$, no finite number of these preparations
+distinguishes the candidate images.
+\end{theorem}
+\begin{proof}
+Before applying $E_bP_b$, subtract $\tau=I_D/D$ from the conditional
+average. Its diagonal position blocks are $1/N$ times the matrices in
+Eq.~\eqref{eq:qef_actual_diagonal_moment}; its off-diagonal blocks are
+$1/N$ times those in Eq.~\eqref{eq:qef_actual_cross_moment}.
+Distinct blocks are orthogonal in the Hilbert--Schmidt inner product.
+Unitary conjugation preserves this norm and $\tau$; convexity of its
+square therefore gives
+\begin{equation}
+ \|\sigma-\tau\|_2^2
+ \leq\delta_2^2/N+(1-1/N)\eta_2^2.
+\end{equation}
+Using $\mathsf D(\sigma\|\tau)\leq
+\ln(1+D\|\sigma-\tau\|_2^2)$ proves
+Eq.~\eqref{eq:qef_actual_source_budget}. The same Holevo/Fano argument
+used above proves Eq.~\eqref{eq:qef_actual_source_sample_bound}.
+No independence within an individual key record is used in this proof.
+\end{proof}
+
+The reference law has $\delta_2=0$ and $\eta_2=\beta_L$.
+For an uncertified source, only the general inequalities
+$\delta_2^2\leq1-1/F$ and $\eta_2\leq1$ are available. They give
+$C_{\rm actual}\leq\ln D$ and only the trivial necessary count
+$q\geq1$ for $p=2/3$ and $D\geq2$. This is not a successful attack;
+it means the source information supplied does not certify a larger
+count. A nontrivial value must follow from certified upper bounds on
+the actual conditional moments, rather than being assigned from the
+reference table.
+
+\paragraph{Finite keys and the stronger independence assumption.}
+Two independent uniform pixel tuples over an $L$-point angle alphabet
+contain $6r$ independent symbols. Consequently
+\begin{equation}
+ H(A\mid B)\geq H(\Theta_k,\Theta_l\mid B)=6r\log_2L,
+ \qquad k\ne l.
+ \label{eq:qef_source_entropy_requirement}
+\end{equation}
+If all angles are deterministic expansions of an $s$-bit substitution
+seed, their pair has at most $2^s$ possible values. For its support $S$,
+the actual law gives probability one to $S$, whereas the independent
+uniform pair law gives at most $2^s/L^{6r}$. Hence their total variation
+distance is at least
+\begin{equation}
+ \max\{0,1-2^s/L^{6r}\}.
+ \label{eq:qef_source_support_obstruction}
+\end{equation}
+For QIRBP ($r=11$) and a deterministic 128-bit substitution seed, this
+lower bound is $15/16$ at $L=4$, and $1-2^{-400}$ at $L=256$.
+These results concern the strong independent-symbol reference; they do
+not exclude a correlated source satisfying the weaker operator-moment
+criterion in Theorem~\ref{thm:qef_actual_source_moments}.
+
+\paragraph{What the HG$\Phi$ measurement establishes.}
+For the stated raw-bit model, an observer who knows the phase and
+reference setting has single-bit guessing probability and conditional
+pointwise min-entropy
+\begin{equation}
+ p_{\rm guess}(b\mid\phi,\delta)
+ =\frac{1+|\cos(\phi+\delta)|}{2},\qquad
+ H_{\min}(b\mid\phi,\delta)
+ =-\log_2p_{\rm guess}(b\mid\phi,\delta).
+ \label{eq:qef_raw_bit_source_entropy}
+\end{equation}
+The latter can be zero. A fixed deterministic coarse-graining or hash
+cannot create missing entropy; a reversible map preserves it. Specifying
+a randomness extractor would additionally require a source entropy
+bound, seed assumptions, output length, and extraction error. None is
+supplied here as a certification of the original generator.
+
+\paragraph{Freshness alone does not supply the missing bound.}
+An explicit countermodel uses two constant FRQI images with feature
+states $|0\rangle$ and $|1\rangle$. Set the $x$ and $y$ rotation angles
+to zero, refresh the $z$ angles independently for every encryption,
+allow any position permutation, and let the entanglement component
+select CZ gates. Every layer preserves the feature's $Z$ basis value.
+One feature measurement therefore distinguishes the two images with
+probability one using a single ciphertext. The whole key record is
+fresh even though its gate-selection component is fixed. This is an
+allowed source-law countermodel to an architecture-only claim, not an
+attack attributed to the unspecified actual nD-QHCS/HG$\Phi$ law.
+
+Finally, the supplied experimental implementation resets NumPy's
+scalar-seeded pseudorandom generator and uses a fixed seed in its
+driver. Its QIRBP branch performs shared channel masks and XOR chaining;
+it does not implement the controlled complex Euler rotations or the
+specified nD-QHCS/HG$\Phi$ generator. It therefore cannot certify the
+moments in Eqs.~\eqref{eq:qef_actual_diagonal_moment}--
+\eqref{eq:qef_actual_cross_moment}. The actual-source numerical
+resistance remains unestablished; the preceding table entries are
+conditional mathematical benchmarks.
+\par}

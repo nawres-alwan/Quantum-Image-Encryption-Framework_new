@@ -1,0 +1,253 @@
+{
+  "files": [
+    {
+      "relative_path": "qef_gsa_oracle.py",
+      "bytes": 37164,
+      "sha256": "4eebfc36f8ad75aac786a4cc312eb79f22f4a9c9d76eb94280f32e6f2b51535b"
+    },
+    {
+      "relative_path": "test_qef_gsa_oracle.py",
+      "bytes": 9346,
+      "sha256": "e94aef00b00bc7007cd78d540da88b98cbea65f59c031b54918d90c9b36d66d3"
+    },
+    {
+      "relative_path": "requirements.txt",
+      "bytes": 102,
+      "sha256": "9b07770d23bdcc0c732e0a8f48be834b2d58998858e0b78094ef1709a75dba5f"
+    },
+    {
+      "relative_path": "README.txt",
+      "bytes": 7420,
+      "sha256": "7d89f7f52fc1428e4a028cf03074220e81d3ecd140d7cff363759ea2489c3bcd"
+    },
+    {
+      "relative_path": "RUN.ps1",
+      "bytes": 337,
+      "sha256": "0c291a611a1330c7b627e2b35ff7f7447b0fc5c8a0d01299af45041e0469b067"
+    },
+    {
+      "relative_path": "results\\component_gate_counts.csv",
+      "bytes": 273,
+      "sha256": "d374f02ecb64383deb887d6f262487e6b24393d69f22fa875e56dd6274f1d5d3"
+    },
+    {
+      "relative_path": "results\\entanglement_selector_mpl.png",
+      "bytes": 24356,
+      "sha256": "f85e6e6cde83759dcab1573f0cf27ff1191738ddebb2e6be25feef0b10914e2a"
+    },
+    {
+      "relative_path": "results\\entanglement_selector_mpl.svg",
+      "bytes": 26416,
+      "sha256": "eb8af3dcd372f8591af71308e4d5c9ae4562b96c5f9254207bd65d70b93c095c"
+    },
+    {
+      "relative_path": "results\\experiment_report.json",
+      "bytes": 18596,
+      "sha256": "afaca3af3495c535d5aa5838f02930b25b6d7db6cbc5ea972662bbbbf1b5a69f"
+    },
+    {
+      "relative_path": "results\\grover_success.png",
+      "bytes": 96153,
+      "sha256": "fae73fde8cf23421d5396d45e115e9e2b7fde10ec9448c07fe5c0f45217d0a68"
+    },
+    {
+      "relative_path": "results\\grover_success.svg",
+      "bytes": 45785,
+      "sha256": "d61d72d39357488ec15adbc8665cb4dbaf81f755e166d84e9a151c2ed1a86261"
+    },
+    {
+      "relative_path": "results\\oracle_full.qpy",
+      "bytes": 22901182,
+      "sha256": "163ed74a22489bf3eed2c04afe0a3da758ae70ddaa5cab8a4ebddc22ed6f3b52"
+    },
+    {
+      "relative_path": "results\\oracle_full_mpl.png",
+      "bytes": 72907,
+      "sha256": "4b42bbae09dce57340549a47997304d2030bd51c779f87c619b8d10052f8b4e5"
+    },
+    {
+      "relative_path": "results\\oracle_full_mpl.svg",
+      "bytes": 44304,
+      "sha256": "862b5e2fa79c4528d5f6a26d023d0f4db8162cd992cfd037491cb87fe043a326"
+    },
+    {
+      "relative_path": "results\\oracle_single_block.qpy",
+      "bytes": 509141,
+      "sha256": "629c2c5282bcffd88759be211d1500214d00cddd316e882b34a21564c31f4a57"
+    },
+    {
+      "relative_path": "results\\oracle_single_block_mpl.png",
+      "bytes": 74645,
+      "sha256": "231fe6960b0280c44cbfec6df08792d90165376de69a5c9199bf72665328af6c"
+    },
+    {
+      "relative_path": "results\\oracle_single_block_mpl.svg",
+      "bytes": 53425,
+      "sha256": "6ef9514c52b36b9247bb307e1d75e9596f1f673d37e90fd2c76a5b08a300154d"
+    },
+    {
+      "relative_path": "results\\programmable_qef.qpy",
+      "bytes": 248648,
+      "sha256": "0b142f7ba0a2fb72db471d906615b8fcf407e22d91e5079892d50c3f04a5f4c2"
+    },
+    {
+      "relative_path": "results\\programmable_qef_mpl.png",
+      "bytes": 68014,
+      "sha256": "32fd88f3697516137abe36e349b4ff2eee4b8888e7af587dd2cc0702139722d3"
+    },
+    {
+      "relative_path": "results\\programmable_qef_mpl.svg",
+      "bytes": 49178,
+      "sha256": "a0bf17158692ef7d8cfa70284e2687011117733d067d4303b28611237731b352"
+    },
+    {
+      "relative_path": "results\\resource_summary.csv",
+      "bytes": 5551,
+      "sha256": "eeb059a508f3ea101b6fb488e7620c27cf94e716d31d2acb5ea0edc8b87003a9"
+    },
+    {
+      "relative_path": "results\\SUMMARY_AR.txt",
+      "bytes": 3164,
+      "sha256": "5f2780ce52b3ed3434b0a549bbf07a77a1e00484110fa31395f501f059452f51"
+    },
+    {
+      "relative_path": "results\\test_report.json",
+      "bytes": 876,
+      "sha256": "1aba52902f0c7e133315931c8859bdd1443535767045313e2334a8e9cb8bf092"
+    },
+    {
+      "relative_path": "results\\verification_test_mpl.png",
+      "bytes": 63435,
+      "sha256": "48e529f6e1d977c7caaa95db8a74c2a42aa3102a4208c9fd339a0ff772e68775"
+    },
+    {
+      "relative_path": "results\\verification_test_mpl.svg",
+      "bytes": 46501,
+      "sha256": "a82325384a077b42f3809ab81802d60cc90d338ed73993f335b30ccb520f8943"
+    },
+    {
+      "relative_path": "results\\IM1_w0\\candidate_verification.csv",
+      "bytes": 986,
+      "sha256": "89271d7a85dcd48804bb4a26d10c89daacdfdc641c54c2855775b04033da48a5"
+    },
+    {
+      "relative_path": "results\\IM1_w0\\grover_trace.csv",
+      "bytes": 537,
+      "sha256": "ff80ee844b98f54a816adde672ac799fc8faf6a72eadb8b87efd43cc663ddc2d"
+    },
+    {
+      "relative_path": "results\\IM1_w0\\resources.json",
+      "bytes": 1883,
+      "sha256": "d044d5c364875c2e798547f4ea91b5b24466f949a1749b348d0b033bb5f2b4e5"
+    },
+    {
+      "relative_path": "results\\IM1_w5\\candidate_verification.csv",
+      "bytes": 1014,
+      "sha256": "b49e9458e77e28e804f00c338b2fbf5eeb5055dba215135dde5592fb096091fd"
+    },
+    {
+      "relative_path": "results\\IM1_w5\\grover_trace.csv",
+      "bytes": 509,
+      "sha256": "74142f9430b85db79545430775feff92268b012ff0c0846041622b3e68bde8de"
+    },
+    {
+      "relative_path": "results\\IM1_w5\\resources.json",
+      "bytes": 1893,
+      "sha256": "9f7cee5aa3780087e4bc1db0f5301ba06e565770e7b3e3df1cd5ffb7c7815488"
+    },
+    {
+      "relative_path": "results\\IM2_w0\\candidate_verification.csv",
+      "bytes": 986,
+      "sha256": "f7525890275460d43de0d5c01d78bced7cbd2c34430c35931bb7930a6331da94"
+    },
+    {
+      "relative_path": "results\\IM2_w0\\grover_trace.csv",
+      "bytes": 509,
+      "sha256": "87ad8499114be191831d2e36b7bcb6ba2053125d4f2c32e3c27b9c873c9c2d80"
+    },
+    {
+      "relative_path": "results\\IM2_w0\\resources.json",
+      "bytes": 1882,
+      "sha256": "2a02e89cfb71c5f628c867eb005b8681cc515cc0013bf5409d24f2859143a793"
+    },
+    {
+      "relative_path": "results\\IM2_w5\\candidate_verification.csv",
+      "bytes": 1006,
+      "sha256": "786da2cf1336f7ef12665a44497709b167ac8f456395fcd617601b66271b3514"
+    },
+    {
+      "relative_path": "results\\IM2_w5\\grover_trace.csv",
+      "bytes": 510,
+      "sha256": "3da692834eafa9df11e3272ea0800d9bfb78b80402c38b7177b75e4295db9540"
+    },
+    {
+      "relative_path": "results\\IM2_w5\\resources.json",
+      "bytes": 1893,
+      "sha256": "88be2e53f58505e95790fd64254af21c2a32d5414514b99bfa545f4471285d97"
+    },
+    {
+      "relative_path": "results\\IM3_w0\\candidate_verification.csv",
+      "bytes": 986,
+      "sha256": "24f26bed6c1582aef93f2ddeb523888f9a064c235079be600fb83bd2573509a2"
+    },
+    {
+      "relative_path": "results\\IM3_w0\\grover_trace.csv",
+      "bytes": 511,
+      "sha256": "0f694abd16c1af9fcf5c98bd1efa6ddc89b4b935f43fb9458ae41ac8be83528b"
+    },
+    {
+      "relative_path": "results\\IM3_w0\\resources.json",
+      "bytes": 1880,
+      "sha256": "8cf902c2f7556eec737f53ea9a1c08298d69d7249032fb24225bdd5ba89bbac1"
+    },
+    {
+      "relative_path": "results\\IM3_w5\\candidate_verification.csv",
+      "bytes": 999,
+      "sha256": "6155df259182feaff3b93d155fddf43ef12955e5e5951470955650fbf0bffbdc"
+    },
+    {
+      "relative_path": "results\\IM3_w5\\grover_trace.csv",
+      "bytes": 538,
+      "sha256": "6949fbee3f5180d61a596ee43bfcf963b851e9930e0e3775b1128402e1d8d283"
+    },
+    {
+      "relative_path": "results\\IM3_w5\\resources.json",
+      "bytes": 1892,
+      "sha256": "9e8d99106cb5cf123fbe2709aeedbf9751d27dd3249f0c21ac2c5c802d541a2e"
+    },
+    {
+      "relative_path": "results\\IM4_w0\\candidate_verification.csv",
+      "bytes": 983,
+      "sha256": "c01073cbb5074bd639befde078d36dee7303f7747dfecdf9d05012da0c98397c"
+    },
+    {
+      "relative_path": "results\\IM4_w0\\grover_trace.csv",
+      "bytes": 508,
+      "sha256": "b341dfe4596868c258eb30026e05553c19da0bced8cb86630c3b5b36754cc9d7"
+    },
+    {
+      "relative_path": "results\\IM4_w0\\resources.json",
+      "bytes": 1882,
+      "sha256": "9dfd12262ac68543ca5b707b88dc7af6a61b61c5a918f1b135a5cdfa1acca9a9"
+    },
+    {
+      "relative_path": "results\\IM4_w5\\candidate_verification.csv",
+      "bytes": 991,
+      "sha256": "4e36f5db8c90c8e2ffccd9e12148504dbf064da4582a5a961de027b06bd79248"
+    },
+    {
+      "relative_path": "results\\IM4_w5\\grover_trace.csv",
+      "bytes": 510,
+      "sha256": "37283c27f4f8be9e70f0f81db065fceab5a9203b16a06cd067475cea411d712d"
+    },
+    {
+      "relative_path": "results\\IM4_w5\\resources.json",
+      "bytes": 1891,
+      "sha256": "cd0937255a4de7eea8fadea7ea1cfade1e7646dd12b24c30809e94448a66b3e6"
+    }
+  ],
+  "existing_reference_sha256": "3888c1776a46324a08fcf018aa7c3b0f6487e727955083cb426cdcf29a4ce6c5",
+  "paper_changed": false,
+  "existing_modules_changed": false,
+  "tests_passed": true
+}

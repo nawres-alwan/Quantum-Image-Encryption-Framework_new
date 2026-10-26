@@ -1,0 +1,772 @@
+{
+  "proof": {
+    "page_count": 6,
+    "pages": [
+      {
+        "page": 1,
+        "characters": 2749,
+        "red_characters": 2484,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": true,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 2,
+        "characters": 2216,
+        "red_characters": 2159,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": true,
+        "content_outside_page": 0
+      },
+      {
+        "page": 3,
+        "characters": 2353,
+        "red_characters": 2296,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": true,
+        "has_final_bound": true,
+        "content_outside_page": 0
+      },
+      {
+        "page": 4,
+        "characters": 2958,
+        "red_characters": 2901,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": true,
+        "content_outside_page": 0
+      },
+      {
+        "page": 5,
+        "characters": 2710,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 6,
+        "characters": 769,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      }
+    ]
+  },
+  "paper": {
+    "page_count": 62,
+    "pages": [
+      {
+        "page": 1,
+        "characters": 3818,
+        "red_characters": 1192,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 2,
+        "characters": 5452,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 3,
+        "characters": 5236,
+        "red_characters": 520,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 4,
+        "characters": 2567,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 5,
+        "characters": 1914,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 6,
+        "characters": 1823,
+        "red_characters": 17,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 7,
+        "characters": 2041,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 8,
+        "characters": 4267,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 9,
+        "characters": 1908,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 10,
+        "characters": 2730,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 11,
+        "characters": 2131,
+        "red_characters": 261,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 12,
+        "characters": 2007,
+        "red_characters": 309,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 13,
+        "characters": 2037,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 14,
+        "characters": 1584,
+        "red_characters": 463,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 15,
+        "characters": 2218,
+        "red_characters": 533,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 16,
+        "characters": 1824,
+        "red_characters": 473,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 17,
+        "characters": 2053,
+        "red_characters": 207,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 18,
+        "characters": 2417,
+        "red_characters": 2,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 19,
+        "characters": 1547,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 20,
+        "characters": 3020,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 21,
+        "characters": 1008,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 22,
+        "characters": 970,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 23,
+        "characters": 1311,
+        "red_characters": 184,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 24,
+        "characters": 2112,
+        "red_characters": 400,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 25,
+        "characters": 3134,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 26,
+        "characters": 2197,
+        "red_characters": 1,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 27,
+        "characters": 1580,
+        "red_characters": 17,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 28,
+        "characters": 385,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 29,
+        "characters": 2090,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 30,
+        "characters": 5095,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 31,
+        "characters": 3746,
+        "red_characters": 310,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 32,
+        "characters": 276,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 33,
+        "characters": 1848,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 34,
+        "characters": 49,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 35,
+        "characters": 3271,
+        "red_characters": 3227,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": true,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 36,
+        "characters": 2215,
+        "red_characters": 2213,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": true,
+        "content_outside_page": 0
+      },
+      {
+        "page": 37,
+        "characters": 3176,
+        "red_characters": 3167,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": true,
+        "content_outside_page": 0
+      },
+      {
+        "page": 38,
+        "characters": 3583,
+        "red_characters": 1512,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 39,
+        "characters": 2373,
+        "red_characters": 376,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 40,
+        "characters": 2868,
+        "red_characters": 2,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 41,
+        "characters": 2117,
+        "red_characters": 2,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 42,
+        "characters": 1823,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 43,
+        "characters": 2085,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 44,
+        "characters": 1748,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 45,
+        "characters": 2785,
+        "red_characters": 613,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 46,
+        "characters": 5108,
+        "red_characters": 1021,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 47,
+        "characters": 1966,
+        "red_characters": 24,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 48,
+        "characters": 2957,
+        "red_characters": 320,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 49,
+        "characters": 5271,
+        "red_characters": 1469,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 50,
+        "characters": 4479,
+        "red_characters": 1480,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 51,
+        "characters": 2766,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 52,
+        "characters": 3466,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 53,
+        "characters": 3610,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 54,
+        "characters": 3301,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 55,
+        "characters": 2884,
+        "red_characters": 931,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 56,
+        "characters": 2181,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 57,
+        "characters": 1885,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 58,
+        "characters": 2026,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 59,
+        "characters": 1653,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 60,
+        "characters": 1715,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 61,
+        "characters": 2172,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      },
+      {
+        "page": 62,
+        "characters": 1821,
+        "red_characters": 0,
+        "replacement_characters": 0,
+        "unresolved_markers": 0,
+        "security_heading": false,
+        "has_conditional_table": false,
+        "has_final_bound": false,
+        "content_outside_page": 0
+      }
+    ]
+  },
+  "logs": {
+    "proof": {
+      "undefined_references": false,
+      "changed_labels": false,
+      "overfull_hboxes": 0
+    },
+    "paper": {
+      "undefined_references": false,
+      "changed_labels": false,
+      "overfull_hboxes": 16
+    }
+  }
+}

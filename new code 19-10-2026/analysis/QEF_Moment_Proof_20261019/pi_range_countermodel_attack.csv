@@ -1,0 +1,5 @@
+﻿image,N,angle_reference,attack,expected_ciphertext_samples,binary_success,status
+IM1,65536,"independent uniform [0,pi)",measure position until zero; then one data-qubit X measurement,65536,0.7026423672846756,CONDITIONAL COUNTERMODEL; actual HCS angle law is unspecified
+IM2,50394,"independent uniform [0,pi)",measure position until zero; then one data-qubit X measurement,50394,0.7026423672846756,CONDITIONAL COUNTERMODEL; actual HCS angle law is unspecified
+IM3,65536,"independent uniform [0,pi)",measure position until zero; then one data-qubit X measurement,65536,0.7026423672846756,CONDITIONAL COUNTERMODEL; actual HCS angle law is unspecified
+IM4,786432,"independent uniform [0,pi)",measure position until zero; then one data-qubit X measurement,786432,0.7026423672846756,CONDITIONAL COUNTERMODEL; actual HCS angle law is unspecified

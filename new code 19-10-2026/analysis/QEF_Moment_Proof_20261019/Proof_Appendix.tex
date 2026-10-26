@@ -1,0 +1,93 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{fontspec}\setmainfont{Times New Roman}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\newtheorem{theorem}{Theorem}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small Original QEF: rotation moments and attack samples}
+\fancyhead[R]{\small 19 October 2026}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}\setlength{\parskip}{5pt}
+\let\subsubsection\section
+\begin{document}
+\begin{center}
+{\LARGE\bfseries A security bound from the original QEF operators}\\[5pt]
+{\large Mathematical derivation, source assumptions, and corrected tables}\\[4pt]
+{\small The numerical benchmark is conditional; the original source law is not certified.}
+\end{center}
+\input{security_section.tex}
+\clearpage
+\section{Verification and finite-angle benchmarks}
+The finite reference law uses $L$ equally spaced angles in $[0,2\pi)$;
+$L$ is not the number of image intensity levels. The table lists the
+necessary independently encrypted preparations at success $2/3$ for
+$r=11$. Integer thresholds were calculated at 100 and 140 decimal digits
+and agree. These are theorem evaluations, not executed cryptanalytic attacks.
+
+\begin{table}[htbp]\centering\small
+\caption{Additional conditional finite-angle sample lower bounds.}
+\begin{tabular}{lrrr}
+\toprule
+Image & $L=2$ & $L=4$ & $L=256$\\\midrule
+\input{finite_angle_rows.tex}
+\end{tabular}
+\end{table}
+
+\input{verification_summary.tex}
+
+The small-system channel calculation enumerates all substitution keys
+on four models and compares the resulting superoperator with the
+derived moment formula. It checks the full channel, rather than only
+the norm of a few outputs. The image checks then verify trace norm,
+Hilbert--Schmidt norm, and relative-entropy inequalities. Joint binary
+measurements are evaluated directly on small product states and checked
+against the Holevo/Fano converse. Separate perturbation cases check the
+source-error inequality. These checks support the algebra but cannot
+certify an unspecified HCS source distribution.
+
+\section{Impact on the manuscript and remaining work}
+The revision replaces the old quantum-attack subsection and its
+``passed'' table. Its abstract, discussion, comparisons, and conclusion
+are adjusted to the proved scope. Pixel-dependent angle indexing and
+the chronological Euler/inverse order are made consistent with the
+operator used by the theorem. The receiver uses the delivered stochastic
+key values rather than drawing new QRNG outcomes. Hardware statements
+distinguish small IBM circuits from the large-image simulations.
+
+The three encryption layers and both proposed original key-source
+classes remain in the mathematical architecture. No QOTP layer or v2
+uniform privacy core is used in this derivation. A quantum-safe
+confidentiality claim for the actual original source still requires a
+certified finite joint angle/control law, the actual range parameter,
+an imperfection bound, and implementation correspondence. The sorting
+work-register cleanup must also be checked independently; the theorem
+assumes an ideal clean address permutation. The new proof has not been
+formalized in Lean~4.
+
+A particularly important consequence is the range countermodel in
+Section~\ref{sec:qef_moment_security}. With the independent uniform
+$[0,\pi)$ reference, the expected sample counts for the demonstrated
+postselection attack are only $65,536$, $50,394$, $65,536$, and $786,432$
+for the four images, at success $0.702642$. Those are attack upper
+bounds in that contrasting law; they are not the theorem's lower bounds
+and are not measured attacks on the original generator. The sharp
+difference prevents assigning one of the reference numbers to the
+actual system before its angle law is established.
+
+\begin{thebibliography}{9}
+\bibitem{Watrous2018QEF} J. Watrous, \emph{The Theory of Quantum
+Information}, Cambridge University Press, 2018. Chapters 3 and 5,
+including Theorem 5.49 and Lemma 5.54.
+\url{https://cs.uwaterloo.ca/~watrous/TQI/}.
+\bibitem{GDO} L. K. Grover, A fast quantum mechanical algorithm for
+database search, STOC 1996.
+\bibitem{Boyer1998QEF} M. Boyer, G. Brassard, P. H{\o}yer, and A. Tapp,
+Tight bounds on quantum searching, Fortschritte der Physik 46
+(1998). \url{https://arxiv.org/abs/quant-ph/9605034}.
+\bibitem{Zalka1999QEF} C. Zalka, Grover's quantum searching algorithm
+is optimal, Physical Review A 60, 2746--2751 (1999).
+\url{https://arxiv.org/abs/quant-ph/9711070}.
+\end{thebibliography}
+\end{document}

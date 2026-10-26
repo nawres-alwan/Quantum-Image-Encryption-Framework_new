@@ -1,0 +1,19 @@
+% Proposed replacement for the generic key-search claim only.
+% This paragraph does not constitute a complete replacement of Section 5.2.
+{\color{red}
+For a uniform candidate space of size $M$ and an available reversible
+verification oracle marking $t$ acceptable candidates, generic quantum
+search requires $\Theta(\sqrt{M/t})$ oracle queries for constant success
+probability. In particular, three independent, uniformly distributed
+128-bit key fields and a unique marked key give the conditional baseline
+$\Theta(2^{192})$. The elementary gate cost also depends on the cost of
+reversible verification and the search reflection. This is a generic
+unstructured-search estimate; it is not a lower bound on all attacks
+against QEF. Establishing such a lower bound would require a reduction
+or an explicit computational hardness assumption for the actual
+key-generation and encryption family. When a fresh independent key is
+used for every preparation, plaintext--ciphertext pairs from different
+operations are not samples of one fixed encryption unitary. Consequently,
+the parameter count of an arbitrary $Q$-qubit unitary, $4^Q-1$, is not
+used as a lower bound on QEF attack complexity.
+\par}

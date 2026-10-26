@@ -1,0 +1,223 @@
+{\color{red}
+\section{Quantum Gate Complexity Analysis}
+\label{section:7}
+
+The resource analysis distinguishes the logical encryption operations from
+their synthesis into a specified gate library. Let $N=HW$ be the number of
+valid primary pixel positions, $n=\lceil\log_2N\rceil$, and $r$ the number
+of feature qubits. The image register contains $Q=n+r$ qubits; working
+ancillas must be counted separately. The following counts concern the
+three encryption layers after image preparation and key generation.
+Neither an image-register dimension nor a circuit gate count is an
+attack-complexity bound.
+
+\subsection{Register allocation and logical operations}
+
+Table~\ref{tab:1} fixes the register conventions used in the resource and
+security comparisons. Here $s$ is the binary intensity depth, $p$ the
+adjacency-register size, $c$ the number of channels, and $b$ the number of
+wavelength-label qubits. A register with one possible wavelength label has
+$b=0$. These explicit benchmark choices do not identify the allocation
+of a hardware experiment. The HSI and adjacency allocations follow their
+position--feature descriptions
+\cite{QIRHSI,EQIRHSI,AFQIRHSI}; the QIRBP and QIRWC layouts distinguish
+bit-plane, wavelength, and neighbouring-position registers
+\cite{QIRBPQIRWC}. QRMW denotes the multi-wavelength representation with
+$s$ intensity qubits and $\lceil\log_2c\rceil$ channel-label qubits
+(\url{https://doi.org/10.3906/elk-1705-396}); it is distinct from QIRWC.
+
+\begin{table}[htbp]
+\centering
+\color{red}
+\caption{{\color{red}Declared position--feature allocations for QEF resource accounting.}}
+\label{tab:1}
+\small
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\rowcolor{Bisque3}
+\textbf{Model} & \textbf{Feature size $r$} & \textbf{Benchmark} & \textbf{$Q$} \\
+\hline
+FRQI & $1$ & $r=1$ & $n+1$ \\\hline
+NEQR & $s$ & $s=8$ & $n+8$ \\\hline
+QIRHSI & $s+2$ & $s=8$ & $n+10$ \\\hline
+EQIRHSI & $s+2$ & $s=8$ & $n+10$ \\\hline
+AFQIRHSI & $p+3$ & $p=4$ & $n+7$ \\\hline
+QIRBP & $b+6$ & $b=0$ & $n+6$ \\\hline
+QRMW & $s+\lceil\log_2c\rceil$ & $s=8,\ c=3$ & $n+10$ \\\hline
+QIRWC & $n+2b+8$ & $b=0$ & $2n+8$ \\\hline
+\end{tabular}
+\end{table}
+
+For the QIRWC row, the primary position register has $n$ qubits and
+the neighbouring-position register is included in the $r$ feature
+qubits. A prescribed neighbour $f(k)$ is represented within the
+normalised feature state $|C_k\rangle$, so the input retains the form
+$N^{-1/2}\sum_k|k\rangle|C_k\rangle$. The row does not use an
+independent address register ranging over all $N^2$ pixel pairs. The
+QIRBP allocation counts three RGB data qubits, three bit-plane-index
+qubits, and $b$ wavelength-label qubits; it does not identify the number
+of bit planes with the number of index qubits.
+
+The pixel-dependent substitution specified in
+Theorem~\ref{Generalized Quantum Image Encryption via HG-QRNG} contains
+three address-controlled rotations for each of the $r$ feature qubits
+at each of the $N$ valid positions. Its specified logical count, before
+identity removal or circuit optimisation, is therefore
+\begin{equation}
+L_{\rm sub}=3Nr.
+\label{eq:qef-logical-sub-count}
+\end{equation}
+The controls select $|k\rangle$; they are not ordinary unconditioned
+single-qubit gates. Invalid addresses receive the identity operation.
+The entanglement loop in Algorithm~\ref{Alg2} selects one CNOT or CZ
+for each position--feature qubit pair. Consequently,
+\begin{equation}
+L_E=L_{CX}+L_{CZ}\le nr,
+\qquad L_E=nr\ \text{for the complete loop}.
+\label{eq:qef-logical-ent-count}
+\end{equation}
+This loop is indexed by position qubits and feature qubits, rather than
+by $N$ pixel addresses. Its count is therefore $nr$, not $Nr$.
+
+\begin{table}[htbp]
+\centering
+\color{red}
+\caption{{\color{red}Logical operation counts for the allocations in Table~\ref{tab:1}.}}
+\label{tab:QGC}
+\small
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{|l|c|c|}
+\hline
+\rowcolor{Bisque3}
+\textbf{Model} & \shortstack{\textbf{Controlled rotations}\\$L_{\rm sub}$}
+& \shortstack{\textbf{Entangling gates}\\$L_E$ (complete loop)} \\
+\hline
+FRQI & $3N$ & $n$ \\\hline
+NEQR & $24N$ & $8n$ \\\hline
+QIRHSI / EQIRHSI & $30N$ & $10n$ \\\hline
+AFQIRHSI & $21N$ & $7n$ \\\hline
+QIRBP ($b=0$) & $18N$ & $6n$ \\\hline
+QRMW ($s=8,c=3$) & $30N$ & $10n$ \\\hline
+QIRWC ($b=0$) & $3N(n+8)$ & $n(n+8)$ \\\hline
+\end{tabular}
+\end{table}
+
+\subsection{Compiled gate count and depth}
+
+Fix a gate library, hardware connectivity, ancilla policy, and rotation
+synthesis accuracy. Let $g_C(n)$ and $d_C(n)$ be upper bounds on the
+compiled gate count and depth of one address-controlled rotation,
+including any control-bit inversions and restoration of its working
+ancillas. Their values depend on the chosen synthesis; no specific
+asymptotic formula follows from the abstract operator definition alone.
+Let $g_E$ and $d_E$ bound the compiled resources of one selected CNOT
+or CZ. These bounds equal one for count and depth when both gates are
+available primitives with the required connectivity.
+
+Denote the compiled gate count and depth of a clean implementation of
+$P_\pi$ by $G_P$ and $D_P$. These quantities include the chosen key
+lookup, comparator or routing construction, its scratch registers,
+and their cleanup whenever those operations are part of the
+permutation implementation. In particular, a sorting description does
+not by itself give an $N$-tuple sorting-network cost for a single
+amplitude-encoded image register. A construction must specify how the
+keyed bijection and its inverse are accessed and implemented. The
+permutation must realise
+\[
+|k\rangle|0\rangle_{\rm work}
+\longmapsto
+|\pi(k)\rangle|0\rangle_{\rm work};
+\]
+retaining address-dependent garbage would change the encryption
+channel when that garbage is inaccessible to the recipient.
+
+For the concatenation of the three compiled modules, serial execution
+of the controlled rotations and selected entangling gates gives the
+constructive upper bounds
+\begin{align}
+\mathcal{QGC}_{\rm QEF}
+&\le 3Nr\,g_C(n)+G_P+L_Eg_E,
+\label{eq:qef-compiled-gate-bound}\\
+\mathcal{QCD}_{\rm QEF}
+&\le 3Nr\,d_C(n)+D_P+L_Ed_E.
+\label{eq:qef-compiled-depth-bound}
+\end{align}
+Parallel scheduling or cross-module optimisation may improve these
+bounds. They are not asserted to be optimal. The serial-module depth
+is the sum of the three scheduled module depths, while its gate count
+is the sum of their gate counts.
+
+For a primitive type $\chi$ in the chosen library $\mathcal L$, let
+$g_\chi(k,j,a)$ count its occurrences in the synthesis of the
+address-controlled $R_a(\theta_{k,j}^a)$ gate. The precise accounting
+identity is
+\begin{equation}
+G_\chi=
+\sum_{k=0}^{N-1}\sum_{j=1}^{r}\sum_{a\in\{x,y,z\}}
+g_\chi(k,j,a)+G_\chi^{(P)}+G_\chi^{(E)}.
+\label{eq:84}
+\end{equation}
+In particular, CNOT gates used to synthesise controlled substitution
+rotations belong to the substitution block, not the permutation block.
+For a library containing CNOT and CZ directly, the unsynthesised
+entanglement counts are $G_{CX}^{(E)}=L_{CX}$ and
+$G_{CZ}^{(E)}=L_{CZ}$; otherwise their chosen decompositions must be
+included in Eq.~\eqref{eq:84}.
+
+\subsection{Weighted circuit cost}
+
+\begin{theorem}[Additive cost of a specified QEF implementation]
+\label{thm:QEF-quantum-cost}
+For any compiled QEF circuit over a fixed library $\mathcal L$, assign
+a nonnegative cost $w_\chi$ to each primitive type $\chi$. With the
+counts in Eq.~\eqref{eq:84}, its weighted cost is
+\begin{equation}
+QC_{\rm QEF}=\sum_{\chi\in\mathcal L}w_\chi G_\chi.
+\label{eq:QC-QEF-final}
+\end{equation}
+For a concatenation retaining its three module boundaries,
+\begin{equation}
+QC_{\rm QEF}=QC_{\rm sub}+QC_{\rm perm}+QC_{\rm ent}.
+\label{eq:QC-sum-blocks}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+For each module $B\in\{{\rm sub},{\rm perm},{\rm ent}\}$, define
+\begin{equation}
+QC_B=\sum_{\chi\in\mathcal L}w_\chi G_\chi^{(B)}.
+\label{eq:QC-sum-def}
+\end{equation}
+Each gate occurrence belongs to exactly one module, so
+$G_\chi=\sum_B G_\chi^{(B)}$. Substitution and interchange of the
+finite sums give
+\begin{equation}
+\sum_{\chi\in\mathcal L}w_\chi G_\chi
+=\sum_B\sum_{\chi\in\mathcal L}w_\chi G_\chi^{(B)}
+=\sum_B QC_B,
+\label{eq:QC-expanded}
+\end{equation}
+which proves both identities.
+\end{proof}
+
+Unit weights recover the compiled gate count. Hardware durations,
+two-qubit-gate weights, or another declared resource model give
+different costs. In particular, neither CZ nor Toffoli has a universal
+fixed optimal cost independent of the primitive library. Logical
+multi-qubit gates and their decomposed primitives must not both be
+counted for the same operation.
+
+For an end-to-end circuit, image preparation, generation and loading of
+the realised keys, and any required final measurement must be added
+separately. When $N<2^n$, the exact amplification construction uses one
+phase-matched amplification step, but synthesis of its reflections and
+of the feature-loading operations still has size-dependent cost.
+The intensity depth $s$ remains independent of the number of pixels
+$N$; setting $s=N$ would describe a changing encoding rather than a
+fixed eight-bit image model. Numerical preparation estimates obtained
+under that identification are therefore not QEF encryption costs.
+Numerical compiled counts and depths require a specified clean
+permutation circuit and controlled-rotation synthesis; the logical
+counts in Table~\ref{tab:QGC} are the quantities established here.
+\par}

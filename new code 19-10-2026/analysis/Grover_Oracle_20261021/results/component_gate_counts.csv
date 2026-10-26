@@ -1,0 +1,7 @@
+﻿component,qubits,cx,u,total_gates,depth
+programmable_QEF,11,2665,4982,7647,5353
+plaintext_preparation,7,530,964,1494,1200
+ciphertext_preparation,7,120,127,247,241
+test_block,11,3163,5940,9103,6514
+inverse_test_block,11,3331,6087,9418,6650
+diffusion,6,25,54,79,45

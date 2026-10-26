@@ -1,0 +1,28 @@
+{
+  "scope": "Original abstract E P R operator; unspecified HCS/HG-Phi law is not substituted.",
+  "grover_probability_checks": 351,
+  "maximum_grover_probability_error": 3.6637359812630166e-15,
+  "original_operator_checks": 40,
+  "maximum_block_formula_error": 0.0,
+  "maximum_layer_reparametrization_error": 0.0,
+  "qirbp_known_image_collision": {
+    "N": 4,
+    "r": 6,
+    "norm": 0.9999999999999999,
+    "same_black_QIRBP_cipher_fidelity": 0.9999999999999996,
+    "operators_differ": 5.815502822902375
+  },
+  "conditional_cost_rows": 5,
+  "exact_key_dimension_bound_rows": 4,
+  "binary_state_verification_checks": 20,
+  "maximum_binary_probability_error": 2.220446049250313e-16,
+  "dimension_bound_tight_examples": 4,
+  "NO_claim_of_2_to_192_global_QEF_lower_bound": true,
+  "NO_actual_384_bit_key_search_executed": true,
+  "NO_claim_reparameterized_angles_correspond_to_HCS_seeds": true,
+  "references": [
+    "https://arxiv.org/abs/quant-ph/9605034",
+    "https://arxiv.org/abs/quant-ph/9711070",
+    "https://eprint.iacr.org/2019/1146"
+  ]
+}

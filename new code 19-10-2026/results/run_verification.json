@@ -1,0 +1,29 @@
+{
+  "algorithm": "QEF-QIRBP-v2-uniform-core",
+  "completed_utc": "2026-10-19T07:42:34.739931+00:00",
+  "profiles": [
+    "native",
+    "paper256"
+  ],
+  "replicates": 3,
+  "runs_completed": 24,
+  "all_exact_decryptions": true,
+  "max_fidelity_error": 1.9984014443252818e-15,
+  "max_branch_norm_error": 4.218847493575595e-15,
+  "ssim_independent_window_check_error": 9.71445146547012e-17,
+  "original_sources_before": {
+    "images encryption and decryption models/code/encryption.py": "1fea2fcfbdecbfc45101f408044eb76ef490cf31003e8483aaa781fa3335e630",
+    "images encryption and decryption models/code/decryption.py": "b57da07f26369736c3be11f220473c8016f90a22ced68bc4c57b37d105f43d4e",
+    "images encryption and decryption models/code/qirbp_model.py": "e6146902f2b14c541e304282e69ba9b69834a7e9fe9dce211f4310b917c98114"
+  },
+  "original_sources_after": {
+    "images encryption and decryption models/code/encryption.py": "1fea2fcfbdecbfc45101f408044eb76ef490cf31003e8483aaa781fa3335e630",
+    "images encryption and decryption models/code/decryption.py": "b57da07f26369736c3be11f220473c8016f90a22ced68bc4c57b37d105f43d4e",
+    "images encryption and decryption models/code/qirbp_model.py": "e6146902f2b14c541e304282e69ba9b69834a7e9fe9dce211f4310b917c98114"
+  },
+  "original_sources_unchanged": true,
+  "input_files_unchanged": true,
+  "randomness_provider": "Python secrets; OS randomness; ideal theorem assumes uniform independent reserved bits",
+  "not_executed_on_quantum_hardware": true,
+  "diagnostic_previews_are_not_classical_ciphertexts": true
+}

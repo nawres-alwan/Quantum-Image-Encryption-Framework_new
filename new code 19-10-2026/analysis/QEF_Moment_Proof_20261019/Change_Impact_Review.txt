@@ -1,0 +1,69 @@
+IMPACT OF THE SECURITY REVISION
+
+1. Security resource and success event
+The replacement theorem concerns binary discrimination of two classical
+images encoded into quantum states, given repeated independently keyed
+encryptions of the same hidden image. The bound is in ciphertext samples.
+It does not replace the old numbers with a different computational-bit
+security claim. It does not cover arbitrary reference-entangled inputs.
+
+2. Source requirements
+Uniform Euler angles over the specified range, independence within each
+pixel, conditional pairwise independence of different pixel tuples, and
+independent refresh are explicit hypotheses. The original generators are
+not claimed to satisfy them. A source-imperfection term propagates to the
+relative-entropy and sample bounds. The range countermodel shows why this
+limitation is substantive rather than editorial.
+
+3. Table and downstream conclusions
+The original quantum-attack table is replaced by conditional QIRBP sample
+lower bounds. There is no "passed" column. The abstract, discussion, and
+conclusion no longer infer optimal attack cost from tomography, image
+dimensions, output-key lengths, visual scrambling, or entanglement.
+Comparison metrics retain their values but are described as diagnostics.
+
+4. Substitution algorithm
+The algorithm's angle declarations and gate application use theta[k,f],
+consistent with the intended per-pixel operator. Chronological application
+is Rx, Ry, Rz; decryption uses Rz inverse, Ry inverse, Rx inverse. The
+revision does not certify that older array simulation results implement
+this quantum transformation. Pixel-controlled gate synthesis, source
+generation cost, and older resource counts require their own audit.
+
+5. Delivered fresh keys
+The receiver loads the exact record delivered securely for the ciphertext.
+Re-drawing random quantum outcomes from the same generator parameters
+would not generally reproduce those outcomes. This is an operational
+assumption about delivery, not an implemented key-distribution protocol.
+
+6. Hardware, Lean, and authentication
+Small IBM circuit tests are distinguished from large-image simulation,
+consistent with the author's stated experiment scope. The new probability
+theorem is analytical and numerically checked, not machine-checked in the
+existing Lean development. No authentication or active-tampering guarantee
+is inferred from entanglement.
+
+7. Boundaries of this revision
+The theorem assumes an ideal clean position permutation. In the older
+sorting description, key labels associated with the old address cannot
+in general be cleared by evaluating the original key oracle at the new
+address. Correct cleanup must use the corresponding inverse-address key
+or retained old-address information. That implementation repair, its gate
+cost, and verification of sorting work registers are not performed here.
+The older circuit figures and resource analysis likewise need a separate
+implementation-correspondence review. They are not used to prove the
+new sample-complexity statement.
+
+8. Verification versus certification
+All substitution keys are enumerated on four small models, yielding 80
+image checks; there are also 10 joint binary-measurement checks, 12 source
+perturbation checks, and six normalized QIRBP checks. The largest channel
+formula discrepancy is about 1.8e-16. Full-sized table entries are analytic
+evaluations, with integer rounding checked at two high precisions. These
+checks do not estimate the actual source's security imperfection.
+
+9. File status
+The original manuscript is retained. A separate source/PDF revision is
+provided for review, with the current changes in red and prior red edits
+preserved. This is a security-analysis revision, not a declaration that
+every remaining implementation and resource issue in the paper is fixed.

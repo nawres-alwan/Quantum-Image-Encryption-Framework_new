@@ -1,0 +1,5 @@
+﻿D,M,exact_key_success,dimension_upper,achieves_bound
+2,8,0.25,0.25,True
+4,16,0.25,0.25,True
+6,24,0.24999999999999997,0.25,True
+8,64,0.125,0.125,True

@@ -1,0 +1,6 @@
+﻿scenario,uniform_candidate_bits,log2_accepted_keys,grover_exponent,square_root_scale,near_certain_leading_queries,status
+"three independent uniform 128-bit fields, unique accepted key",384,0,192.0,6.277101735386681e+57,4.9300241744316344e+57,CONDITIONAL black-box baseline; not proved QEF security
+"same nominal space, 2^128 accepted keys",384,128,128.0,3.402823669209385e+38,2.6725714601624168e+38,CONDITIONAL black-box baseline; not proved QEF security
+"two shared-generator 128-bit seeds, unique accepted key",256,0,128.0,3.402823669209385e+38,2.6725714601624168e+38,CONDITIONAL black-box baseline; not proved QEF security
+"one 128-bit seed for all three outputs, unique accepted key",128,0,64.0,1.8446744073709552e+19,1.4488038916154245e+19,CONDITIONAL black-box baseline; not proved QEF security
+"legacy scalar 32-bit seed space, unique accepted seed",32,0,16.0,65536.0,51471.85403641517,CONDITIONAL black-box baseline; not proved QEF security
